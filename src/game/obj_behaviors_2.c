@@ -45,6 +45,7 @@
 #include "seq_ids.h"
 #include "spawn_sound.h"
 #include "pc/configfile.h"
+#include "bettercamera.h"
 #define POS_OP_SAVE_POSITION 0
 #define POS_OP_COMPUTE_VELOCITY 1
 #define POS_OP_RESTORE_POSITION 2

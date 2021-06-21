@@ -3,9 +3,14 @@
 const GeoLayout bob_area_1_geo[] = {
 	GEO_NODE_START(),
 	GEO_OPEN_NODE(),
-		GEO_DISPLAY_LIST(4, bob_dl_DL_bob_1_0xe052b70_Obj_mesh_layer_4),
-		GEO_DISPLAY_LIST(1, bob_dl_DL_bob_1_0xe052b70_Obj_mesh_layer_1),
-		GEO_DISPLAY_LIST(4, bob_dl_DL_bob_1_0xe06ba50_Obj_mesh_layer_4),
+		GEO_DISPLAY_LIST(4, bob_dl_RoD_1_mesh_layer_4),
+		GEO_DISPLAY_LIST(4, bob_dl_RoD_4_mesh_layer_4),
+		GEO_DISPLAY_LIST(1, bob_dl_RoD_4_mesh_layer_1),
+		GEO_DISPLAY_LIST(4, bob_dl_RoD_4_001_mesh_layer_4),
+		GEO_DISPLAY_LIST(1, bob_dl_SR1_1_mesh_layer_1),
+		GEO_DISPLAY_LIST(4, bob_dl_SRR_1_mesh_layer_4),
+		GEO_DISPLAY_LIST(1, bob_dl_SRR_1_mesh_layer_1),
+		GEO_DISPLAY_LIST(4, bob_dl_SRR_4_mesh_layer_4),
 	GEO_CLOSE_NODE(),
 	GEO_RETURN(),
 };

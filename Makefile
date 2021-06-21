@@ -30,7 +30,7 @@ COMPILER_N64 ?= gcc
 # Accept RM2C level folder output
 RM2C ?= 0
 #add in text engine
-TE ?= 0
+TE ?= 1
 #Debug stuff to make testing easier
 #inside pause menu of levels
 LEVEL_SELECT ?= 0
@@ -1190,14 +1190,14 @@ ALL_DIRS := $(BUILD_DIR) $(addprefix $(BUILD_DIR)/,$(SRC_DIRS) $(ASM_DIRS) $(GOD
 # Make sure build directory exists before compiling anything
 DUMMY != mkdir -p $(ALL_DIRS)
 ifeq ($(TE),1)
-	# TE files
-	TE_FILES := $(foreach dir,$(SRC_DIRS),$(wildcard $(dir)/*_te.py))
-	# TE h files
-	TEH_FILES := $(foreach file,$(TE_FILES),$(BUILD_DIR)/$(file:.h=.py))
-	#create text engine encoded strings
-	$(TEH_FILES):$(TE_FILES)
-		$(call print,Converting TE string:,$<,$@)
-		python3 $(TECONV) $< $@
+# TE files
+TE_FILES := $(foreach dir,$(SRC_DIRS),$(wildcard $(dir)/*_te.py))
+# TE h files
+TEH_FILES := $(foreach file,$(TE_FILES),$(BUILD_DIR)/$(file:.h=.py))
+#create text engine encoded strings
+$(TEH_FILES):$(TE_FILES)
+	$(call print,Converting TE string:,$<,$@)
+	python3 $(TECONV) $< $@
 endif
 #make menu strings dependent on TE files so they're built into final file
 $(BUILD_DIR)/include/text_strings.h: $(BUILD_DIR)/include/text_menu_strings.h
