@@ -35,10 +35,12 @@ u32 FunctionReturns[NumEngines][8];
 
 //my char and ptr arrays
 #include "src/game/Keyboard_te.py"
+#include "src/game/TE_strings.inc.h"
 
 
 void SetupTextEngine(s16 x, s16 y, u8 *str, u8 state){
 	TE_flush_eng(&TE_Engines[state]);
+	str = segmented_to_virtual(str);
 	TE_Engines[state].state = state;
 	TE_Engines[state].LastVI = gNumVblanks;
 	TE_Engines[state].OgStr = str;

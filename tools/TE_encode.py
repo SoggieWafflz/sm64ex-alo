@@ -160,19 +160,28 @@ if __name__ == "__main__":
 	global Ptrs
 	Ptrs = []
 	Place = 0
-	f = sys.argv[1]
-	q = Path(f).stem
-	r = Path(sys.path[0]).parent / Path(f).parent
-	sys.path.append(str(r))
-	f = IL.import_module(q)
-	o = sys.argv[2]
-	o = open(o,'w')
-	for k,v in Funcs.items():
-		globals()[k] = Make(*v)
-	s = [a for a in f.__dict__ if type(a) == str and '__' not in a]
-	s = [[f.__dict__.get(a),a] for a in s]
-	for a in s:
-		if a[0]:
-			Place = 0
-			Ptrs = []
-			Write(o,*a)
+	f = sys.argv[1:-1]
+	o = sys.argv[-1]
+	z=''
+	for file in f:
+		q = 'build/us' / Path(file)
+		if q==Path(o):
+			z = file
+	if not z:
+		pass
+	else:
+		f = z
+		q = Path(f).stem
+		r = Path(sys.path[0]).parent / Path(f).parent
+		sys.path.append(str(r))
+		f = IL.import_module(q)
+		o = open(o,'w')
+		for k,v in Funcs.items():
+			globals()[k] = Make(*v)
+		s = [a for a in f.__dict__ if type(a) == str and '__' not in a]
+		s = [[f.__dict__.get(a),a] for a in s]
+		for a in s:
+			if a[0]:
+				Place = 0
+				Ptrs = []
+				Write(o,*a)

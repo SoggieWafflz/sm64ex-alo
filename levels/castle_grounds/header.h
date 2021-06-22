@@ -3,6 +3,16 @@
 
 #include "types.h"
 #include "game/moving_texture.h"
+//te strings
+extern char OW_dorrie1[];
+extern char Shoutouts[];
+extern char Tomatobird8[];
+extern char Aglab2[];
+extern char LinCrash[];
+extern char DarGos[];
+extern char SimpleFlips[];
+extern char CeeSZee[];
+extern char usernamesarespiders[];
 
 // geo
 extern const GeoLayout castle_grounds_geo_000660[];

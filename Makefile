@@ -1187,17 +1187,18 @@ $(BUILD_DIR)/text/%/define_text.inc.c: text/define_text.inc.c text/%/courses.h t
 RSP_DIRS := $(BUILD_DIR)/rsp
 ALL_DIRS := $(BUILD_DIR) $(addprefix $(BUILD_DIR)/,$(SRC_DIRS) $(ASM_DIRS) $(GODDARD_SRC_DIRS) $(ULTRA_SRC_DIRS) $(ULTRA_ASM_DIRS) $(ULTRA_BIN_DIRS) $(BIN_DIRS) $(TEXTURE_DIRS) $(TEXT_DIRS) $(SOUND_SAMPLE_DIRS) $(addprefix levels/,$(LEVEL_DIRS)) include) $(MIO0_DIR) $(addprefix $(MIO0_DIR)/,$(VERSION)) $(SOUND_BIN_DIR) $(SOUND_BIN_DIR)/sequences/$(VERSION) $(RSP_DIRS)
 
+TE_DIRS := $(SRC_DIRS) $(ASM_DIRS) $(TEXTURE_DIRS) $(TEXT_DIRS) $(SOUND_SAMPLE_DIRS) $(addprefix levels/,$(LEVEL_DIRS))
 # Make sure build directory exists before compiling anything
 DUMMY != mkdir -p $(ALL_DIRS)
 ifeq ($(TE),1)
 # TE files
-TE_FILES := $(foreach dir,$(SRC_DIRS),$(wildcard $(dir)/*_te.py))
-# TE h files
-TEH_FILES := $(foreach file,$(TE_FILES),$(BUILD_DIR)/$(file:.h=.py))
+TE_FILES := $(foreach dir,$(TE_DIRS),$(wildcard $(dir)/*_te.py))
+# TE H files
+TEH_FILES := $(foreach file,$(TE_FILES),$(BUILD_DIR)/$(file))
 #create text engine encoded strings
 $(TEH_FILES):$(TE_FILES)
-	$(call print,Converting TE string:,$<,$@)
-	python3 $(TECONV) $< $@
+	$(call print,Converting TE string:,$?,$@)
+	python3 $(TECONV) $? $@
 endif
 #make menu strings dependent on TE files so they're built into final file
 $(BUILD_DIR)/include/text_strings.h: $(BUILD_DIR)/include/text_menu_strings.h
