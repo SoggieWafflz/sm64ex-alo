@@ -78,6 +78,9 @@ struct TEState{
 	/* 0x64 */ Gfx *TextEndDL; //gDisplayListHead of last text. In place due to some jank might not keep
 	/* 0x68 */ u8 *BufferStrPtr; //Used so buffer knows where to go back and clear
 	/* 0x6C */ s16 NewSpeed;
+	/* NEW  */ u8 StackDepth;
+	/* NEW  */ u8 StackLocked;
+	/* NEW  */ u8 *StrStack[10];
 	//camera cmds
 	
 	//callback cmds
@@ -117,6 +120,7 @@ void SetupTextEngine(s16 x, s16 y, u8 *str, u8 state);
 void RunTextEngine(void);
 void TE_setup_ia8(void);
 void TE_end_ia8(void);
+s16 getTEspd(struct TEState *CurEng);
 void TE_flush_str_buff(struct TEState *CurEng);
 void TE_frame_init(struct TEState *CurEng);
 void TE_set_env(struct TEState *CurEng);
@@ -207,6 +211,9 @@ s8 TE_box_transition(struct TEState *CurEng,u8 *str);
 s8 TE_call_once(struct TEState *CurEng,u8 *str);
 s8 TE_call_loop(struct TEState *CurEng,u8 *str);
 s8 TE_function_response(struct TEState *CurEng,u8 *str);
+s8 TE_set_mario_action(struct TEState *CurEng,u8 *str);
+s8 TE_jump_link_str(struct TEState *CurEng,u8 *str);
+s8 TE_pop_str(struct TEState *CurEng,u8 *str);
 s8 TE_line_break(struct TEState *CurEng,u8 *str);
 s8 TE_terminator(struct TEState *CurEng,u8 *str);
 #endif

@@ -50,6 +50,8 @@ void SetupTextEngine(s16 x, s16 y, u8 *str, u8 state){
 	TE_Engines[state].StartY = y;
 	TE_Engines[state].OgSeqID = -1;
 	TE_Engines[state].NewSeqID = -1;
+	TE_Engines[state].StackDepth = 0;
+	TE_Engines[state].NewSpeed = 0x1234;
 }
 
 void RunTextEngine(void){
@@ -95,10 +97,6 @@ void RunTextEngine(void){
 				goto loopswitch;
 			}
 			if(!(CurChar<0x40||(CurChar>0x4F&&CurChar<0x70)||(CurChar>0xCF&&CurChar<0xFE)||CurChar==0x9E||CurChar==0x9F)){
-				static char buf[32];
-				sprintf(buf,"%d",CurChar);
-				// print_text(32,96,buf);
-				//parse cmds and use switch
 				loop = TE_jump_cmds(CurEng,CurChar,str);
 				loopswitch:
 					if (loop==1)
@@ -139,19 +137,20 @@ void RunTextEngine(void){
 			//now I have to check if a new character has to be drawn
 			else{
 				//check char speed for neg
-				if(CurEng->VIpChar<0){
-					if(((CurVI<<absi(CurEng->VIpChar)))>((CurEng->LastVI<<absi(CurEng->VIpChar))+CharsThisFrame)){
+				s16 TEspd = getTEspd(CurEng);
+				if(TEspd<0){
+					if(((CurVI*absi(TEspd)))>((CurEng->LastVI*absi(TEspd))+CharsThisFrame)){
 						//draw a new char
-						TE_add_new_char(CurEng,CurVI);
+						TE_add_new_char(CurEng,CurEng->LastVI);
+						CharsThisFrame++;
 						goto loop;
-					}else{
+					}else if(CharsThisFrame>1){
 						CurEng->LastVI = CurVI;
 					}
-					CharsThisFrame++;
 				}else{
-					if(CurVI>=(CurEng->LastVI+CurEng->VIpChar)){
+					if(CurVI>=(CurEng->LastVI+TEspd)){
 						//draw a new char
-						TE_add_new_char(CurEng,CurVI+CurEng->VIpChar);
+						TE_add_new_char(CurEng,CurVI+TEspd);
 						goto loop;
 					}
 				}
@@ -191,7 +190,7 @@ void TE_frame_init(struct TEState *CurEng){
 	CurEng->ScaleF[0] = 1.0f;
 	CurEng->ScaleF[1] = 1.0f;
 	CurEng->EnvColorWord =- 1;
-	CurEng->NewSpeed = 0x1234;
+	CurEng->StackDepth = 0;
 	CurEng->ShakeScreen = 0;
 	StrBuffer[CurEng->state][0] = 0xFF;
 }
@@ -266,23 +265,26 @@ void TE_transition_active(struct TEState *CurEng,struct Transition *Tr,u8 flip){
 }
 
 void TE_print(struct TEState *CurEng){
-	//print shadow with plaintext
-	if(CurEng->PlainText){
-		u32 Env = CurEng->EnvColorWord;
-		CurEng->EnvColorWord = 0x10101000 | CurEng->EnvColorByte[3];
-		CurEng->TempX += 1;
-		CurEng->TempY -= 1;
+	//deal with case where buffer is empty
+	if(!(StrBuffer[CurEng->state][0] == 0x9E && StrBuffer[CurEng->state][1] == 0xFF)){
+		//print shadow with plaintext
+		if(CurEng->PlainText){
+			u32 Env = CurEng->EnvColorWord;
+			CurEng->EnvColorWord = 0x10101000 | CurEng->EnvColorByte[3];
+			CurEng->TempX += 1;
+			CurEng->TempY -= 1;
+			TE_transition_print(CurEng);
+			CurEng->TempX -= 1;
+			CurEng->TempY += 1;
+			CurEng->EnvColorWord = Env;
+		}
 		TE_transition_print(CurEng);
-		CurEng->TempX -= 1;
-		CurEng->TempY += 1;
-		CurEng->EnvColorWord = Env;
+		TE_flush_str_buff(CurEng);
+		TE_reset_Xpos(CurEng);
+		gSPPopMatrix(gDisplayListHead++, G_MTX_MODELVIEW);
+		create_dl_scale_matrix(MENU_MTX_PUSH, CurEng->ScaleF[0], CurEng->ScaleF[1], 1.0f);
+		TE_fix_scale_Xpos(CurEng);
 	}
-	TE_transition_print(CurEng);
-	TE_flush_str_buff(CurEng);
-	TE_reset_Xpos(CurEng);
-	gSPPopMatrix(gDisplayListHead++, G_MTX_MODELVIEW);
-	create_dl_scale_matrix(MENU_MTX_PUSH, CurEng->ScaleF[0], CurEng->ScaleF[1], 1.0f);
-	TE_fix_scale_Xpos(CurEng);
 }
 
 void TE_add_new_char(struct TEState *CurEng,u32 VI_inc){
@@ -381,7 +383,14 @@ void TE_flush_str_buff(struct TEState *CurEng){
 	StrBuffer[CurEng->state][0]=0x9E;
 	StrBuffer[CurEng->state][1]=0xFF;
 }
-
+s16 getTEspd(struct TEState *CurEng){
+	if(gPlayer1Controller->buttonDown&A_BUTTON && CurEng->NewSpeed!=0x1234){
+		return CurEng->NewSpeed;
+	}else{
+		return CurEng->VIpChar;
+	}
+	
+}
 void TE_set_env(struct TEState *CurEng){
 	gDPSetEnvColor(gDisplayListHead++, CurEng->EnvColorByte[0], CurEng->EnvColorByte[1], CurEng->EnvColorByte[2], CurEng->EnvColorByte[3]);
 }
@@ -430,9 +439,10 @@ u32 TE_get_u32(u8 *str){
 
 u32 TE_get_ptr(u8 *strArgs,u8 *str){
 	u16 pos = TE_get_u16(strArgs);
-	u16 ptr = TE_get_u16(strArgs+2);
+	u16 ptrID = TE_get_u16(strArgs+2);
 	str = (u32)str-4-pos;
 	u32 **Ptrptr = str;
-	return (*Ptrptr)[ptr];
+	u32 *ptr =  segmented_to_virtual(*Ptrptr);
+	return ptr[ptrID];
 }
 #endif

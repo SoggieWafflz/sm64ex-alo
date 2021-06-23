@@ -1,36 +1,78 @@
 #OW dorrie
-OW_dorrie1 = ["[end]Glad you made it out all right. Its practically\n\
-war out there, but we cant use that name for\n\
-copyright reasons.\n\
-Well as you have seen, the world of star revenge\n\
-has been broken into fragments. You see the\n\
-natural order was disturbed from the outside.\n\
+OW_settings = ["[SetSpd(1)][FFSpd(-1)][EnBlip()][Pop()]"]
+OW_Box = ["[ShadedBGBox(0x18,0x120,0x04,0x50,0x20,0x20,0x20,0x80)][Pop()]"]
+
+OW_dorrie1 = ["[JumpLink('OW_settings')][JumpLink('OW_Box')]\
+Glad you made it out all right.[Pause(14)] It's practically\n\
+war out there,[Pause(10)] but we can't use that name for\n\
+copyright reasons.[AbtnNextBox()][JumpLink('OW_Box')]\
+Well as you have seen,[Pause(10)] the world of star revenge\n\
+has been broken into fragments.[Pause(14)] You see the\n\
+natural order was disturbed from the outside.[Pause(14)]\n\
 The world Brodute ruled over has been upsurped\n\
-by some unknown foreign bug like entity.\n\
-Luckily as your friendly neighborhood dorrie,\n\
+by some unknown foreign bug like entity.[AbtnNextBox()][JumpLink('OW_Box')]\
+Luckily as your friendly neighborhood dorrie,[Pause(10)]\n\
 I can navigate the clusters to help guide you\n\
-back to your rightful place, SR 5.5 the best SR.\n\
-Theres 6 stars to collect, and in order to get\n\
-them you have to appease the scuttling overlord.\n\
-His guidance is as follows,\n\
-\"Answer my questions,\n\
-songs of mystery.\n\
-Or you'll be dead\n\
-before you count to three!\".\n\
+back to your rightful place,[Pause(14)] SR 5.5 the best SR.[Pause(14)]\n\
+There's 3 stars to collect,[Pause(10)] and in order to get\n\
+them you have to appease the scuttling overlord.[AbtnNextBox()][JumpLink('OW_Box')]\
+His guidance is as follows,[Pause(20)]\n\
+[LQ]Answer my questions,[Pause(20)]\n\
+songs of mystery.[Pause(20)]\n\
+Or you'll be dead[Pause(20)]\n\
+before you can count to three![RQ].[AbtnNextBox()][JumpLink('OW_Box')]\
 Just jump into any pipe to start your timely\n\
-death, but only after a message from our sponsor.\n\
-\"Advanced Text Engine now available in native\n\
-C code, download today! Also download RM2C, the\n\
+death,[Pause(10)] but only after a message from our \n\
+sponsor.[AbtnNextBox()][JumpLink('OW_Box')]\
+[LQ]Advanced Text Engine now available in native\n\
+C code, download today![Pause(14)] Also download RM2C, the\n\
 perfect tool to convert any binary hack to\n\
-decomp automagically!\"\n\
+decomp automagically![RQ][AbtnNextBox()][JumpLink('OW_Box')]\
 If you need any hints about the levels feel\n\
-free to ask me anytime."]
+free to ask me anytime.[AbtnNextBox()]\
+[MarioAction('ACT_IDLE')][AbtnEndStr()]"]
 
 #shoutout board
-Shoutouts = ["List of absolute legends - paginated for\n\
-leisurely reading."]
+Shoutouts = ["[JumpLink('OW_settings')][JumpLink('OW_Box')]List of absolute legends - paginated for\n\
+leisurely reading.[AbtnNextBox()][SetRtrn(1)]\
+[SetSpd(1)][TransAbs(32,140)]\
+[ShadedBGBox(0x18,0x120,0x20,144,0x20,0x20,0x20,0x80)][DialogOptions(6)]\
+TomatoBird8[end]\
+Aglab2[end]\
+LinCrash[end]\
+DarGos[end]\
+SimpleFlips[end]\
+CSZ[end]\
+Pg 2[end]\
+[SetSpd(1)][ShadedBGBox(0x18,0x120,0x20,144,0x20,0x20,0x20,0x80)]\
+[TransAbs(32,127)]\
+[DialogResponse(0)][JumpLink('Tomatobird8')]\
+[DialogResponse(1)][JumpLink('Aglab2')]\
+[DialogResponse(2)][JumpLink('LinCrash')]\
+[DialogResponse(3)][JumpLink('DarGos')]\
+[DialogResponse(4)][JumpLink('SimpleFlips')]\
+[DialogResponse(5)][JumpLink('CSZ')]\
+[DialogResponse(6)][TransAbs(32,140)]\
+[StartDialogBracket(0)][DialogOptions(7)]\
+Usernamesarespiders[end]\
+PyroJay[end]\
+Brodute[end]\
+Kaze[end]\
+Scuttlebug_Raiser[end]\
+Short_Mentions[end]\
+Pg 1[end]\
+Done learning about legends[end]\
+[DialogResponse(0)][JumpLink('Usernamesarespiders')]\
+[DialogResponse(1)][JumpLink('PyroJay')]\
+[DialogResponse(2)][JumpLink('Brodute')]\
+[DialogResponse(3)][JumpLink('Kaze')]\
+[DialogResponse(4)][JumpLink('Scuttlebug_Raiser')]\
+[DialogResponse(5)][JumpLink('Short_Mentions')]\
+[DialogResponse(6)][GotoRtrn(1)]\
+[GenericText()][AbtnNextBox()][MarioAction('ACT_IDLE')][TimeEndStr(0)]\
+[EndDialogBracket(0)][GotoRtrn(1)]"]
 
-Tomatobird8 = ["\n\
+Tomatobird8 = ["\
 legend status - absolute\n\
 dorrie status - lad\n\
 feats. Kept an almost perfect database of all\n\
@@ -38,68 +80,68 @@ hacks when sm64hacks fell and maintains it\n\
 to this day.\n\
 Held star road 130 and 80 star records.\n\
 Makes lit hacks\n\
-Subscribe today"]
+Subscribe today![AbtnNextBox()][Pop()]"]
 
-Aglab2 = ["\n\
+Aglab2 = ["\
 legend status - yes\n\
 dorrie status - yes\n\
 feats. Makes the best hacks. Makes custom code\n\
 that massively improves hacks for all.\n\
-Subscibble today"]
+Subscibble today![AbtnNextBox()][Pop()]"]
 
-LinCrash = ["\n\
+LinCrash = ["\
 legend status - legend\n\
 dorrie status - friend of dorrie's\n\
 feats. played and beat most extreme hacks.\n\
 extensive knowledge on rom hacks. A true OG.\n\
 Also makes lit hacks.\n\
-Subscribe today"]
+Subscribe today![AbtnNextBox()][Pop()]"]
 
-DarGos = ["\n\
+DarGos = ["\
 legend status - you already know\n\
 dorrie status - is dorrie\n\
 feats. epic TASer, epic hacker, epic youtuber,\n\
 epic all around.\n\
-subscribe today"]
+subscribe today![AbtnNextBox()][Pop()]"]
 
-SimpleFlips = ["\n\
+SimpleFlips = ["\
 legend status - did the cool LI jump\n\
 dorrie status - unknown\n\
 feats. Is probably the one reading this.\n\
 Spends hours on pointless things for swag points.\n\
 Has played this hack (probably)\n\
-You're probably already subscribed to his YT."]
+You're probably already subscribed to his YT.[AbtnNextBox()][Pop()]"]
 
-CeeSZee = ["\n\
+CSZ = ["\
 legend status - unit\n\
 dorrie status - dorrie\n\
 feats. hangs with the hottest dudes, drives the\n\
 flyist cars and drinks the coldest water.\n\
 lit TASer and lad.\n\
-subscribe"]
+subscribe[AbtnNextBox()][Pop()]"]
 
-usernamesarespiders = ["\n\
+Usernamesarespiders = ["\
 legend status - spider\n\
 dorrie status - spider\n\
 feats. is a spider. makes good hacks, especially\n\
 for a spider.\n\
-subscribe"]
+subscribe[AbtnNextBox()][Pop()]"]
 
-PyroJay = ["\n\
+PyroJay = ["\
 legend status - helped me on this hack\n\
 dorrie status - dorrie appreciator\n\
 feats. helped me on this hack.\n\
-subscribe"]
+subscribe[AbtnNextBox()][Pop()]"]
 
-Brodute = ["\n\
+Brodute = ["\
 legend status - creator of atar revenge\n\
 dorrie status - friend of all dorries\n\
 feats. wears hawaiin shirts, hates kaizo hacks\n\
 and speedrunners just the right amount.\n\
 makes fun hacks.\n\
-subscribe."]
+subscribe.[AbtnNextBox()][Pop()]"]
 
-Kaze = ["\n\
+Kaze = ["\
 legend status - can lift big weights\n\
 dorrie status - enemy of dorries\n\
 feats. continually dmca'd by the bored intern\n\
@@ -107,9 +149,9 @@ in nintendos legal department or just someone\n\
 pretending to he nintendo.\n\
 made every single rom hack of all time\n\
 managed to be the only hacker who has\n\
-abused dorrie."]
+abused dorrie.[AbtnNextBox()][Pop()]"]
 
-Scuttlebug_Raiser = ["\n\
+Scuttlebug_Raiser = ["\
 legend status - omitted\n\
 dorrie status - omitted\n\
 feats. Founder of the thriving and completely\n\
@@ -117,32 +159,32 @@ alive kirby64 hacking community. Made many\n\
 rom hacks of questionable quality (this one\n\
 included)\n\
 Creator of several sm64 hacking and kirby\n\
-hacking tools (download today)."]
+hacking tools (download today).[AbtnNextBox()][Pop()]"]
 
-Short_Mentions = ["\n\
+Short_Mentions = ["\
 Quills - Made an epic first hack ever for my\n\
 hacking comp. Also a lad.\n\
 Reonu - Another comp participant and cool\n\
-hacker.\n\
+hacker.[AbtnNextBox()]\
 AndrewSM64 - Play WSA today\n\
 Fazana - Creator of the most controversial\n\
-upgrade patch (I like it though)\n\
+upgrade patch (I like it though)[AbtnNextBox()]\
 Aloxado - Maintains decomp repo with the\n\
 most platform compatability, likes isabelle.\n\
 Drunkrazy - Cool speedrunning man who\n\
-probably wants a shoutout.\n\
+probably wants a shoutout.[AbtnNextBox()]\
 Mr. Comit - epic sex joke maker. creator of\n\
 ligma\n\
 prakxo - wanted a shoutout\n\
-Shin3 - haha kbr\n\
+Shin3 - haha kbr[AbtnNextBox()]\
 mint - hey put me in the scree shot too\n\
 a random player - ASA is hot garbage\n\
 KingToad64 - PRChase\n\
 someone2639 - another rpic kirby hacker.\n\
-creator of nothing64 2. follow him on soundcloud."]
+creator of nothing64 2. follow him on soundcloud.[AbtnNextBox()][Pop()]"]
 
 #how its made
-HowMade = ["\n\
+HowMade = ["\
 How its made, romhacking edition.\n\
 First the hacker starts out with nothing but\n\
 a blank copy of sm64. The hacker places his or\n\
