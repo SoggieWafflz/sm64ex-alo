@@ -332,6 +332,12 @@
     BC_PTR(dropletParams)
 
 
+const BehaviorScript bhvSpawnTE[] = {
+	BEGIN(OBJ_LIST_GENACTOR),
+	CALL_NATIVE(spawn_te_init),
+	DEACTIVATE(),
+};
+
 const BehaviorScript bhvStarDoor[] = {
     BEGIN(OBJ_LIST_SURFACE),
     SET_INT(oInteractType, INTERACT_DOOR),

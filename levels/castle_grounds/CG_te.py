@@ -1,6 +1,6 @@
 #OW dorrie
 OW_settings = ["[SetSpd(1)][FFSpd(-1)][EnBlip()][Pop()]"]
-OW_Box = ["[ShadedBGBox(0x18,0x120,0x04,0x50,0x20,0x20,0x20,0x80)][Pop()]"]
+OW_Box = ["[ShadedBGBox(0x18,0x120,0x08,0x50,0x20,0x20,0x20,0x80)][Pop()]"]
 
 OW_dorrie1 = ["[JumpLink('OW_settings')][JumpLink('OW_Box')]\
 Glad you made it out all right.[Pause(14)] It's practically\n\
@@ -33,9 +33,10 @@ free to ask me anytime.[AbtnNextBox()]\
 [MarioAction('ACT_IDLE')][AbtnEndStr()]"]
 
 #shoutout board
-Shoutouts = ["[JumpLink('OW_settings')][JumpLink('OW_Box')]List of absolute legends - paginated for\n\
-leisurely reading.[AbtnNextBox()][SetRtrn(1)]\
-[SetSpd(1)][TransAbs(32,140)]\
+Shoutouts = ["[JumpLink('OW_settings')][TransAbs(32,96)][ShadedBGBox(0x18,0x120,48,112,0x20,0x20,0x20,0x80)]\
+List of absolute legends - paginated for\n\
+leisurely reading.[AbtnNextBox()][SetRtrn(0)]\
+[SetSpd(-4)][NoFFSpd()][TransAbs(32,140)]\
 [ShadedBGBox(0x18,0x120,0x20,144,0x20,0x20,0x20,0x80)][DialogOptions(6)]\
 TomatoBird8[end]\
 Aglab2[end]\
@@ -44,7 +45,7 @@ DarGos[end]\
 SimpleFlips[end]\
 CSZ[end]\
 Pg 2[end]\
-[SetSpd(1)][ShadedBGBox(0x18,0x120,0x20,144,0x20,0x20,0x20,0x80)]\
+[ShadedBGBox(0x18,0x120,0x20,144,0x20,0x20,0x20,0x80)]\
 [TransAbs(32,127)]\
 [DialogResponse(0)][JumpLink('Tomatobird8')]\
 [DialogResponse(1)][JumpLink('Aglab2')]\
@@ -52,8 +53,11 @@ Pg 2[end]\
 [DialogResponse(3)][JumpLink('DarGos')]\
 [DialogResponse(4)][JumpLink('SimpleFlips')]\
 [DialogResponse(5)][JumpLink('CSZ')]\
-[DialogResponse(6)][TransAbs(32,140)]\
-[StartDialogBracket(0)][DialogOptions(7)]\
+[DialogResponse(6)]\
+[StartDialogBracket(0)][AutoNextBox()][SetRtrn(2)]\
+[ShadedBGBox(0x18,0x120,0x20,144,0x20,0x20,0x20,0x80)]\
+[TransAbs(32,140)]\
+[DialogOptions(7)]\
 Usernamesarespiders[end]\
 PyroJay[end]\
 Brodute[end]\
@@ -61,16 +65,18 @@ Kaze[end]\
 Scuttlebug_Raiser[end]\
 Short_Mentions[end]\
 Pg 1[end]\
-Done learning about legends[end]\
+Done learning about legends[end][ShadedBGBox(0x18,0x120,0x20,144,0x20,0x20,0x20,0x80)]\
+[TransAbs(32,127)]\
 [DialogResponse(0)][JumpLink('Usernamesarespiders')]\
 [DialogResponse(1)][JumpLink('PyroJay')]\
 [DialogResponse(2)][JumpLink('Brodute')]\
 [DialogResponse(3)][JumpLink('Kaze')]\
 [DialogResponse(4)][JumpLink('Scuttlebug_Raiser')]\
 [DialogResponse(5)][JumpLink('Short_Mentions')]\
-[DialogResponse(6)][GotoRtrn(1)]\
-[GenericText()][AbtnNextBox()][MarioAction('ACT_IDLE')][TimeEndStr(0)]\
-[EndDialogBracket(0)][GotoRtrn(1)]"]
+[DialogResponse(6)][GotoRtrn(0)]\
+[DialogResponse(7)][AutoNextBox()][MarioAction('ACT_IDLE')][TimeEndStr(0)]\
+[GenericText()][GotoRtrn(2)]\
+[EndDialogBracket(0)][GenericText()][GotoRtrn(0)]"]
 
 Tomatobird8 = ["\
 legend status - absolute\n\
@@ -134,7 +140,7 @@ feats. helped me on this hack.\n\
 subscribe[AbtnNextBox()][Pop()]"]
 
 Brodute = ["\
-legend status - creator of atar revenge\n\
+legend status - creator of star revenge\n\
 dorrie status - friend of all dorries\n\
 feats. wears hawaiin shirts, hates kaizo hacks\n\
 and speedrunners just the right amount.\n\
@@ -161,60 +167,62 @@ included)\n\
 Creator of several sm64 hacking and kirby\n\
 hacking tools (download today).[AbtnNextBox()][Pop()]"]
 
-Short_Mentions = ["\
+Short_Mentions = ["[AutoNextBox()][JumpLink('OW_Box')]\
 Quills - Made an epic first hack ever for my\n\
 hacking comp. Also a lad.\n\
 Reonu - Another comp participant and cool\n\
-hacker.[AbtnNextBox()]\
+hacker.[AbtnNextBox()][JumpLink('OW_Box')]\
 AndrewSM64 - Play WSA today\n\
 Fazana - Creator of the most controversial\n\
-upgrade patch (I like it though)[AbtnNextBox()]\
+upgrade patch (I like it though)[AbtnNextBox()][JumpLink('OW_Box')]\
 Aloxado - Maintains decomp repo with the\n\
 most platform compatability, likes isabelle.\n\
 Drunkrazy - Cool speedrunning man who\n\
-probably wants a shoutout.[AbtnNextBox()]\
+probably wants a shoutout.[AbtnNextBox()][JumpLink('OW_Box')]\
 Mr. Comit - epic sex joke maker. creator of\n\
 ligma\n\
 prakxo - wanted a shoutout\n\
-Shin3 - haha kbr[AbtnNextBox()]\
+Shin3 - haha kbr[AbtnNextBox()][JumpLink('OW_Box')]\
 mint - hey put me in the scree shot too\n\
-a random player - ASA is hot garbage\n\
+A Random Player - ASA is hot garbage\n\
 KingToad64 - PRChase\n\
 someone2639 - another rpic kirby hacker.\n\
 creator of nothing64 2. follow him on soundcloud.[AbtnNextBox()][Pop()]"]
 
 #how its made
-HowMade = ["\
-How its made, romhacking edition.\n\
+HowMade = ["[SetSpd(1)][FFSpd(-1)][TransAbs(32,127)]\
+[ShadedBGBox(0x18,0x120,0x20,144,0x20,0x20,0x20,0x80)]\
+[F*][F*]How its made, romhacking edition[F*][F*][Pause(24)]\n\
 First the hacker starts out with nothing but\n\
-a blank copy of sm64. The hacker places his or\n\
+a blank copy of sm64.[AbtnNextBox()][TransAbs(32,127)][ShadedBGBox(0x18,0x120,0x20,144,0x20,0x20,0x20,0x80)]\
+The hacker places his or\n\
 her copy of the nintendo classic into their\n\
-tool of choice to start the hack setup process.\n\
+tool of choice to start the hack setup process.[Pause(14)]\n\
 This particular hack was made using sm64\n\
-decomp. After the setup is done, our hacker\n\
+decomp.[Pause(14)] After the setup is done, our hacker\n\
 proceeded to steal all the level models from\n\
-brodute.\n\
-How is this possible you ask? Well a combination\n\
+brodute.[AbtnNextBox()][TransAbs(32,127)][ShadedBGBox(0x18,0x120,0x20,144,0x20,0x20,0x20,0x80)]\
+How is this possible you ask?[Pause(24)] Well a combination\n\
 of several new tools were used to perfectly\n\
 recreate all aspects of old levels in a way\n\
-that was easily editable for decomp.\n\
-First a port of the soutce game is made for\n\
-decomp using RM2C. Details can be found at your\n\
-local rom hacking forum. Once this process is\n\
+that was easily editable for decomp.[AbtnNextBox()][TransAbs(32,127)][ShadedBGBox(0x18,0x120,0x20,144,0x20,0x20,0x20,0x80)]\
+First a port of the source game is made for\n\
+decomp using RM2C.[Pause(20)] Details can be found at your\n\
+local rom hacking forum.[Pause(20)] Once this process is\n\
 complete our hacker now has access to all\n\
-models, textures, music and object placement\n\
-in C format allowing easy access, but that is\n\
-just the beginning.\n\
-Afterwards, using a special blender plugin,\n\
+models,[Pause(12)] textures,[Pause(12)] music[Pause(12)] and object placement\n\
+in C format allowing easy access,[Pause(14)] but that is\n\
+just the beginning.[AbtnNextBox()][TransAbs(32,127)][ShadedBGBox(0x18,0x120,0x20,144,0x20,0x20,0x20,0x80)]\
+Afterwards,[Pause(12)] using a special blender plugin,[Pause(12)]\n\
 these levels can be imported into blender\n\
 with near perfect recreation of\n\
 the C specification in a fast64 compliant\n\
-form. This allows our hacker to quickly and\n\
+form.[Pause(14)] This allows our hacker to quickly and\n\
 easily edit whats needed and export it back\n\
-right away.\n\
+right away.[AbtnNextBox()][TransAbs(32,127)][ShadedBGBox(0x18,0x120,0x20,144,0x20,0x20,0x20,0x80)]\
 Now you can combine and merge pieces from\n\
 any older hack with complete ease and with\n\
-almost no manual fixes required."]
+almost no manual fixes required.[AbtnNextBox()][MarioAction('ACT_IDLE')][TimeEndStr(0)]"]
 
 #second dorrie talk
 OW_dorrie2 = ["Ok champ, what do you need help with?\n\

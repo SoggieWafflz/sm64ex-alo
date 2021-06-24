@@ -1045,7 +1045,7 @@ s8 TE_box_transition(struct TEState *CurEng,u8 *str){
 s8 TE_jump_link_str(struct TEState *CurEng,u8 *str){
 	TE_print(CurEng);
 	CurEng->TempStr = segmented_to_virtual(TE_get_ptr(str,str));
-	CurEng->StrStack[CurEng->StackDepth+CurEng->StackLocked] = str+5;
+	CurEng->StrStack[CurEng->StackDepth] = str+5;
 	CurEng->StackDepth++;
 	CurEng->CurPos = 0;
 	return 1;
@@ -1053,7 +1053,7 @@ s8 TE_jump_link_str(struct TEState *CurEng,u8 *str){
 //ad cmd works
 s8 TE_pop_str(struct TEState *CurEng,u8 *str){
 	TE_print(CurEng);
-	CurEng->TempStr = CurEng->StrStack[CurEng->StackDepth+CurEng->StackLocked-1];
+	CurEng->TempStr = CurEng->StrStack[CurEng->StackDepth-1];
 	CurEng->StackDepth--;
 	CurEng->CurPos = 0;
 	return 1;

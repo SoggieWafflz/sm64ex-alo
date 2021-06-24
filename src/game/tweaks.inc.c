@@ -1,7 +1,7 @@
 //This is a series of defines to edit commonly changed parameters in romhacks
 //These are commonly referred to as tweaks
 
-#define MARIO_START_LIVES 4
+#define MARIO_START_LIVES 32
 #define INFINITE_LIVES 0
 #define START_LEVEL LEVEL_CASTLE_GROUNDS
 #define COINS_REQ_COINSTAR 100

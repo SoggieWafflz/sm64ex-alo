@@ -3,7 +3,8 @@
 
 #include "types.h"
 #include "game/moving_texture.h"
-
+//te strings
+#include "levels/castle_courtyard//IntroText_te.h"
 // geo
 extern const GeoLayout castle_courtyard_geo_000200[];
 extern const GeoLayout castle_courtyard_geo_000218[];
@@ -19,5 +20,7 @@ extern const struct MovtexQuadCollection castle_courtyard_movtex_star_statue_wat
 
 // script
 extern const LevelScript level_castle_courtyard_entry[];
+
+#include "levels/castle_courtyard/header.inc.h"
 
 #endif

@@ -139,7 +139,7 @@ void RunTextEngine(void){
 				//check char speed for neg
 				s16 TEspd = getTEspd(CurEng);
 				if(TEspd<0){
-					if(((CurVI*absi(TEspd)))>((CurEng->LastVI*absi(TEspd))+CharsThisFrame)){
+					if(((CurVI*absi(TEspd)))>=((CurEng->LastVI*absi(TEspd))+CharsThisFrame)){
 						//draw a new char
 						TE_add_new_char(CurEng,CurEng->LastVI);
 						CharsThisFrame++;
@@ -190,7 +190,7 @@ void TE_frame_init(struct TEState *CurEng){
 	CurEng->ScaleF[0] = 1.0f;
 	CurEng->ScaleF[1] = 1.0f;
 	CurEng->EnvColorWord =- 1;
-	CurEng->StackDepth = 0;
+	CurEng->StackDepth = CurEng->StackLocked;
 	CurEng->ShakeScreen = 0;
 	StrBuffer[CurEng->state][0] = 0xFF;
 }
