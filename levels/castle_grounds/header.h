@@ -3,8 +3,6 @@
 
 #include "types.h"
 #include "game/moving_texture.h"
-//te strings
-#include "levels/castle_grounds//CG_te.h"
 
 // geo
 extern const GeoLayout castle_grounds_geo_000660[];

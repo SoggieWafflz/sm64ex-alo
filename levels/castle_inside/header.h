@@ -4,7 +4,8 @@
 #include "types.h"
 #include "game/paintings.h"
 #include "game/moving_texture.h"
-
+//te strings
+#include "levels/castle_inside//CG_te.h"
 // geo
 extern const GeoLayout castle_geo_000F00[];
 extern const GeoLayout castle_geo_000F18[];

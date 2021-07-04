@@ -45,8 +45,8 @@ const GeoLayout castle_courtyard_area_1[] = {
 				GEO_CLOSE_NODE(),
 			GEO_CLOSE_NODE(),
 		GEO_CLOSE_NODE(),
-		GEO_DISPLAY_LIST(1, castle_courtyard_dl_material_revert_render_settings),
 		GEO_DISPLAY_LIST(4, castle_courtyard_dl_material_revert_render_settings),
+		GEO_DISPLAY_LIST(1, castle_courtyard_dl_material_revert_render_settings),
 	GEO_CLOSE_NODE(),
 	GEO_END(),
 };

@@ -18,6 +18,7 @@
 #include "game_init.h"
 #include "object_helpers.h"
 
+
 extern u8 gDialogCharWidths[256];
 extern struct MarioState *gMarioState;
 extern s16 sDelayedWarpOp;
@@ -78,6 +79,9 @@ void RunTextEngine(void){
 		//init TE state vars
 		CharsThisFrame = 1;
 		TE_frame_init(CurEng);
+		#if TE_DEBUG
+		TE_debug_print(CurEng);
+		#endif
 		//run until either the string ends or you need to wait to draw more chars.
 		loop:
 			CurChar = CurEng->TempStr[CurEng->CurPos];
@@ -445,4 +449,20 @@ u32 TE_get_ptr(u8 *strArgs,u8 *str){
 	u32 *ptr =  segmented_to_virtual(*Ptrptr);
 	return ptr[ptrID];
 }
+
+#if TE_DEBUG
+void TE_debug_print(struct TEState *CurEng){
+	u8 buf[32];
+	if (gPlayer1Controller->buttonDown&L_TRIG){
+		sprintf(buf,"str %x",CurEng->OgStr);
+		print_text(32,32,buf);
+	}
+	
+	
+	
+	
+}
+#endif
+
+
 #endif
