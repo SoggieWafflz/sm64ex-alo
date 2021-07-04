@@ -115,7 +115,7 @@ def Write(out,header,Test,name):
 	E='char %s[] = {\n'%name
 	Z = 'u32 %s[] = {\n'%(name+'_ptrlist')
 	cmt = "/* %s interpreted string\n"%name
-	h.write('extern char %s[];\n'%name)
+	header.write('extern char %s[];\n'%name)
 	for cmd in Test:
 		iter=0
 		while(iter<len(cmd)):
@@ -188,6 +188,7 @@ if __name__ == "__main__":
 			globals()[k] = Make(*v)
 		s = [a for a in f.__dict__ if type(a) == str and '__' not in a]
 		s = [[f.__dict__.get(a),a] for a in s]
+		h.write('#include "src/game/text_engine.h";\n')
 		for a in s:
 			if a[0]:
 				Place = 0

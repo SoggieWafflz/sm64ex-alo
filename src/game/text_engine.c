@@ -32,12 +32,31 @@ u32 TimerBuffer[NumEngines][64];
 u8 UserInputs[NumEngines][16][16]; //16 length 16 strings
 //object array
 u32 FunctionReturns[NumEngines][8];
-
+static struct TEState *AccessEngine; //for outside functions to access
+//during callback functions
 
 //my char and ptr arrays
 #include "src/game/Keyboard_te.py"
 #include "src/game/TE_strings.inc.h"
 
+//SR11 specific funcs
+u32 PrintAnswer(void){
+	
+}
+u32 DetermineAnswer(u8 answer){
+	if(AccessEngine->ReturnedDialog == answer)
+		return 1;
+	else
+		return 0;
+}
+u32 DamageAnswer(u8 answer){
+	if(AccessEngine->ReturnedDialog == answer)
+		return 1;
+	else{
+		gMarioState->health-=0x0300;
+		return 0;
+	}
+}
 
 void SetupTextEngine(s16 x, s16 y, u8 *str, u8 state){
 	TE_flush_eng(&TE_Engines[state]);
@@ -65,6 +84,7 @@ void RunTextEngine(void){
 	u8 *str;
 	for(i=0;i<NumEngines;i++){
 		CurEng = &TE_Engines[i];
+		AccessEngine = &CurEng;
 		if (CurEng->OgStr==0){
 			continue;
 		}

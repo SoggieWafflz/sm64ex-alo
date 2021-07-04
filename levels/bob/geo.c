@@ -12,7 +12,7 @@
 #include "make_const_nonconst.h"
 
 #include "levels/bob/header.h"
-
+#include "levels/bob/SR11_quiz_1_te.py"
 #include "levels/bob/chain_chomp_gate/geo.inc.c"
 #include "levels/bob/seesaw_platform/geo.inc.c"
 #include "levels/bob/grate_door/geo.inc.c"

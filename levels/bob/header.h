@@ -3,6 +3,9 @@
 
 #include "types.h"
 
+//te strings
+#include "levels/bob//SR11_quiz_1_te.h"
+
 // geo
 extern const GeoLayout bob_geo_000440[];
 extern const GeoLayout bob_geo_000458[];
