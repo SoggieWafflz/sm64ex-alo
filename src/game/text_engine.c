@@ -41,7 +41,7 @@ static struct TEState *AccessEngine; //for outside functions to access
 
 //SR11 specific funcs
 u32 PrintAnswer(void){
-	
+	return gCurrentArea->index;
 }
 u32 DetermineAnswer(u8 answer){
 	if(AccessEngine->ReturnedDialog == answer)
@@ -84,7 +84,7 @@ void RunTextEngine(void){
 	u8 *str;
 	for(i=0;i<NumEngines;i++){
 		CurEng = &TE_Engines[i];
-		AccessEngine = &CurEng;
+		AccessEngine = CurEng;
 		if (CurEng->OgStr==0){
 			continue;
 		}
@@ -475,7 +475,11 @@ void TE_debug_print(struct TEState *CurEng){
 	u8 buf[32];
 	if (gPlayer1Controller->buttonDown&L_TRIG){
 		sprintf(buf,"str %x",CurEng->OgStr);
+		print_text(32,64,buf);
+		sprintf(buf,"stack %x",&CurEng->StrStack);
 		print_text(32,32,buf);
+		sprintf(buf,"dialog %x",&CurEng->ReturnedDialog);
+		print_text(32,128,buf);
 	}
 	
 	

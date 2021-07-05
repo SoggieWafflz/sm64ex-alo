@@ -30,19 +30,20 @@ perfect tool to convert any binary hack to\n\
 decomp automagically![RQ][AbtnNextBox()][JumpLink('OW_Box')]\
 If you need any hints about the levels feel\n\
 free to ask me anytime.[AbtnNextBox()]\
-[MarioAction('ACT_IDLE')][AbtnEndStr()]"]
+[MarioAction('ACT_IDLE')][TimeEndStr(0)]"]
 
 #shoutout board
 Shoutouts = ["[JumpLink('OW_settings')][TransAbs(32,96)][ShadedBGBox(0x18,0x120,48,112,0x20,0x20,0x20,0x80)]\
 List of absolute legends - paginated for\n\
 leisurely reading.[AbtnNextBox()][SetRtrn(0)]\
 [SetSpd(-4)][NoFFSpd()][TransAbs(32,140)]\
-[ShadedBGBox(0x18,0x120,0x20,144,0x20,0x20,0x20,0x80)][DialogOptions(6)]\
+[ShadedBGBox(0x18,0x120,0x20,144,0x20,0x20,0x20,0x80)][DialogOptions(7)]\
 TomatoBird8[end]\
 Aglab2[end]\
 LinCrash[end]\
 DarGos[end]\
 SimpleFlips[end]\
+CSZ[end]\
 CSZ[end]\
 Pg 2[end]\
 [ShadedBGBox(0x18,0x120,0x20,144,0x20,0x20,0x20,0x80)]\
@@ -51,9 +52,10 @@ Pg 2[end]\
 [DialogResponse(1)][JumpLink('Aglab2')]\
 [DialogResponse(2)][JumpLink('LinCrash')]\
 [DialogResponse(3)][JumpLink('DarGos')]\
-[DialogResponse(4)][JumpLink('SimpleFlips')]\
+[DialogResponse(4)][JumpLink('Mushie')]\
 [DialogResponse(5)][JumpLink('CSZ')]\
-[DialogResponse(6)]\
+[DialogResponse(6)][JumpLink('Infvoid')]\
+[DialogResponse(7)]\
 [StartDialogBracket(0)][AutoNextBox()][SetRtrn(2)]\
 [ShadedBGBox(0x18,0x120,0x20,144,0x20,0x20,0x20,0x80)]\
 [TransAbs(32,140)]\
@@ -77,6 +79,15 @@ Done learning about legends[end][ShadedBGBox(0x18,0x120,0x20,144,0x20,0x20,0x20,
 [DialogResponse(7)][AutoNextBox()][MarioAction('ACT_IDLE')][TimeEndStr(0)]\
 [GenericText()][GotoRtrn(2)]\
 [EndDialogBracket(0)][GenericText()][GotoRtrn(0)]"]
+
+Infvoid = ["\
+legend status - void\n\
+dorrie status - void\n\
+feats. Speedruns almost all Star Revenge Games\n\
+God of SR2.5\n\
+Leader of the Harm Police\n\
+Hosts SRM\n\
+Subscribe today![AbtnNextBox()][Pop()]"]
 
 Tomatobird8 = ["\
 legend status - absolute\n\
@@ -110,13 +121,12 @@ feats. epic TASer, epic hacker, epic youtuber,\n\
 epic all around.\n\
 subscribe today![AbtnNextBox()][Pop()]"]
 
-SimpleFlips = ["\
-legend status - did the cool LI jump\n\
+Mushie = ["\
+legend status - made birthday 64\n\
 dorrie status - unknown\n\
 feats. Is probably the one reading this.\n\
-Spends hours on pointless things for swag points.\n\
-Has played this hack (probably)\n\
-You're probably already subscribed to his YT.[AbtnNextBox()][Pop()]"]
+Only person in the universe who still runs LI.\n\
+Do not subscribe under any circumstance.[AbtnNextBox()][Pop()]"]
 
 CSZ = ["\
 legend status - unit\n\

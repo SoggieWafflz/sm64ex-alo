@@ -1,4 +1,4 @@
-const Collision bob_area_1_collision[] = {
+const Collision bob_area_4_collision[] = {
 	COL_INIT(),
 	COL_VERTEX_INIT(16),
 	COL_VERTEX(425, -43, 250),

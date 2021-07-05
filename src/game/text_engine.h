@@ -2,7 +2,7 @@
 #define TEXT_ENGINE_H
 
 #include <PR/ultratypes.h>
-#define TE_DEBUG 0
+#define TE_DEBUG 1
 #define NumEngines 3
 struct Transition{
 	/* 0xD0 */ s32 TransVI; //the start of the transition, for the end of a box

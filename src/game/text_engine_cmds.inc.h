@@ -827,7 +827,7 @@ s8 TE_enable_dialog_options(struct TEState *CurEng,u8 *str){
 	u8 arrow = 0x9E;
 	TE_print(CurEng);
 	CurEng->TempY -= 0xD;
-	CurEng->TempYOrigin -= 0xD;
+	CurEng->TempYOrigin = CurEng->TempY;
 	CurEng->TempXOrigin -= 1;
 	CurEng->NumDialogs = str[1];
 	if(CurEng->DialogEnd != 0){
@@ -918,7 +918,7 @@ s8 TE_start_bracket(struct TEState *CurEng,u8 *str){
 	return 1;
 }
 //95 cmd works
-u8 * TE_mask_nested_dialog_option(struct TEState *CurEng,u8 *str){
+u8 *TE_mask_nested_dialog_option(struct TEState *CurEng,u8 *str){
 	u8 key = str[1];
 	str += 2;
 	CurEng->TempStr += 2;
@@ -1006,7 +1006,7 @@ s8 TE_call_loop(struct TEState *CurEng,u8 *str){
 //a2 cmd works
 s8 TE_function_response(struct TEState *CurEng,u8 *str){
 	u32 key = FunctionReturns[CurEng->state][str[1]];
-	if(key == TE_get_u32(str+2)){
+	if(key == TE_get_u32(str+1)){
 		return TE_advBlen(CurEng,6);
 	}else{
 		str += 6;
@@ -1019,8 +1019,8 @@ s8 TE_function_response(struct TEState *CurEng,u8 *str){
 				CurEng->TempStr += 1;
 			}else{
 				key = FunctionReturns[CurEng->state][str[1]];
-				if(key == TE_get_u32(str+2)){
-					return TE_advBlen(CurEng,2);
+				if(key == TE_get_u32(str+1)){
+					return TE_advBlen(CurEng,6);
 				}else{
 					str += 6;
 					CurEng->TempStr += 6;
@@ -1055,6 +1055,14 @@ s8 TE_pop_str(struct TEState *CurEng,u8 *str){
 	TE_print(CurEng);
 	CurEng->TempStr = CurEng->StrStack[CurEng->StackDepth-1];
 	CurEng->StackDepth--;
+	//if you pop after a new box, you will lose  your jump and break
+	//the chain of jump/pop, therefore you have to start a new box
+	if(CurEng->StackDepth<CurEng->StackLocked){
+		CurEng->OgStr = CurEng->TempStr;
+		CurEng->StackLocked = CurEng->StackDepth;
+		CurEng->StrEnd = 0;
+		return -1;
+	}
 	CurEng->CurPos = 0;
 	return 1;
 }

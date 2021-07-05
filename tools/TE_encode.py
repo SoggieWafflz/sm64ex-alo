@@ -53,8 +53,8 @@ Funcs = {
 	'BtnBranchClose':(0x76,),
 	'EnBlip':(0x76,),
 	'DisBlip':(0x77,),
-	'KeepNewMusic':(0x78,),
-	'SetMusic':(0x79,B),
+	'PersistMusic':(0x78,),
+	'PlayMusic':(0x79,B),
 	'ClearBuffer':(0x7A,),
 	'AbtnEndStr':(0x7B,),
 	'TimeEndStr':(0x7C,H),
@@ -87,7 +87,7 @@ Funcs = {
 	'StartBoxTransition':(0x9C,B,B,B,B),
 	'CallOnce':(0xA0,B,p,B,z),
 	'CallLoop':(0xA1,B,p,B,z),
-	'MatchReturn':(0xA2,B,l),
+	'MatchRtrn':(0xA2,B,l),
 	'MarioAction':(0xA6,p),
 	'JumpLink':(0xAC,p),
 	'Pop':(0xAD,),
@@ -190,7 +190,7 @@ if __name__ == "__main__":
 		s = [[f.__dict__.get(a),a] for a in s]
 		h.write('#include "src/game/text_engine.h";\n')
 		for a in s:
-			if a[0]:
+			if type(a)==list and a[0]:
 				Place = 0
 				Ptrs = []
 				Write(o,h,*a)
