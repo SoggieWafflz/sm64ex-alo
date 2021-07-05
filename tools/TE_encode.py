@@ -188,7 +188,7 @@ if __name__ == "__main__":
 			globals()[k] = Make(*v)
 		s = [a for a in f.__dict__ if type(a) == str and '__' not in a]
 		s = [[f.__dict__.get(a),a] for a in s]
-		h.write('#include "src/game/text_engine.h";\n')
+		h.write('#include "src/game/text_engine.h"\n')
 		for a in s:
 			if type(a)==list and a[0]:
 				Place = 0

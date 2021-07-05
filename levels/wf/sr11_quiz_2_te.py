@@ -29,15 +29,15 @@ Quiz21_Handle = [
 ]
 
 Q21 = ["[SetRtrn(2)]Question One:\n\
-[PlayMusic(6)][PersistMusic()]\
+[PlayMusic(0x11)][PersistMusic()]\
 This frightful song is home to dungeon\n\
 exploration game, pokemon mystery dungeon.[DialogOptions(3)]\
-Forest of Fear- Explorers of Sky[end]\
-Steam Cave - Explorers of Time[end]\
-Sinister Woods - Red Rescue Team[end]\
+Floating Gardens - Star Revenge 0[end]\
+Frosty Water Park - Star Revenge 4.5[end]\
+Forgotten Cove of Fiore - Star Revenge 5[end]\
 Hint[end]\
 [DialogResponse(3)]\
-This song is used in Star Revenge 6.25 bowser 1\
+This song is from Sonic Mania.\
 [AbtnNextBox()][SetSpd(0)][FFSpd(0)][GotoRtrn(2)]",
 #question was answered
 "[GenericText()][JumpLink('Q2_Settings')][Pop()]"]
@@ -50,25 +50,24 @@ Quiz22_Handle = [
 #question
 "[JumpLink('Q22')]",
 #question was answered, handle response
-"[CallLoop(0,'DetermineAnswer',1,[1])]\
+"[CallLoop(0,'DetermineAnswer',1,[2])]\
 [MatchRtrn(0,1)][JumpLink('Q2_right')]\
 [MatchRtrn(0,0)][JumpLink('Q2_wrong')]\
 [GenericText()]\
-[CallOnce(1,'DamageAnswer',1,[1])]\
+[CallOnce(1,'DamageAnswer',1,[2])]\
 [TriggerWarp(1,0x11)][Jump('Q2_End')]"
 ]
 
 Q22 =["[SetRtrn(2)]Question Two:\n\
-[PlayMusic(8)][PersistMusic()]\
-You can't have Star Revenge without Sonic songs.\n\
-Almost all games have seen use at\n\
-least once, and for good reason.[DialogOptions(3)]\
-Stardust Speedway - Sonic Mania[end]\
-Mystic Cave Zone- Sonic the Hedgehog 2[end]\
-Metallic Madness Present - Sonic CD JP[end]\
+[PlayMusic(0x13)][PersistMusic()]\
+Another common source game, many of the recent.\n\
+star revenge games share songs from this title.[DialogOptions(3)]\
+Ocher Dunes Canyon - Star Revenge 1.5[end]\
+Abheinn Factory - Star Revenge 3[end]\
+Forgotten Lands I - Star Revenge 2.5[end]\
 Hint[end]\
 [DialogResponse(3)]\
-This comes from Star Revenge 5 course 4\
+This song originates from M&L Partners in Time.\
 [AbtnNextBox()][SetSpd(0)][FFSpd(0)][GotoRtrn(2)]",
 #question was answered
 "[GenericText()][JumpLink('Q2_Settings')][Pop()]"]
@@ -90,15 +89,16 @@ Quiz23_Handle = [
 ]
 
 Q23 = ["[SetRtrn(2)]Question Three:\n\
-[PlayMusic(9)][PersistMusic()]\
-A song remixed to death and back. A\n\
-mario classic.[DialogOptions(3)]\
-Athletic Theme - Super Mario World *[end]\
-Underground Theme - Super Mario Bros.[end]\
-Overworld - Super Mario Bros. 2[end]\
+[PlayMusic(0x14)][PersistMusic()]\
+The goto when you need some abstract sky or sea\n\
+type of feel. Used in too many hacks.[DialogOptions(3)]\
+Tower of Hope - Star Revenge Redone[end]\
+Sea Fortress Mizu - Star Revenge 7[end]\
+Borderline Valley - Star Revenge 2: TTM[end]\
 Hint[end]\
 [DialogResponse(3)]\
-From Star Revenge 1 course 2\
+From the level everyone hates in \n\
+Super Mario Sunshine.\
 [AbtnNextBox()][SetSpd(0)][FFSpd(0)][GotoRtrn(2)]",
 #question was answered
 "[GenericText()][JumpLink('Q2_Settings')][Pop()]"]
@@ -111,26 +111,25 @@ Quiz24_Handle = [
 #question
 "[JumpLink('Q24')]",
 #question was answered, handle response
-"[CallLoop(0,'DetermineAnswer',1,[0])]\
+"[CallLoop(0,'DetermineAnswer',1,[1])]\
 [MatchRtrn(0,1)][JumpLink('Q2_right')]\
 [MatchRtrn(0,0)][JumpLink('Q2_wrong')]\
 [GenericText()]\
-[CallOnce(1,'DamageAnswer',1,[0])]\
+[CallOnce(1,'DamageAnswer',1,[1])]\
 [TriggerWarp(1,0x11)][Jump('Q2_End')]"
 ]
 
 Q24 = ["[SetRtrn(2)]Question Four:\n\
-[PlayMusic(0xC)][PersistMusic()]\
-Our final question. A theme filled with\n\
-horror and crushed dreams.[DialogOptions(3)]\
-Crocodile Cacophony - Donkey Kong Country[end]\
-Riddle Tower - Paper Mario TTYD[end]\
-Twilight - Zelda Twlight Princess[end]\
+[PlayMusic(0x19)][PersistMusic()]\
+A theme anyone with taste would recognize.\n\
+Shame on you if you don't know this.[DialogOptions(3)]\
+Sanctuary of Sealing - Star Revenge 3.5[end]\
+Abyss of Purple Pinkness - Star Revenge 5.5[end]\
+Scarlet Forest - Star Revenge 6.25[end]\
 Hint[end]",
 #hint
 "[DialogResponse(3)]\
-From BroDutes favorite hack, Night of\n\
-Doom course 15\
+Phantons Favorite.\
 [AbtnNextBox()][SetSpd(0)][FFSpd(0)][GotoRtrn(2)]",
 #question was answered
 "[GenericText()][JumpLink('Q2_Settings')][Pop()]"]
@@ -138,15 +137,15 @@ Doom course 15\
 #Question Wrong
 Q2_wrong = ["Oh thats too bad. The answer was actually\n\
 [CallLoop(2,'PrintAnswer',0,[])]\
-[MatchRtrn(2,1)]Forest of Fear\
-[MatchRtrn(2,2)]Mystic Cave\
-[MatchRtrn(2,3)]Athletic Theme\
-[MatchRtrn(2,4)]Crocodile Cacophony\
-[GenericText()]. You'll have to do this next\n\
-level with three less health now. Good luck.[AbtnNextBox()]\
+[MatchRtrn(2,1)]Floating Gardens - Star Revenge 0.\n\
+[MatchRtrn(2,2)]Forgotten Lands I - Star Revenge 2.5.\n\
+[MatchRtrn(2,3)]Tower of Hope - Star Revenge Redone.\n\
+[MatchRtrn(2,4)]Abyss of Purple Pinkness - Star Revenge 5.5.\n\
+[GenericText()]Hopefully you brighten up soon, or\n\
+you will die a painful dying death.[AbtnNextBox()]\
 [Pop()]"]
 
 #Question right
-Q2_right = ["Correct! Quite the noggin on this one, or\n\
-ear I should say. Good luck on the next level.\
+Q2_right = ["Excellent! You have proven yourself knowledgeable\n\
+and have earned the respect of your peers.\
 [AbtnNextBox()][Pop()]"]

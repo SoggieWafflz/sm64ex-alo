@@ -33,7 +33,7 @@ Q11 = ["[SetRtrn(2)]Question One:\n\
 [PlayMusic(6)][PersistMusic()]\
 This frightful song is home to dungeon\n\
 exploration game, pokemon mystery dungeon.[DialogOptions(3)]\
-Forest of Fear- Explorers of Sky[end]\
+Forest of Fear - Explorers of Sky[end]\
 Steam Cave - Explorers of Time[end]\
 Sinister Woods - Red Rescue Team[end]\
 Hint[end]\
