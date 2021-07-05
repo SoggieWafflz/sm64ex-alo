@@ -3,7 +3,7 @@
 const GeoLayout ccm_area_4_geo[] = {
 	GEO_NODE_START(),
 	GEO_OPEN_NODE(),
-		GEO_TRANSLATE_NODE_WITH_DL(1, 942, 207, 0, ccm_dl_Cube_022_mesh_layer_1),
+		GEO_TRANSLATE_NODE_WITH_DL(1, 1698, 4273, -601, ccm_dl_Cube_022_mesh_layer_1),
 		GEO_TRANSLATE_NODE_WITH_DL(1, -967, 207, 0, ccm_dl_Cube_023_mesh_layer_1),
 	GEO_CLOSE_NODE(),
 	GEO_RETURN(),
