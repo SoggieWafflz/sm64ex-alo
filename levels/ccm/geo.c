@@ -12,7 +12,7 @@
 #include "make_const_nonconst.h"
 
 #include "levels/ccm/header.h"
-
+#include "levels/ccm/SR11_quiz_3_te.py"
 #include "levels/ccm/ropeway_lift/geo.inc.c"
 #include "levels/ccm/snowman_base/geo.inc.c"
 #include "levels/ccm/snowman_head/geo.inc.c"
@@ -23,3 +23,4 @@
 #include "levels/ccm/areas/1/10/geo.inc.c"
 #include "levels/ccm/areas/1/geo.inc.c"
 #include "levels/ccm/areas/2/geo.inc.c"
+#include "levels/ccm/geo.inc.c"

@@ -5709,6 +5709,116 @@ Gfx castle_inside_dl_Cylinder_mesh_layer_1_tri_1[] = {
 	gsSPEndDisplayList(),
 };
 
+Vtx castle_inside_dl_Cylinder_001_mesh_layer_1_vtx_0[20] = {
+	{{{-190, 0, -575},0, {-16, 4080},{0x76, 0x38, 0x16, 0xFF}}},
+	{{{-135, 258, -410},0, {1008, 4080},{0xCA, 0x85, 0x5F, 0xFF}}},
+	{{{348, 258, -255},0, {1008, -16},{0xCA, 0x85, 0x5F, 0xFF}}},
+	{{{488, 0, -358},0, {-16, -16},{0x76, 0x38, 0x16, 0xFF}}},
+	{{{488, 0, -358},0, {-16, 4080},{0x76, 0x38, 0x16, 0xFF}}},
+	{{{348, 258, -255},0, {1008, 4080},{0xCA, 0x85, 0x5F, 0xFF}}},
+	{{{350, 258, 252},0, {1008, -16},{0xCA, 0x85, 0x5F, 0xFF}}},
+	{{{491, 0, 354},0, {-16, -16},{0x76, 0x38, 0x16, 0xFF}}},
+	{{{491, 0, 354},0, {-16, 4080},{0x76, 0x38, 0x16, 0xFF}}},
+	{{{350, 258, 252},0, {1008, 4080},{0xCA, 0x85, 0x5F, 0xFF}}},
+	{{{-132, 258, 411},0, {1008, -16},{0xCA, 0x85, 0x5F, 0xFF}}},
+	{{{-185, 0, 577},0, {-16, -16},{0x76, 0x38, 0x16, 0xFF}}},
+	{{{-185, 0, 577},0, {-16, 4080},{0x76, 0x38, 0x16, 0xFF}}},
+	{{{-132, 258, 411},0, {1008, 4080},{0xCA, 0x85, 0x5F, 0xFF}}},
+	{{{-431, 258, 2},0, {1008, -16},{0xCA, 0x85, 0x5F, 0xFF}}},
+	{{{-605, 0, 3},0, {-16, -16},{0x76, 0x38, 0x16, 0xFF}}},
+	{{{-605, 0, 3},0, {-16, 4080},{0x76, 0x38, 0x16, 0xFF}}},
+	{{{-431, 258, 2},0, {1008, 4080},{0xCA, 0x85, 0x5F, 0xFF}}},
+	{{{-135, 258, -410},0, {1008, -16},{0xCA, 0x85, 0x5F, 0xFF}}},
+	{{{-190, 0, -575},0, {-16, -16},{0x76, 0x38, 0x16, 0xFF}}},
+};
+
+Gfx castle_inside_dl_Cylinder_001_mesh_layer_1_tri_0[] = {
+	gsSPVertex(castle_inside_dl_Cylinder_001_mesh_layer_1_vtx_0 + 0, 16, 0),
+	gsSP1Triangle(0, 1, 2, 0),
+	gsSP1Triangle(0, 2, 3, 0),
+	gsSP1Triangle(4, 5, 6, 0),
+	gsSP1Triangle(4, 6, 7, 0),
+	gsSP1Triangle(8, 9, 10, 0),
+	gsSP1Triangle(8, 10, 11, 0),
+	gsSP1Triangle(12, 13, 14, 0),
+	gsSP1Triangle(12, 14, 15, 0),
+	gsSPVertex(castle_inside_dl_Cylinder_001_mesh_layer_1_vtx_0 + 16, 4, 0),
+	gsSP1Triangle(0, 1, 2, 0),
+	gsSP1Triangle(0, 2, 3, 0),
+	gsSPEndDisplayList(),
+};
+
+Vtx castle_inside_dl_Cylinder_001_mesh_layer_1_vtx_1[5] = {
+	{{{350, 258, 252},0, {2163, 177},{0xCA, 0x85, 0x5F, 0xFF}}},
+	{{{348, 258, -255},0, {581, -337},{0xCA, 0x85, 0x5F, 0xFF}}},
+	{{{-135, 258, -410},0, {-396, 1008},{0xCA, 0x85, 0x5F, 0xFF}}},
+	{{{-132, 258, 411},0, {2163, 1839},{0xCA, 0x85, 0x5F, 0xFF}}},
+	{{{-431, 258, 2},0, {581, 2353},{0xCA, 0x85, 0x5F, 0xFF}}},
+};
+
+Gfx castle_inside_dl_Cylinder_001_mesh_layer_1_tri_1[] = {
+	gsSPVertex(castle_inside_dl_Cylinder_001_mesh_layer_1_vtx_1 + 0, 5, 0),
+	gsSP1Triangle(0, 1, 2, 0),
+	gsSP1Triangle(2, 3, 0, 0),
+	gsSP1Triangle(2, 4, 3, 0),
+	gsSPEndDisplayList(),
+};
+
+Vtx castle_inside_dl_Cylinder_002_mesh_layer_1_vtx_0[20] = {
+	{{{-190, 0, -575},0, {-16, 4080},{0xB, 0x23, 0x40, 0xFF}}},
+	{{{-135, 258, -410},0, {1008, 4080},{0x64, 0x96, 0xD3, 0xFF}}},
+	{{{348, 258, -255},0, {1008, -16},{0x64, 0x96, 0xD3, 0xFF}}},
+	{{{488, 0, -358},0, {-16, -16},{0xB, 0x23, 0x40, 0xFF}}},
+	{{{488, 0, -358},0, {-16, 4080},{0xB, 0x23, 0x40, 0xFF}}},
+	{{{348, 258, -255},0, {1008, 4080},{0x64, 0x96, 0xD3, 0xFF}}},
+	{{{350, 258, 252},0, {1008, -16},{0x64, 0x96, 0xD3, 0xFF}}},
+	{{{491, 0, 354},0, {-16, -16},{0xB, 0x23, 0x40, 0xFF}}},
+	{{{491, 0, 354},0, {-16, 4080},{0xB, 0x23, 0x40, 0xFF}}},
+	{{{350, 258, 252},0, {1008, 4080},{0x64, 0x96, 0xD3, 0xFF}}},
+	{{{-132, 258, 411},0, {1008, -16},{0x64, 0x96, 0xD3, 0xFF}}},
+	{{{-185, 0, 577},0, {-16, -16},{0xB, 0x23, 0x40, 0xFF}}},
+	{{{-185, 0, 577},0, {-16, 4080},{0xB, 0x23, 0x40, 0xFF}}},
+	{{{-132, 258, 411},0, {1008, 4080},{0x64, 0x96, 0xD3, 0xFF}}},
+	{{{-431, 258, 2},0, {1008, -16},{0x64, 0x96, 0xD3, 0xFF}}},
+	{{{-605, 0, 3},0, {-16, -16},{0xB, 0x23, 0x40, 0xFF}}},
+	{{{-605, 0, 3},0, {-16, 4080},{0xB, 0x23, 0x40, 0xFF}}},
+	{{{-431, 258, 2},0, {1008, 4080},{0x64, 0x96, 0xD3, 0xFF}}},
+	{{{-135, 258, -410},0, {1008, -16},{0x64, 0x96, 0xD3, 0xFF}}},
+	{{{-190, 0, -575},0, {-16, -16},{0xB, 0x23, 0x40, 0xFF}}},
+};
+
+Gfx castle_inside_dl_Cylinder_002_mesh_layer_1_tri_0[] = {
+	gsSPVertex(castle_inside_dl_Cylinder_002_mesh_layer_1_vtx_0 + 0, 16, 0),
+	gsSP1Triangle(0, 1, 2, 0),
+	gsSP1Triangle(0, 2, 3, 0),
+	gsSP1Triangle(4, 5, 6, 0),
+	gsSP1Triangle(4, 6, 7, 0),
+	gsSP1Triangle(8, 9, 10, 0),
+	gsSP1Triangle(8, 10, 11, 0),
+	gsSP1Triangle(12, 13, 14, 0),
+	gsSP1Triangle(12, 14, 15, 0),
+	gsSPVertex(castle_inside_dl_Cylinder_002_mesh_layer_1_vtx_0 + 16, 4, 0),
+	gsSP1Triangle(0, 1, 2, 0),
+	gsSP1Triangle(0, 2, 3, 0),
+	gsSPEndDisplayList(),
+};
+
+Vtx castle_inside_dl_Cylinder_002_mesh_layer_1_vtx_1[5] = {
+	{{{350, 258, 252},0, {2163, 177},{0x64, 0x96, 0xD3, 0xFF}}},
+	{{{348, 258, -255},0, {581, -337},{0x64, 0x96, 0xD3, 0xFF}}},
+	{{{-135, 258, -410},0, {-396, 1008},{0x64, 0x96, 0xD3, 0xFF}}},
+	{{{-132, 258, 411},0, {2163, 1839},{0x64, 0x96, 0xD3, 0xFF}}},
+	{{{-431, 258, 2},0, {581, 2353},{0x64, 0x96, 0xD3, 0xFF}}},
+};
+
+Gfx castle_inside_dl_Cylinder_002_mesh_layer_1_tri_1[] = {
+	gsSPVertex(castle_inside_dl_Cylinder_002_mesh_layer_1_vtx_1 + 0, 5, 0),
+	gsSP1Triangle(0, 1, 2, 0),
+	gsSP1Triangle(2, 3, 0, 0),
+	gsSP1Triangle(2, 4, 3, 0),
+	gsSPEndDisplayList(),
+};
+
 Gfx mat_castle_inside_dl_WALLS[] = {
 	gsDPPipeSync(),
 	gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, ENVIRONMENT, TEXEL0, 0, SHADE, 0, 0, 0, 0, ENVIRONMENT),
@@ -6062,6 +6172,26 @@ Gfx castle_inside_dl_Cylinder_mesh_layer_1[] = {
 	gsSPDisplayList(mat_revert_castle_inside_dl_warp_ow_siide),
 	gsSPDisplayList(mat_castle_inside_dl_WarpOW_plat),
 	gsSPDisplayList(castle_inside_dl_Cylinder_mesh_layer_1_tri_1),
+	gsSPDisplayList(mat_revert_castle_inside_dl_WarpOW_plat),
+	gsSPEndDisplayList(),
+};
+
+Gfx castle_inside_dl_Cylinder_001_mesh_layer_1[] = {
+	gsSPDisplayList(mat_castle_inside_dl_warp_ow_siide),
+	gsSPDisplayList(castle_inside_dl_Cylinder_001_mesh_layer_1_tri_0),
+	gsSPDisplayList(mat_revert_castle_inside_dl_warp_ow_siide),
+	gsSPDisplayList(mat_castle_inside_dl_WarpOW_plat),
+	gsSPDisplayList(castle_inside_dl_Cylinder_001_mesh_layer_1_tri_1),
+	gsSPDisplayList(mat_revert_castle_inside_dl_WarpOW_plat),
+	gsSPEndDisplayList(),
+};
+
+Gfx castle_inside_dl_Cylinder_002_mesh_layer_1[] = {
+	gsSPDisplayList(mat_castle_inside_dl_warp_ow_siide),
+	gsSPDisplayList(castle_inside_dl_Cylinder_002_mesh_layer_1_tri_0),
+	gsSPDisplayList(mat_revert_castle_inside_dl_warp_ow_siide),
+	gsSPDisplayList(mat_castle_inside_dl_WarpOW_plat),
+	gsSPDisplayList(castle_inside_dl_Cylinder_002_mesh_layer_1_tri_1),
 	gsSPDisplayList(mat_revert_castle_inside_dl_WarpOW_plat),
 	gsSPEndDisplayList(),
 };

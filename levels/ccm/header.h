@@ -3,7 +3,7 @@
 
 #include "types.h"
 #include "game/moving_texture.h"
-
+#include "levels/ccm//SR11_quiz_3_te.h"
 // geo
 extern const GeoLayout ccm_geo_0003D0[];
 extern const GeoLayout ccm_geo_0003F0[];
@@ -56,5 +56,7 @@ extern const Trajectory ccm_seg7_trajectory_penguin_race[];
 
 // script
 extern const LevelScript level_ccm_entry[];
+
+#include "levels/ccm/header.inc.h"
 
 #endif

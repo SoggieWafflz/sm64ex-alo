@@ -826,7 +826,7 @@ s8 TE_scale_text(struct TEState *CurEng,u8 *str){
 s8 TE_enable_dialog_options(struct TEState *CurEng,u8 *str){
 	u8 arrow = 0x9E;
 	TE_print(CurEng);
-	CurEng->TempY -= 0xD;
+	CurEng->TempY -= ((u16) 0xD*CurEng->ScaleF[1]);
 	CurEng->TempYOrigin = CurEng->TempY;
 	CurEng->TempXOrigin -= 1;
 	CurEng->NumDialogs = str[1];
@@ -1084,6 +1084,7 @@ s8 TE_line_break(struct TEState *CurEng,u8 *str){
 	TE_flush_str_buff(CurEng);
 	CurEng->TempX = CurEng->TempXOrigin-1;
 	CurEng->TempY -= ((u16) 0xD*CurEng->ScaleF[1]);
+	CurEng->TempYOrigin -= ((u16) 0xD*CurEng->ScaleF[1]);
 	CurEng->TotalXOff = 0;
 	gSPPopMatrix(gDisplayListHead++, G_MTX_MODELVIEW);
 	create_dl_scale_matrix(MENU_MTX_PUSH, CurEng->ScaleF[0], CurEng->ScaleF[1], 1.0f);
@@ -1099,8 +1100,8 @@ s8 TE_terminator(struct TEState *CurEng,u8 *str){
 	}
 	CurEng->DisplayingDialog += 1;
 	CurEng->TempX = CurEng->TempXOrigin-1;
-	CurEng->TempY = CurEng->TempYOrigin-0xD;
-	CurEng->TempYOrigin = CurEng->TempYOrigin-0xD;
+	CurEng->TempY -= ((u16) 0xD*CurEng->ScaleF[1]);
+	CurEng->TempYOrigin -= ((u16) 0xD*CurEng->ScaleF[1]);
 	if(CurEng->HoveredDialog == CurEng->DisplayingDialog){
 		StrBuffer[CurEng->state][0] = 0x53;
 		StrBuffer[CurEng->state][1] = 0xFF;

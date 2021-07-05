@@ -1,33 +1,34 @@
 #OW dorrie
 OW_settings = ["[SetSpd(1)][FFSpd(-1)][EnBlip()][Pop()]"]
+OW_Box1 = ["[ShadedBGBox(0x18,0x120,0x14,0x74,0x20,0x20,0x20,0x80)][Pop()]"]
 OW_Box = ["[ShadedBGBox(0x18,0x120,0x08,0x50,0x20,0x20,0x20,0x80)][Pop()]"]
 
-OW_dorrie1 = ["[JumpLink('OW_settings')][JumpLink('OW_Box')]\
+OW_dorrie1 = ["[JumpLink('OW_settings')][SetOrigin(32,96)][JumpLink('OW_Box1')]\
 Glad you made it out all right.[Pause(14)] It's practically\n\
 war out there,[Pause(10)] but we can't use that name for\n\
-copyright reasons.[AbtnNextBox()][JumpLink('OW_Box')]\
+copyright reasons.[AbtnNextBox()][JumpLink('OW_Box1')]\
 Well as you have seen,[Pause(10)] the world of star revenge\n\
 has been broken into fragments.[Pause(14)] You see the\n\
 natural order was disturbed from the outside.[Pause(14)]\n\
 The world Brodute ruled over has been upsurped\n\
-by some unknown foreign bug like entity.[AbtnNextBox()][JumpLink('OW_Box')]\
+by some unknown foreign bug like entity.[AbtnNextBox()][JumpLink('OW_Box1')]\
 Luckily as your friendly neighborhood dorrie,[Pause(10)]\n\
 I can navigate the clusters to help guide you\n\
 back to your rightful place,[Pause(14)] SR 5.5 the best SR.[Pause(14)]\n\
-There's 3 stars to collect,[Pause(10)] and in order to get\n\
-them you have to appease the scuttling overlord.[AbtnNextBox()][JumpLink('OW_Box')]\
+There's 11 stars to collect,[Pause(10)] and in order to get\n\
+them you have to appease the scuttling overlord.[AbtnNextBox()][JumpLink('OW_Box1')]\
 His guidance is as follows,[Pause(20)]\n\
 [LQ]Answer my questions,[Pause(20)]\n\
 songs of mystery.[Pause(20)]\n\
 Or you'll be dead[Pause(20)]\n\
-before you can count to three![RQ].[AbtnNextBox()][JumpLink('OW_Box')]\
+before you can count to three![RQ].[AbtnNextBox()][JumpLink('OW_Box1')]\
 Just jump into any pipe to start your timely\n\
 death,[Pause(10)] but only after a message from our \n\
-sponsor.[AbtnNextBox()][JumpLink('OW_Box')]\
+sponsor.[AbtnNextBox()][JumpLink('OW_Box1')]\
 [LQ]Advanced Text Engine now available in native\n\
 C code, download today![Pause(14)] Also download RM2C, the\n\
 perfect tool to convert any binary hack to\n\
-decomp automagically![RQ][AbtnNextBox()][JumpLink('OW_Box')]\
+decomp automagically![RQ][AbtnNextBox()][JumpLink('OW_Box1')]\
 If you need any hints about the levels feel\n\
 free to ask me anytime.[AbtnNextBox()]\
 [MarioAction('ACT_IDLE')][TimeEndStr(0)]"]
@@ -42,9 +43,9 @@ TomatoBird8[end]\
 Aglab2[end]\
 LinCrash[end]\
 DarGos[end]\
-SimpleFlips[end]\
+Mushie64[end]\
 CSZ[end]\
-CSZ[end]\
+InfiniteVoid[end]\
 Pg 2[end]\
 [ShadedBGBox(0x18,0x120,0x20,144,0x20,0x20,0x20,0x80)]\
 [TransAbs(32,127)]\
@@ -161,9 +162,8 @@ Kaze = ["\
 legend status - can lift big weights\n\
 dorrie status - enemy of dorries\n\
 feats. continually dmca'd by the bored intern\n\
-in nintendos legal department or just someone\n\
-pretending to he nintendo.\n\
-made every single rom hack of all time\n\
+in nintendos legal department.\n\
+made every single rom hack of all time.\n\
 managed to be the only hacker who has\n\
 abused dorrie.[AbtnNextBox()][Pop()]"]
 
@@ -184,19 +184,19 @@ Reonu - Another comp participant and cool\n\
 hacker.[AbtnNextBox()][JumpLink('OW_Box')]\
 AndrewSM64 - Play WSA today\n\
 Fazana - Creator of the most controversial\n\
-upgrade patch (I like it though)[AbtnNextBox()][JumpLink('OW_Box')]\
+upgrade patch (I like it though)\n\
 Aloxado - Maintains decomp repo with the\n\
-most platform compatability, likes isabelle.\n\
+most platform compatability, likes isabelle.[AbtnNextBox()][JumpLink('OW_Box')]\
 Drunkrazy - Cool speedrunning man who\n\
-probably wants a shoutout.[AbtnNextBox()][JumpLink('OW_Box')]\
+probably wants a shoutout.\n\
 Mr. Comit - epic sex joke maker. creator of\n\
-ligma\n\
+ligma[AbtnNextBox()][JumpLink('OW_Box')]\
 prakxo - wanted a shoutout\n\
-Shin3 - haha kbr[AbtnNextBox()][JumpLink('OW_Box')]\
-mint - hey put me in the scree shot too\n\
+Shin3 - haha kbr\n\
+mint - hey put me in the screem shot too[AbtnNextBox()][JumpLink('OW_Box')]\
 A Random Player - ASA is hot garbage\n\
 KingToad64 - PRChase\n\
-someone2639 - another rpic kirby hacker.\n\
+someone2639 - another epic kirby hacker.\n\
 creator of nothing64 2. follow him on soundcloud.[AbtnNextBox()][Pop()]"]
 
 #how its made

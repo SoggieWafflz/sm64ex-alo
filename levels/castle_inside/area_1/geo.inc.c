@@ -5,7 +5,9 @@ const GeoLayout castle_inside_area_1_geo[] = {
 	GEO_OPEN_NODE(),
 		GEO_TRANSLATE_NODE_WITH_DL(1, -2727, -1142, 0, castle_inside_dl_Cube_mesh_layer_1),
 		GEO_TRANSLATE_NODE_WITH_DL(1, -2727, -1142, 0, castle_inside_dl_Cube_001_mesh_layer_1),
-		GEO_TRANSLATE_NODE_WITH_DL(1, -5314, -865, 0, castle_inside_dl_Cylinder_mesh_layer_1),
+		GEO_TRANSLATE_NODE_WITH_DL(1, -4818, -865, 0, castle_inside_dl_Cylinder_mesh_layer_1),
+		GEO_TRANSLATE_NODE_WITH_DL(1, -6284, -865, 1336, castle_inside_dl_Cylinder_001_mesh_layer_1),
+		GEO_TRANSLATE_NODE_WITH_DL(1, -6256, -865, -1293, castle_inside_dl_Cylinder_002_mesh_layer_1),
 	GEO_CLOSE_NODE(),
 	GEO_RETURN(),
 };

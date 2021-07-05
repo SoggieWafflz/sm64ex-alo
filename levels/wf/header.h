@@ -3,7 +3,8 @@
 
 #include "types.h"
 #include "game/moving_texture.h"
-
+//te strings
+#include "levels/wf//SR11_quiz_2_te.h"
 // geo
 extern const GeoLayout wf_geo_0007E0[];
 extern const GeoLayout wf_geo_000820[];
@@ -98,5 +99,7 @@ extern const struct MovtexQuadCollection wf_movtex_water[];
 
 // script
 extern const LevelScript level_wf_entry[];
+
+#include "levels/wf/header.inc.h"
 
 #endif

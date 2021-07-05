@@ -12,7 +12,7 @@
 #include "make_const_nonconst.h"
 
 #include "levels/wf/header.h"
-
+#include "levels/wf/SR11_quiz_2_te.py"
 #include "levels/wf/areas/1/5/geo.inc.c"
 #include "levels/wf/areas/1/6/geo.inc.c"
 #include "levels/wf/areas/1/7/geo.inc.c"
@@ -41,3 +41,4 @@
 #include "levels/wf/kickable_board/geo.inc.c"
 #include "levels/wf/tower_door/geo.inc.c"
 #include "levels/wf/areas/1/geo.inc.c"
+#include "levels/wf/geo.inc.c"

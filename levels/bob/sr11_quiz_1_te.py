@@ -1,13 +1,15 @@
 #quiz one
 
-Q1_Settings = ["[SetSpd(1)][SetOrigin(32,168)][FFSpd(-1)][EnBlip()]\
+Q1_Settings = ["[a comment, you can put anything here and it won't compile]\
+[SetSpd(1)][SetOrigin(32,168)][FFSpd(-1)][EnBlip()]\
 [EnShadow()][Pop()]"]
 
 Q1_End = ["[MarioAction('ACT_IDLE')][TimeEndStr(1)]"]
 
 Q1_start = ["[JumpLink('Q1_Settings')]\
-This will be our first set of\n\
-questions. Get a question wrong and you\n\
+This will be our first set of questions. Listen\n\
+to a music track and guess its origin.\n\
+Get a question wrong and you\n\
 lose three HP. Lose a life and you'll\n\
 have to start all over![AbtnNextBox()]\
 [Pop()]"]
@@ -15,7 +17,7 @@ have to start all over![AbtnNextBox()]\
 #Quiz one - one
 Quiz11_Handle = [
 #start message
-"[JumpLink('Q1_start')]",
+"[MarioAction('ACT_WAITING_FOR_DIALOG')][JumpLink('Q1_start')]",
 #question
 "[JumpLink('Q11')]",
 #question was answered, handle response
@@ -45,19 +47,19 @@ This song is used in Star Revenge 6.25 bowser 1\
 
 Quiz12_Handle = [
 #start message
-"[JumpLink('Q1_Settings')]",
+"[MarioAction('ACT_WAITING_FOR_DIALOG')][JumpLink('Q1_Settings')]",
 #question
 "[JumpLink('Q12')]",
 #question was answered, handle response
-"[CallLoop(0,'DetermineAnswer',1,[2])]\
+"[CallLoop(0,'DetermineAnswer',1,[1])]\
 [MatchRtrn(0,1)][JumpLink('Q1_right')]\
 [MatchRtrn(0,0)][JumpLink('Q1_wrong')]\
 [GenericText()]\
-[CallOnce(1,'DamageAnswer',1,[2])]\
+[CallOnce(1,'DamageAnswer',1,[1])]\
 [TriggerWarp(1,0x11)][Jump('Q1_End')]"
 ]
 
-Q12 =["Question Two:\n\
+Q12 =["[SetRtrn(2)]Question Two:\n\
 [PlayMusic(8)][PersistMusic()]\
 You can't have Star Revenge without Sonic songs.\n\
 Almost all games have seen use at\n\
@@ -76,7 +78,7 @@ This comes from Star Revenge 5 course 4\
 
 Quiz13_Handle = [
 #start message
-"[JumpLink('Q1_Settings')]",
+"[MarioAction('ACT_WAITING_FOR_DIALOG')][JumpLink('Q1_Settings')]",
 #question
 "[JumpLink('Q13')]",
 #question was answered, handle response
@@ -88,11 +90,11 @@ Quiz13_Handle = [
 [TriggerWarp(1,0x11)][Jump('Q1_End')]"
 ]
 
-Q13 = ["Question Three:\n\
-[PlayMusic(7)][PersistMusic()]\
+Q13 = ["[SetRtrn(2)]Question Three:\n\
+[PlayMusic(9)][PersistMusic()]\
 A song remixed to death and back. A\n\
 mario classic.[DialogOptions(3)]\
-Athletic Theme - Super Mario World *[end]\
+Athletic Theme - Super Mario World[end]\
 Underground Theme - Super Mario Bros.[end]\
 Overworld - Super Mario Bros. 2[end]\
 Hint[end]\
@@ -106,7 +108,7 @@ From Star Revenge 1 course 2\
 
 Quiz14_Handle = [
 #start message
-"[JumpLink('Q1_Settings')]",
+"[MarioAction('ACT_WAITING_FOR_DIALOG')][JumpLink('Q1_Settings')]",
 #question
 "[JumpLink('Q14')]",
 #question was answered, handle response
@@ -118,8 +120,8 @@ Quiz14_Handle = [
 [TriggerWarp(1,0x11)][Jump('Q1_End')]"
 ]
 
-Q14 = ["[SetupReturn(2)]Question Four:\n\
-[PlayMusic(8)][PersistMusic()]\
+Q14 = ["[SetRtrn(2)]Question Four:\n\
+[PlayMusic(0xC)][PersistMusic()]\
 Our final question. A theme filled with\n\
 horror and crushed dreams.[DialogOptions(3)]\
 Crocodile Cacophony - Donkey Kong Country[end]\
@@ -137,11 +139,11 @@ Doom course 15\
 #Question Wrong
 Q1_wrong = ["Oh thats too bad. The answer was actually\n\
 [CallLoop(2,'PrintAnswer',0,[])]\
-[MatchRtrn(2,1)]Angry Aztec\
-[MatchRtrn(2,2)]Metallic Madness Bad Future\
+[MatchRtrn(2,1)]Forest of Fear\
+[MatchRtrn(2,2)]Mystic Cave\
 [MatchRtrn(2,3)]Athletic Theme\
 [MatchRtrn(2,4)]Crocodile Cacophony\
-[GenericText()].You'll have to do this next\n\
+[GenericText()]. You'll have to do this next\n\
 level with three less health now. Good luck.[AbtnNextBox()]\
 [Pop()]"]
 
