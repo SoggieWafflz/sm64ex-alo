@@ -58,16 +58,16 @@ Quiz12_Handle = [
 ]
 
 Q12 =["Question Two:\n\
-[PlayMusic(6)][PersistMusic()]\
-You can't have Star Revenge without Sonic CD.\n\
-Almost all its tracks have seen use at\n\
-least once, across many games.[DialogOptions(3)]\
+[PlayMusic(8)][PersistMusic()]\
+You can't have Star Revenge without Sonic songs.\n\
+Almost all games have seen use at\n\
+least once, and for good reason.[DialogOptions(3)]\
 Stardust Speedway - Sonic Mania[end]\
-Wacky Workbench Present - Sonic CD JP[end]\
-Metallic Madness Bad Future - Sonic CD JP[end]\
+Mystic Cave Zone- Sonic the Hedgehog 2[end]\
+Metallic Madness Present - Sonic CD JP[end]\
 Hint[end]\
 [DialogResponse(3)]\
-This comes from Star Revenge 5.5 course 8\
+This comes from Star Revenge 5 course 4\
 [AbtnNextBox()][SetSpd(0)][FFSpd(0)][GotoRtrn(2)]",
 #question was answered
 "[GenericText()][JumpLink('Q1_Settings')][Pop()]"]
