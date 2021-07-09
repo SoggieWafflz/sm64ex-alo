@@ -10,6 +10,7 @@ const GeoLayout ccm_area_1_geo[] = {
 			GEO_DISPLAY_LIST(4, ccm_dl_DL_lll_1_0xe052920_Obj_mesh_layer_4),
 		GEO_CLOSE_NODE(),
 		GEO_TRANSLATE_NODE_WITH_DL(1, 2715, 5146, 3268, ccm_dl_DL_lll_1_0xe052920_Obj_001_mesh_layer_1),
+		GEO_TRANSLATE_NODE_WITH_DL(4, -3585, 0, 0, ccm_dl_DL_lll_1_0xe052920_Obj_002_mesh_layer_4),
 	GEO_CLOSE_NODE(),
 	GEO_RETURN(),
 };

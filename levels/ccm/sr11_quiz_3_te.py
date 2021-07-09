@@ -45,7 +45,7 @@ Star Revenge 6.25 bowser 3\
 "[GenericText()][JumpLink('Q3_Settings')][Pop()]"]
 
 #quiz one - two
-
+#3.5 c2
 Quiz32_Handle = [
 #start message
 "[MarioAction('ACT_WAITING_FOR_DIALOG')][JumpLink('Q3_Settings')]",
@@ -80,7 +80,7 @@ inside of a SR game\
 "[GenericText()][JumpLink('Q3_Settings')][Pop()]"]
 
 #quiz one - three
-
+#SR0 course 2
 Quiz33_Handle = [
 #start message
 "[MarioAction('ACT_WAITING_FOR_DIALOG')][JumpLink('Q3_Settings')]",
@@ -104,13 +104,13 @@ Orange Ocean - Kirby's Adventure[end]\
 Beachside Dream - M&L Bowser's Inside Story[end]\
 Hint[end]\
 [DialogResponse(3)]\
-Found in SR6.25\
+Found in SR0\
 [AbtnNextBox()][SetSpd(0)][FFSpd(0)][GotoRtrn(2)]",
 #question was answered
 "[GenericText()][JumpLink('Q3_Settings')][Pop()]"]
 
 #quiz one - four
-
+#SRR c3,SR1c3,NoDc3
 Quiz34_Handle = [
 #start message
 "[MarioAction('ACT_WAITING_FOR_DIALOG')][JumpLink('Q3_Settings')]",

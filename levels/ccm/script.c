@@ -43,7 +43,7 @@ const LevelScript level_ccm_entry[] = {
 		WARP_NODE(0x13, LEVEL_CCM, 0x02, 0x0A, WARP_NO_CHECKPOINT),
 		WARP_NODE(0x12, LEVEL_BOB, 0x01, 0x0A, WARP_NO_CHECKPOINT),
 		OBJECT_WITH_ACTS(MODEL_BITDW_WARP_PIPE, 1919, -136, -4951, 0, 0, 0, 0x130000, bhvWarpPipe, ACT_1 | ACT_2 | ACT_3 | ACT_4 | ACT_5),
-		OBJECT_WITH_ACTS(0, 5684, 798, 401, 0, 0, 0, 0x120000, bhvAirborneWarp, ACT_1 | ACT_2 | ACT_3 | ACT_4 | ACT_5),
+		OBJECT_WITH_ACTS(0, 5953, 1073, -1342, 0, 0, 0, 0x120000, bhvAirborneWarp, ACT_1 | ACT_2 | ACT_3 | ACT_4 | ACT_5),
 		OBJECT_WITH_ACTS(0, -3873, 4023, 294, 0, 0, 0, 0xA0000, bhvInstantActiveWarp, ACT_1 | ACT_2 | ACT_3 | ACT_4 | ACT_5),
 		OBJECT_WITH_ACTS(0, -3559, 4205, 293, 0, 0, 0, 0x000C0000, bhvSpawnTE, ACT_1 | ACT_2 | ACT_3 | ACT_4 | ACT_5),
 		TERRAIN(ccm_area_1_collision),
