@@ -28,7 +28,7 @@ Quiz11_Handle = [
 [CallOnce(1,'DamageAnswer',1,[0])]\
 [TriggerWarp(1,0x11)][Jump('Q1_End')]"
 ]
-
+#sr 625 B1
 Q11 = ["[SetRtrn(2)]Question One:\n\
 [PlayMusic(6)][PersistMusic()]\
 This frightful song is home to dungeon\n\
@@ -58,7 +58,7 @@ Quiz12_Handle = [
 [CallOnce(1,'DamageAnswer',1,[1])]\
 [TriggerWarp(1,0x11)][Jump('Q1_End')]"
 ]
-
+#SR5 c4
 Q12 =["[SetRtrn(2)]Question Two:\n\
 [PlayMusic(8)][PersistMusic()]\
 You can't have Star Revenge without Sonic songs.\n\
@@ -89,7 +89,7 @@ Quiz13_Handle = [
 [CallOnce(1,'DamageAnswer',1,[0])]\
 [TriggerWarp(1,0x11)][Jump('Q1_End')]"
 ]
-
+#sr1 c2
 Q13 = ["[SetRtrn(2)]Question Three:\n\
 [PlayMusic(9)][PersistMusic()]\
 A song remixed to death and back. A\n\
@@ -119,7 +119,7 @@ Quiz14_Handle = [
 [CallOnce(1,'DamageAnswer',1,[0])]\
 [TriggerWarp(1,0x11)][Jump('Q1_End')]"
 ]
-
+#NoD c15
 Q14 = ["[SetRtrn(2)]Question Four:\n\
 [PlayMusic(0xC)][PersistMusic()]\
 Our final question. A theme filled with\n\

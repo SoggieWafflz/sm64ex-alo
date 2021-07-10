@@ -647,7 +647,7 @@ s32 mario_floor_is_slope(struct MarioState *m) {
             break;
 
         case SURFACE_NOT_SLIPPERY:
-            normY = 0.9396926f; // ~cos(20 deg)
+            normY = 0.0f; // ~cos(90 deg)
             break;
     }
 
@@ -680,7 +680,7 @@ s32 mario_floor_is_steep(struct MarioState *m) {
                 break;
 
             case SURFACE_NOT_SLIPPERY:
-                normY = 0.8660254f; // ~cos(30 deg)
+                normY = 0.0f; // ~cos(90 deg)
                 break;
         }
 
