@@ -12,7 +12,7 @@
 #include "make_const_nonconst.h"
 
 #include "levels/jrb/header.h"
-
+#include "levels/jrb/SR11_quiz_3_te.py"
 #include "levels/jrb/falling_pillar/geo.inc.c"
 #include "levels/jrb/falling_pillar_base/geo.inc.c"
 #include "levels/jrb/rock/geo.inc.c"

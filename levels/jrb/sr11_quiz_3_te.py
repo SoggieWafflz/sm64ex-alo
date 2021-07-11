@@ -1,10 +1,10 @@
 #quiz one
 
-Q3_Settings = ["[SetSpd(1)][SetOrigin(32,168)][FFSpd(-1)][EnBlip()]\
+Q3_Settings = ["[SetSpd(1)][SetOrigin(28,168)][FFSpd(-1)][EnBlip()]\
 [EnShadow()][Pop()]"]
 
 Q3_End = ["[MarioAction('ACT_IDLE')][TimeEndStr(1)]"]
-
+Q3_Box = ["[ShadedBGBox(24,296,100,186,0x20,0x20,0x20,0x80)][Pop()]"]
 Q3_start = ["[JumpLink('Q3_Settings')]\
 The third quiz. You will be presented with\n\
 a song of my own creation, and guess its origin.\n\
@@ -13,6 +13,36 @@ to SR though. Get a question wrong and you\n\
 lose three HP. Lose a life and you'll\n\
 have to start all over![AbtnNextBox()]\
 [Pop()]"]
+
+RemixLvls = ["[JumpLink('Q3_Settings')][JumpLink('Q3_Box')]\
+       -------Overlord Dev Log 275-------[Pause(32)]\n\
+       - - Date [F*][H*]&$[F*][H*] &&$[H*][H*][F*][F*] - -\
+[AbtnNextBox()][JumpLink('Q3_Box')]\
+You will work overtime. [Pause(60)]You will enjoy it.[Pause(60)]\n\
+Are you aware of the sacrifices I have made for\n\
+this to happen?[AbtnNextBox()][JumpLink('Q3_Box')]\
+Jerry,[Pause(30)] you have a wonderful wife,[Pause(30)] her\n\
+cooking aside.[Pause(50)] Don't you have things you can't\n\
+sacrifice?[Pause(80)] Next time I see you,[Pause(30)] I want nothing\n\
+but a positive attitude.[Pause(40)] Do not disappoint me.\
+[AbtnNextBox()][Jump('Q3_End')]"]
+
+Sacrifice = ["[JumpLink('Q3_Settings')][JumpLink('Q3_Box')]\
+       ------Overlord Dev Log 145------[Pause(32)]\n\
+       - - Date [F*][H*]&$[H*][F*] &&$[H*][F*][F*][F*] - -\
+[AbtnNextBox()][JumpLink('Q3_Box')]\
+My team doesn't respect me. [Pause(40)]It takes hard work to make it in life.[Pause(40)]\n\
+I've sacrificed a lot for this,[Pause(40)] and for what?\n\
+A tech demo??[Pause(60)] They don't have my vision.[Pause(30)]\n\
+They don't understand the sacrifice,[Pause(20)] the passion,[Pause(20)] the art.[Pause(40)]\n\
+They are so lost,[Pause(30)] it's laughable.\
+[AbtnNextBox()][JumpLink('Q3_Box')]\
+Why should I even bother with the opinions of\n\
+simpletons.[Pause(40)] They are like ants to my intellect.\n\
+[Pause(40)] I shall pay them no mind. Each second they occupy is\n\
+worth a thousands worlds,[Pause(30)] and I have\n\
+so many more to make.[Pause(20)]\
+[AbtnNextBox()][Jump('Q3_End')]"]
 
 #Quiz one - one
 Quiz31_Handle = [
@@ -118,8 +148,8 @@ Quiz34_Handle = [
 "[JumpLink('Q34')]",
 #question was answered, handle response
 "[CallLoop(0,'DetermineAnswer',1,[2])]\
-[MatchRtrn(0,1)][JumpLink('Q3_right')]\
-[MatchRtrn(0,0)][JumpLink('Q3_wrong')]\
+[MatchRtrn(0,1)][JumpLink('Q3_right_last')]\
+[MatchRtrn(0,0)][JumpLink('Q3_wrong_last')]\
 [GenericText()]\
 [CallOnce(1,'DamageAnswer',1,[2])]\
 [TriggerWarp(1,0x11)][Jump('Q3_End')]"
@@ -156,4 +186,28 @@ Enjoy death and suffering for eternity.[AbtnNextBox()]\
 Q3_right = ["Nice Job! As your host I am thoroughly\n\
 impressed. The next level will be one\n\
 I think this music fits well.\
+[AbtnNextBox()][Pop()]"]
+
+#Question Wrong
+Q3_wrong_last = ["Oh thats too bad. The answer was actually Pokemart.\n\
+You will be penalized three HP.\n\
+Enjoy death and suffering for eternity.[AbtnNextBox()][JumpLink('Q3_last')]\
+[Pop()]"]
+
+#Question right
+Q3_right_last = ["I am thoroughly\
+impressed. The next level will be one\n\
+I think this music fits well.\
+[AbtnNextBox()][JumpLink('Q3_last')][Pop()]"]
+
+#Question right
+Q3_last = ["You're progressing.[Pause(32)] I'm proud of you.[Pause(32)]\n\
+They told me no one would make it this far.[Pause(32)] They\n\
+called me crazy.[Pause(32)] Well maybe I am crazy.\
+[AbtnNextBox()]\
+I used to have a team of hard workers on this project.[Pause(32)]\n\
+They couldn't handle it.[Pause(32)] They didn't have the\n\
+mental aptitude for this.[Pause(32)] They couldn't see what I saw.[Pause(32)]\n\
+I've been misunderstood for so long,[Pause(18)] but now,[Pause(18)] no longer.[Pause(32)]\n\
+Soon you'll see my greatest creation.\
 [AbtnNextBox()][Pop()]"]

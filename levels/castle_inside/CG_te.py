@@ -1,21 +1,30 @@
 #OW dorrie
 OW_settings = ["[SetSpd(1)][FFSpd(-1)][EnBlip()][Pop()]"]
-OW_Box1 = ["[ShadedBGBox(0x18,0x120,0x14,0x74,0x20,0x20,0x20,0x80)][Pop()]"]
+OW_Box1 = ["[ShadedBGBox(0x16,0x120,0x14,0x74,0x20,0x20,0x20,0x80)][Pop()]"]
 OW_Box = ["[ShadedBGBox(0x18,0x120,0x08,0x50,0x20,0x20,0x20,0x80)][Pop()]"]
 
-OW_dorrie1 = ["[JumpLink('OW_settings')][SetOrigin(32,96)][JumpLink('OW_Box1')]\
-Glad you made it out all right.[Pause(14)] It's practically\n\
-war out there,[Pause(10)] but we can't use that name for\n\
+OW_scut_intro = ["[JumpLink('OW_settings')][SetOrigin(28,96)][JumpLink('OW_Box1')]\
+Welcome to my world.[Pause(30)] Or should I say worlds hahaha.\n\
+[Pause(30)]I've put together a special play palace just for you![Pause(30)]\n\
+The player![Pause(30)] I'm all about the game.[Pause(20)] I study it,[Pause(20)]\n\
+I live it.[Pause(30)] Before you lies my greatest creations.[Pause(30)]\n\
+You will find greater realities than you've ever\n\
+imagined before,[Pause(24)] just step inside and begin.[AbtnNextBox()]\
+[MarioAction('ACT_IDLE')][TimeEndStr(0)]"]
+
+OW_dorrie1 = ["[JumpLink('OW_settings')][SetOrigin(30,96)][JumpLink('OW_Box1')]\
+Glad you made it out all right.[Pause(30)] It's practically\n\
+war out there,[Pause(18)] but we can't use that name for\n\
 copyright reasons.[AbtnNextBox()][JumpLink('OW_Box1')]\
-Well as you have seen,[Pause(10)] the world of star revenge\n\
-has been broken into fragments.[Pause(14)] You see the\n\
-natural order was disturbed from the outside.[Pause(14)]\n\
+Well as you have seen,[Pause(14)] the world of star revenge\n\
+has been broken into fragments.[Pause(30)] You see the\n\
+natural order was disturbed from the outside.[Pause(30)]\n\
 The world Brodute ruled over has been upsurped\n\
 by some unknown foreign bug like entity.[AbtnNextBox()][JumpLink('OW_Box1')]\
-Luckily as your friendly neighborhood dorrie,[Pause(10)]\n\
+Luckily as your friendly neighborhood dorrie,[Pause(14)]\n\
 I can navigate the clusters to help guide you\n\
-back to your rightful place,[Pause(14)] SR 5.5 the best SR.[Pause(14)]\n\
-There's 11 stars to collect,[Pause(10)] and in order to get\n\
+back to your rightful place,[Pause(20)] SR 5.5 the best SR.[Pause(30)]\n\
+There's 11 stars to collect,[Pause(14)] and in order to get\n\
 them you have to appease the scuttling overlord.[AbtnNextBox()][JumpLink('OW_Box1')]\
 His guidance is as follows,[Pause(20)]\n\
 [LQ]Answer my questions,[Pause(20)]\n\
@@ -23,10 +32,10 @@ songs of mystery.[Pause(20)]\n\
 Or you'll be dead[Pause(20)]\n\
 before you can count to three![RQ].[AbtnNextBox()][JumpLink('OW_Box1')]\
 Just jump into any pipe to start your timely\n\
-death,[Pause(10)] but only after a message from our \n\
+death,[Pause(14)] but only after a message from our \n\
 sponsor.[AbtnNextBox()][JumpLink('OW_Box1')]\
 [LQ]Advanced Text Engine now available in native\n\
-C code, download today![Pause(14)] Also download RM2C, the\n\
+C code, download today![Pause(30)] Also download RM2C, the\n\
 perfect tool to convert any binary hack to\n\
 decomp automagically![RQ][AbtnNextBox()][JumpLink('OW_Box1')]\
 If you need any hints about the levels feel\n\

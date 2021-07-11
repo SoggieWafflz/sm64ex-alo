@@ -1,10 +1,12 @@
 #quiz one
 
 Q1_Settings = ["[a comment, you can put anything here and it won't compile]\
-[SetSpd(1)][SetOrigin(32,168)][FFSpd(-1)][EnBlip()]\
+[SetSpd(1)][SetOrigin(28,168)][FFSpd(-1)][EnBlip()]\
 [EnShadow()][Pop()]"]
 
 Q1_End = ["[MarioAction('ACT_IDLE')][TimeEndStr(1)]"]
+
+Q1_Box = ["[ShadedBGBox(24,298,100,186,0x20,0x20,0x20,0x80)][Pop()]"]
 
 Q1_start = ["[JumpLink('Q1_Settings')]\
 This will be our first set of questions. Listen\n\
@@ -13,6 +15,21 @@ Get a question wrong and you\n\
 lose three HP. Lose a life and you'll\n\
 have to start all over![AbtnNextBox()]\
 [Pop()]"]
+
+TeamDev = ["[JumpLink('Q1_Settings')][JumpLink('Q1_Box')]\
+       ------Overlord Dev Log 18------[Pause(32)]\n\
+       - - Date [H*][H*]&$[H*][H*] &&$[F*][F*][F*][F*] - -\
+[AbtnNextBox()][JumpLink('Q1_Box')]\
+Congratulations team. [Pause(40)]We've commandeered our first\n\
+world.[Pause(20)] Drinks are on me this weekend.[Pause(20)] You all better\n\
+show up.[Pause(40)] This is an official teambuilder.[Pause(40)] Jerry,[Pause(30)]\n\
+tell your wife her meatloaf fucking sucks,[Pause(30)] you don't\n\
+need that garbage,[Pause(30)] you're drinking with us.\
+[AbtnNextBox()][JumpLink('Q1_Box')]\
+Everyone meet up behind the world start warp.\n\
+[Pause(30)]I'll show you the limits of \
+power we've just taken.\
+[AbtnNextBox()][Jump('Q1_End')]"]
 
 #Quiz one - one
 Quiz11_Handle = [
@@ -170,9 +187,12 @@ I will revel in your anguished screams. HAHAHAHAHAHAHA\n\
 HAHAHAHAHAHHAHAHAHAHAHAHHAHAHAHAHAHAHAHA[AbtnNextBox()]\
 [Pop()]"]
 
-NoDMsg = ["[JumpLink('Q1_Settings')]I probably got you real good didn't I?\n\
+NoDMsg = ["[JumpLink('Q1_Settings')][JumpLink('Q1_Box')]\
+       ------Overlord Dev Log 121------[Pause(32)]\n\
+       - - Date [H*][H*]&$[H*][H*] &&$[F*][F*][F*][F*] - -\
+[AbtnNextBox()][JumpLink('Q1_Box')]\I probably got you real good didn't I?\n\
 I am not that mean. I am a gentle and kind overlord, who\n\
-nuzzle uwus his subject's as appropriately needed.[AbtnNextBox()]\
+nuzzle uwus his subject's as appropriately needed.[AbtnNextBox()][JumpLink('Q1_Box')]\
 I also provide some single coins in harder to reach\n\
 for healing as needed. Even if you fail my tasks, there\n\
 is still room for redemption. No need for thanks, I\n\

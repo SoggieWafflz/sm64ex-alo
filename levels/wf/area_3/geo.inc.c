@@ -3,8 +3,10 @@
 const GeoLayout wf_area_3_geo[] = {
 	GEO_NODE_START(),
 	GEO_OPEN_NODE(),
-		GEO_TRANSLATE_NODE_WITH_DL(1, 942, 207, 0, wf_dl_Cube_012_mesh_layer_1),
-		GEO_TRANSLATE_NODE_WITH_DL(1, -967, 207, 0, wf_dl_Cube_013_mesh_layer_1),
+		GEO_TRANSLATE_NODE_WITH_DL(1, 1740, -3168, 1794, wf_dl_Cube_007_mesh_layer_1),
+		GEO_TRANSLATE_NODE_WITH_DL(1, 1772, -3168, 1839, wf_dl_Cube_012_mesh_layer_1),
+		GEO_TRANSLATE_NODE_WITH_DL(4, 1781, 7823, 1871, wf_dl_DL_totwc_1_0xe043170_Obj_001_mesh_layer_4),
+		GEO_TRANSLATE_NODE_WITH_DL(4, 1781, 7823, 1871, wf_dl_DL_totwc_1_0xe057590_Obj_001_mesh_layer_4),
 	GEO_CLOSE_NODE(),
 	GEO_RETURN(),
 };
@@ -30,6 +32,7 @@ const GeoLayout wf_area_3[] = {
 				GEO_CLOSE_NODE(),
 			GEO_CLOSE_NODE(),
 		GEO_CLOSE_NODE(),
+		GEO_DISPLAY_LIST(4, wf_dl_material_revert_render_settings),
 		GEO_DISPLAY_LIST(1, wf_dl_material_revert_render_settings),
 	GEO_CLOSE_NODE(),
 	GEO_END(),

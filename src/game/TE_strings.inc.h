@@ -20,6 +20,11 @@ char *TE_Strings[] = {
 	&Quiz33_Handle,
 	&Quiz34_Handle,
 	/* 0x10 */
-	&NoDMsg,
-	
+	&TexSeams,
+	&ObjectSpam,
+	&TeamDev,
+	&RemixLvls,
+	/* 0x14 */
+	&Sacrifice,
+	&OW_scut_intro,
 };

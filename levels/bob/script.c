@@ -49,6 +49,7 @@ const LevelScript level_bob_entry[] = {
 		OBJECT_WITH_ACTS(MODEL_BREAKABLE_BOX, -3423, 2952, 12061, 0, 0, 0, 0x00000, bhvHiddenObject, ACT_1 | ACT_2 | ACT_3 | ACT_4 | ACT_5),
 		OBJECT_WITH_ACTS(MODEL_BREAKABLE_BOX, -3885, 3107, 12061, 0, 0, 0, 0x00000, bhvHiddenObject, ACT_1 | ACT_2 | ACT_3 | ACT_4 | ACT_5),
 		OBJECT_WITH_ACTS(0, -7087, 2086, -6930, 0, 0, 0, 0x120000, bhvAirborneWarp, ACT_1 | ACT_2 | ACT_3 | ACT_4 | ACT_5),
+		OBJECT_WITH_ACTS(MODEL_WOODEN_SIGNPOST, -7558, 1664, -6930, 0, -90, 0, 0x120000, bhvMessagePanel, ACT_1 | ACT_2 | ACT_3 | ACT_4 | ACT_5),
 		OBJECT(212, -4549, 3792, 10779, 0, 0, 0, 0x0, bhv1Up),
 		OBJECT(180, -6889, 1527, 6208, 0, 0, 0, 0x0, bhvFireSpitter),
 		OBJECT(180, -3333, 2617, 10878, 0, 0, 0, 0x0, bhvFireSpitter),
