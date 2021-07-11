@@ -9,6 +9,7 @@ const GeoLayout jrb_area_2_geo[] = {
 		GEO_OPEN_NODE(),
 			GEO_DISPLAY_LIST(4, jrb_dl_DL_cotmc_1_0xe114b20_Obj_001_mesh_layer_4),
 		GEO_CLOSE_NODE(),
+		GEO_TRANSLATE_NODE_WITH_DL(4, 1121, -1156, -998, jrb_dl_DL_cotmc_1_0xe114b20_Obj_002_mesh_layer_4),
 		GEO_TRANSLATE_NODE_WITH_DL(4, 1121, -1156, -998, jrb_dl_DL_cotmc_1_0xe114b20_Obj_003_mesh_layer_4),
 	GEO_CLOSE_NODE(),
 	GEO_RETURN(),

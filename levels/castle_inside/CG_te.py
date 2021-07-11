@@ -3,7 +3,7 @@ OW_settings = ["[SetSpd(1)][FFSpd(-1)][EnBlip()][Pop()]"]
 OW_Box1 = ["[ShadedBGBox(0x16,0x120,0x14,0x74,0x20,0x20,0x20,0x80)][Pop()]"]
 OW_Box = ["[ShadedBGBox(0x18,0x120,0x08,0x50,0x20,0x20,0x20,0x80)][Pop()]"]
 
-OW_scut_intro = ["[JumpLink('OW_settings')][SetOrigin(28,96)][JumpLink('OW_Box1')]\
+OW_scut_intro = ["[JumpLink('OW_settings')][SetOrigin(26,96)][ShadedBGBox(0x14,0x128,0x14,0x74,0x20,0x20,0x20,0x80)]\
 Welcome to my world.[Pause(30)] Or should I say worlds hahaha.\n\
 [Pause(30)]I've put together a special play palace just for you![Pause(30)]\n\
 The player![Pause(30)] I'm all about the game.[Pause(20)] I study it,[Pause(20)]\n\

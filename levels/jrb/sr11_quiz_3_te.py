@@ -195,7 +195,7 @@ Enjoy death and suffering for eternity.[AbtnNextBox()][JumpLink('Q3_last')]\
 [Pop()]"]
 
 #Question right
-Q3_right_last = ["I am thoroughly\
+Q3_right_last = ["I am thoroughly \
 impressed. The next level will be one\n\
 I think this music fits well.\
 [AbtnNextBox()][JumpLink('Q3_last')][Pop()]"]

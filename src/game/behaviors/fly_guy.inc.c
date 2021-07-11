@@ -11,7 +11,7 @@ static struct ObjectHitbox sFlyGuyHitbox = {
     /* downOffset:        */ 0,
     /* damageOrCoinValue: */ 2,
     /* health:            */ 0,
-    /* numLootCoins:      */ 2,
+    /* numLootCoins:      */ 0,
     /* radius:            */ 70,
     /* height:            */ 60,
     /* hurtboxRadius:     */ 40,

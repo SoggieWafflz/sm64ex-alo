@@ -11,8 +11,9 @@ const GeoLayout wf_area_1_geo[] = {
 			GEO_DISPLAY_LIST(5, wf_dl_DL_sl_1_0xe0bca40_Obj_001_mesh_layer_5),
 		GEO_CLOSE_NODE(),
 		GEO_TRANSLATE_NODE_WITH_DL(1, -2007, 4754, 0, wf_dl_DL_sl_1_0xe0bca40_Obj_002_mesh_layer_1),
-		GEO_TRANSLATE_NODE_WITH_DL(1, -2007, 4754, 0, wf_dl_DL_sl_1_0xe0bca40_Obj_003_mesh_layer_1),
-		GEO_TRANSLATE_NODE_WITH_DL(5, -2007, 4754, 0, wf_dl_DL_sl_1_0xe0c43d0_Obj_002_mesh_layer_5),
+		GEO_TRANSLATE_NODE_WITH_DL(1, -2007, 4000, 0, wf_dl_DL_sl_1_0xe0bca40_Obj_003_mesh_layer_1),
+		GEO_TRANSLATE_NODE_WITH_DL(1, -2007, 4754, 0, wf_dl_DL_sl_1_0xe0bca40_Obj_004_mesh_layer_1),
+		GEO_TRANSLATE_NODE_WITH_DL(5, -2007, 4000, 0, wf_dl_DL_sl_1_0xe0c43d0_Obj_002_mesh_layer_5),
 	GEO_CLOSE_NODE(),
 	GEO_RETURN(),
 };
