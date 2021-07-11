@@ -10,7 +10,7 @@ struct ObjectHitbox sSnufitHitbox = {
     /* downOffset:        */ 0,
     /* damageOrCoinValue: */ 2,
     /* health:            */ 0,
-    /* numLootCoins:      */ 2,
+    /* numLootCoins:      */ 0,
     /* radius:            */ 100,
     /* height:            */ 60,
     /* hurtboxRadius:     */ 70,

@@ -3,8 +3,9 @@
 const GeoLayout bob_area_4_geo[] = {
 	GEO_NODE_START(),
 	GEO_OPEN_NODE(),
-		GEO_TRANSLATE_NODE_WITH_DL(1, 942, 207, 0, bob_dl_Cube_006_mesh_layer_1),
-		GEO_TRANSLATE_NODE_WITH_DL(1, -967, 207, 0, bob_dl_Cube_007_mesh_layer_1),
+		GEO_TRANSLATE_NODE_WITH_DL(1, 1746, -1972, -788, bob_dl_Cube_006_mesh_layer_1),
+		GEO_TRANSLATE_NODE_WITH_DL(1, 1762, -1972, -808, bob_dl_Cube_026_mesh_layer_1),
+		GEO_TRANSLATE_NODE_WITH_DL(4, 1781, 5938, -763, bob_dl_DL_rr_1_0xe038e60_Obj_001_mesh_layer_4),
 	GEO_CLOSE_NODE(),
 	GEO_RETURN(),
 };
@@ -31,6 +32,7 @@ const GeoLayout bob_area_4[] = {
 			GEO_CLOSE_NODE(),
 		GEO_CLOSE_NODE(),
 		GEO_DISPLAY_LIST(1, bob_dl_material_revert_render_settings),
+		GEO_DISPLAY_LIST(4, bob_dl_material_revert_render_settings),
 	GEO_CLOSE_NODE(),
 	GEO_END(),
 };

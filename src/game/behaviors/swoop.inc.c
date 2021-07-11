@@ -12,7 +12,7 @@ static struct ObjectHitbox sSwoopHitbox = {
     /* downOffset:        */ 0,
     /* damageOrCoinValue: */ 1,
     /* health:            */ 0,
-    /* numLootCoins:      */ 1,
+    /* numLootCoins:      */ 0,
     /* radius:            */ 100,
     /* height:            */ 80,
     /* hurtboxRadius:     */ 70,

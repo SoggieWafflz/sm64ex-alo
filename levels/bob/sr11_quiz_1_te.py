@@ -113,8 +113,8 @@ Quiz14_Handle = [
 "[JumpLink('Q14')]",
 #question was answered, handle response
 "[CallLoop(0,'DetermineAnswer',1,[0])]\
-[MatchRtrn(0,1)][JumpLink('Q1_right')]\
-[MatchRtrn(0,0)][JumpLink('Q1_wrong')]\
+[MatchRtrn(0,1)][JumpLink('Q1_right_Last')]\
+[MatchRtrn(0,0)][JumpLink('Q1_wrong_Last')]\
 [GenericText()]\
 [CallOnce(1,'DamageAnswer',1,[0])]\
 [TriggerWarp(1,0x11)][Jump('Q1_End')]"
@@ -151,3 +151,30 @@ level with three less health now. Good luck.[AbtnNextBox()]\
 Q1_right = ["Correct! Quite the noggin on this one, or\n\
 ear I should say. Good luck on the next level.\
 [AbtnNextBox()][Pop()]"]
+
+#Last Question right
+Q1_right_Last = ["Correct! Now surely you've already\n\
+recognized your fate.\
+[AbtnNextBox()][JumpLink('Q1_Last')][Pop()]"]
+
+#Question Wrong Last
+Q1_wrong_Last = ["Oh thats too bad. The answer was actually\n\
+Crocodile Cacophony.[JumpLink('Q1_Last')][Pop()]"]
+
+Q1_Last = ["\
+Good luck on Night of Doom\n\
+foolish mortal. Feel the pain I feel.[AbtnNextBox()]\
+Tremble in fear as all your hopes of surviving\n\
+and passing this challenge are erased.\n\
+I will revel in your anguished screams. HAHAHAHAHAHAHA\n\
+HAHAHAHAHAHHAHAHAHAHAHAHHAHAHAHAHAHAHAHA[AbtnNextBox()]\
+[Pop()]"]
+
+NoDMsg = ["[JumpLink('Q1_Settings')]I probably got you real good didn't I?\n\
+I am not that mean. I am a gentle and kind overlord, who\n\
+nuzzle uwus his subject's as appropriately needed.[AbtnNextBox()]\
+I also provide some single coins in harder to reach\n\
+for healing as needed. Even if you fail my tasks, there\n\
+is still room for redemption. No need for thanks, I\n\
+do it for free.\n\
+- Your scuttling overlord[AbtnNextBox()][Jump('Q1_End')]"]

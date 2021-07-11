@@ -21,16 +21,25 @@ struct Struct802C0DF0 sExclamationBoxContents[] = { { 0, 0, 0, MODEL_MARIOS_WING
                                                     { 3, 0, 0, MODEL_KOOPA_SHELL, bhvKoopaShell },
                                                     { 4, 0, 0, MODEL_YELLOW_COIN,
                                                       bhvSingleCoinGetsSpawned },
-                                                    { 5, 0, 0, MODEL_NONE, bhvThreeCoinsSpawn },
-                                                    { 6, 0, 0, MODEL_NONE, bhvTenCoinsSpawn },
-                                                    { 7, 0, 0, MODEL_1UP, bhv1upWalking },
-                                                    { 8, 0, 0, MODEL_STAR, bhvSpawnedStar },
+                                                    { 5, 0, 0, MODEL_BLACK_BOBOMB, bhvBobomb },
+                                                    { 6, 0, 0, MODEL_YELLOW_COIN, bhvSingleCoinGetsSpawned },
+                                                    { 7, 0, 0, MODEL_CHUCKYA, bhvChuckya },
+                                                    { 8, 0, 0, MODEL_BLACK_BOBOMB, bhvBobomb },
                                                     { 9, 0, 0, MODEL_1UP, bhv1upRunningAway },
-                                                    { 10, 0, 1, MODEL_STAR, bhvSpawnedStar },
-                                                    { 11, 0, 2, MODEL_STAR, bhvSpawnedStar },
-                                                    { 12, 0, 3, MODEL_STAR, bhvSpawnedStar },
-                                                    { 13, 0, 4, MODEL_STAR, bhvSpawnedStar },
-                                                    { 14, 0, 5, MODEL_STAR, bhvSpawnedStar },
+                                                    { 10, 0, 1, MODEL_GOOMBA, bhvGoomba },
+                                                    { 11, 0, 2, MODEL_FLYGUY, bhvFlyGuy },
+                                                    { 12, 0, 3, MODEL_CHUCKYA, bhvChuckya },
+                                                    { 13, 0, 4, MODEL_BOWLING_BALL, bhvFireSpitter },
+                                                    { 14, 0, 5, MODEL_CHUCKYA, bhvChuckya },
+                                                    { 15, 0, 0, MODEL_YELLOW_COIN, bhvSingleCoinGetsSpawned },
+                                                    { 16, 0, 0, MODEL_GOOMBA, bhvGoomba },
+                                                    { 17, 0, 0, MODEL_BLACK_BOBOMB, bhvBobomb },
+                                                    { 18, 0, 0, MODEL_1UP, bhv1upRunningAway },
+                                                    { 19, 0, 1, MODEL_GOOMBA, bhvGoomba },
+                                                    { 20, 0, 2, MODEL_FLYGUY, bhvFlyGuy },
+                                                    { 21, 0, 3, MODEL_CHUCKYA, bhvChuckya },
+                                                    { 22, 0, 4, MODEL_BOWLING_BALL, bhvFireSpitter },
+                                                    { 23, 0, 5, MODEL_CHUCKYA, bhvChuckya },
                                                     { 99, 0, 0, 0, NULL } };
 #endif
 
@@ -40,10 +49,9 @@ void bhv_rotating_exclamation_box_loop(void) {
 }
 
 void exclamation_box_act_0(void) {
-    if (o->oBehParams2ndByte < 3) {
+    if (o->oBehParams2ndByte < 4) {
         o->oAnimState = o->oBehParams2ndByte;
-        if ((save_file_get_flags() & D_8032F0C0[o->oBehParams2ndByte])
-            || ((o->oBehParams >> 24) & 0xFF) != 0)
+        if (1)
             o->oAction = 2;
         else
             o->oAction = 1;

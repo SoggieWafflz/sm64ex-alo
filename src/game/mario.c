@@ -1552,7 +1552,7 @@ void update_mario_health(struct MarioState *m) {
 						// when in snow terrains lose 3 health.
 						// If using the debug level select, do not lose any HP to water.
 						if ((m->pos[1] >= (m->waterLevel - 140)) && !terrainIsSnow) {
-							m->health += 0x1A;
+							// m->health += 0x1A;
 						} else if (!gDebugLevelSelect) {
 							m->health -= (terrainIsSnow ? 3 : 1);
 						}
@@ -1584,7 +1584,7 @@ void update_mario_health(struct MarioState *m) {
 		if(!configDD){
 			// Play a noise to alert the player when Mario is close to drowning.
 			if (((m->action & ACT_GROUP_MASK) == ACT_GROUP_SUBMERGED) && (m->health < 0x300)) {
-				play_sound(SOUND_MOVING_ALMOST_DROWNING, gGlobalSoundSource);
+				// play_sound(SOUND_MOVING_ALMOST_DROWNING, gGlobalSoundSource);
 	#ifdef RUMBLE_FEEDBACK
 				if (!gRumblePakTimer) {
 					gRumblePakTimer = 36;

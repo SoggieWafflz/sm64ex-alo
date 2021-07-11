@@ -27,7 +27,7 @@ Quiz21_Handle = [
 [CallOnce(1,'DamageAnswer',1,[0])]\
 [TriggerWarp(1,0x11)][Jump('Q2_End')]"
 ]
-
+#SR0 c10
 Q21 = ["[SetRtrn(2)]Question One:\n\
 [PlayMusic(0x11)][PersistMusic()]\
 This frightful song is home to dungeon\n\
@@ -57,7 +57,7 @@ Quiz22_Handle = [
 [CallOnce(1,'DamageAnswer',1,[2])]\
 [TriggerWarp(1,0x11)][Jump('Q2_End')]"
 ]
-
+#SR2.5 c13 (THI)
 Q22 =["[SetRtrn(2)]Question Two:\n\
 [PlayMusic(0x13)][PersistMusic()]\
 Another common source game, many of the recent.\n\
@@ -87,7 +87,7 @@ Quiz23_Handle = [
 [CallOnce(1,'DamageAnswer',1,[0])]\
 [TriggerWarp(1,0x11)][Jump('Q2_End')]"
 ]
-
+#SRR WC
 Q23 = ["[SetRtrn(2)]Question Three:\n\
 [PlayMusic(0x14)][PersistMusic()]\
 The goto when you need some abstract sky or sea\n\
@@ -104,7 +104,7 @@ Super Mario Sunshine.\
 "[GenericText()][JumpLink('Q2_Settings')][Pop()]"]
 
 #quiz one - four
-
+#SR5.5 C5
 Quiz24_Handle = [
 #start message
 "[MarioAction('ACT_WAITING_FOR_DIALOG')][JumpLink('Q2_Settings')]",

@@ -1,22 +1,25 @@
 #include "level_headers.h"
 char *TE_Strings[] = {
-	&HowMade,
+	&NoDMsg,
 	&Intro_Text,
 	&Shoutouts,
 	&OW_dorrie1,
-	/* 4 */
+	/* 0x4 */
 	&Quiz11_Handle,
 	&Quiz12_Handle,
 	&Quiz13_Handle,
 	&Quiz14_Handle,
-	/* 8 */
+	/* 0x8 */
 	&Quiz21_Handle,
 	&Quiz22_Handle,
 	&Quiz23_Handle,
 	&Quiz24_Handle,
-	/* C */
+	/* 0xC */
 	&Quiz31_Handle,
 	&Quiz32_Handle,
 	&Quiz33_Handle,
-	&Quiz34_Handle
+	&Quiz34_Handle,
+	/* 0x10 */
+	&NoDMsg,
+	
 };

@@ -3,8 +3,15 @@
 const GeoLayout bob_area_1_geo[] = {
 	GEO_NODE_START(),
 	GEO_OPEN_NODE(),
-		GEO_TRANSLATE_NODE_WITH_DL(1, 942, 207, 0, bob_dl_Cube_mesh_layer_1),
-		GEO_TRANSLATE_NODE_WITH_DL(1, -967, 207, 0, bob_dl_Cube_001_mesh_layer_1),
+		GEO_TRANSLATE_NODE_WITH_DL(1, -3604, -1972, -45, bob_dl_Cube_mesh_layer_1),
+		GEO_TRANSLATE_NODE_WITH_DL(1, -3604, -1972, -45, bob_dl_Cube_001_mesh_layer_1),
+		GEO_TRANSLATE_NODE_WITH_DL(4, -7096, 1664, -6944, bob_dl_DL_bitdw_1_0xe0c3ca0_Obj_002_mesh_layer_4),
+		GEO_TRANSLATE_NODE_WITH_DL(4, -7096, 1664, -6944, bob_dl_DL_bitdw_1_0xe0c3ca0_Obj_003_mesh_layer_4),
+		GEO_OPEN_NODE(),
+			GEO_DISPLAY_LIST(1, bob_dl_DL_bitdw_1_0xe0c3ca0_Obj_003_mesh_layer_1),
+		GEO_CLOSE_NODE(),
+		GEO_TRANSLATE_NODE_WITH_DL(5, -7096, 1664, -6944, bob_dl_DL_bitdw_1_0xe0feed0_Obj_002_mesh_layer_5),
+		GEO_TRANSLATE_NODE_WITH_DL(5, -7096, 1664, -6944, bob_dl_DL_bitdw_1_0xe0feed0_Objj_mesh_layer_5),
 	GEO_CLOSE_NODE(),
 	GEO_RETURN(),
 };
@@ -31,6 +38,8 @@ const GeoLayout bob_area_1[] = {
 			GEO_CLOSE_NODE(),
 		GEO_CLOSE_NODE(),
 		GEO_DISPLAY_LIST(1, bob_dl_material_revert_render_settings),
+		GEO_DISPLAY_LIST(5, bob_dl_material_revert_render_settings),
+		GEO_DISPLAY_LIST(4, bob_dl_material_revert_render_settings),
 	GEO_CLOSE_NODE(),
 	GEO_END(),
 };
