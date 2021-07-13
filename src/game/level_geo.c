@@ -61,19 +61,29 @@ Gfx *geo_envfx_main(s32 callContext, struct GraphNode *node, Mat4 mtxf) {
  */
 Gfx *geo_skybox_main(s32 callContext, struct GraphNode *node, UNUSED Mat4 *mtx) {
     Gfx *gfx = NULL;
+    Gfx *gfx1 = NULL;
+    Gfx *gfx2 = NULL;
     struct GraphNodeBackground *backgroundNode = (struct GraphNodeBackground *) node;
 
     if (callContext == GEO_CONTEXT_AREA_LOAD) {
         backgroundNode->unused = 0;
+		return NULL;
     } else if (callContext == GEO_CONTEXT_RENDER) {
         struct GraphNodeCamera *camNode = (struct GraphNodeCamera *) gCurGraphNodeRoot->views[0];
         struct GraphNodePerspective *camFrustum =
             (struct GraphNodePerspective *) camNode->fnNode.node.parent;
 
-        gfx = create_skybox_facing_camera(0, backgroundNode->background, camFrustum->fov, gLakituState.pos[0],
+        gfx = alloc_display_list(3 * sizeof(Gfx));
+		Gfx *dlist = gfx;
+		gfx1 = create_skybox_facing_camera(0, backgroundNode->background, camFrustum->fov, gLakituState.pos[0],
                             gLakituState.pos[1], gLakituState.pos[2], gLakituState.focus[0],
                             gLakituState.focus[1], gLakituState.focus[2]);
+		gfx2 = create_skybox_facing_camera(1, backgroundNode->background, camFrustum->fov, gLakituState.pos[0],
+                            gLakituState.pos[1], gLakituState.pos[2], gLakituState.focus[0],
+                            gLakituState.focus[1], gLakituState.focus[2]);
+        gSPDisplayList(dlist++, gfx1);
+        gSPDisplayList(dlist++, gfx2);
+        gSPEndDisplayList(dlist++);
+		return gfx;
     }
-
-    return gfx;
 }

@@ -59,6 +59,7 @@ struct Skybox {
 
     /// The index of the upper-left tile in the 3x3 grid that gets drawn
     s32 upperLeftTile;
+    s32 timer;
 };
 
 struct Skybox sSkyBoxInfo[2];
@@ -107,8 +108,8 @@ SkyboxTexture *sSkyboxTextures[10
  * The final color of each pixel is computed from the bitwise AND of the color and the texture.
  */
 u8 sSkyboxColors[][3] = {
-    { 0x50, 0x64, 0x5A },
-    { 0xFF, 0xFF, 0xFF },
+    { 0, 0xFF, 0 },
+    { 0xFF, 0, 0xFF },
 };
 
 /**
@@ -267,7 +268,7 @@ void draw_skybox_tile_grid(Gfx **dlist, s8 background, s8 player, s8 colorIndex)
             s32 tileIndex = sSkyBoxInfo[player].upperLeftTile + row * SKYBOX_COLS + col;
             const u8 *const texture =
                 (*(SkyboxTexture *) segmented_to_virtual(sSkyboxTextures[background]))[tileIndex];
-            Vtx *vertices = make_skybox_rect(tileIndex, colorIndex);
+            Vtx *vertices = make_skybox_rect(tileIndex, player);
 
             gLoadBlockTexture((*dlist)++, 32, 32, G_IM_FMT_RGBA, texture);
             gSPVertex((*dlist)++, VIRTUAL_TO_PHYSICAL(vertices), 4, 0);
@@ -315,6 +316,7 @@ Gfx *init_skybox_display_list(s8 player, s8 background, s8 colorIndex) {
         Mtx *ortho = create_skybox_ortho_matrix(player);
 
         gSPDisplayList(dlist++, dl_skybox_begin);
+        gDPSetEnvColor(dlist++, 255,255,255,10);
         gSPMatrix(dlist++, VIRTUAL_TO_PHYSICAL(ortho), G_MTX_PROJECTION | G_MTX_MUL | G_MTX_NOPUSH);
         gSPDisplayList(dlist++, dl_skybox_tile_tex_settings);
         draw_skybox_tile_grid(&dlist, background, player, colorIndex);
@@ -351,8 +353,9 @@ Gfx *create_skybox_facing_camera(s8 player, s8 background, f32 fov,
     //! fov is always set to 90.0f. If this line is removed, then the game crashes because fov is 0 on
     //! the first frame, which causes a floating point divide by 0
     fov = 90.0f;
-    sSkyBoxInfo[player].yaw = atan2s(cameraFaceZ, cameraFaceX);
-    sSkyBoxInfo[player].pitch = atan2s(sqrtf(cameraFaceX * cameraFaceX + cameraFaceZ * cameraFaceZ), cameraFaceY);
+    sSkyBoxInfo[player].timer ++;
+    sSkyBoxInfo[player].yaw = 0x3fff*sinf(0.001f*sSkyBoxInfo[player].timer*(-1+2*player));
+    sSkyBoxInfo[player].pitch = 0x3fff*sinf(0.002f*sSkyBoxInfo[player].timer*(-1+2*player));
     sSkyBoxInfo[player].scaledX = calculate_skybox_scaled_x(player, fov);
     sSkyBoxInfo[player].scaledY = calculate_skybox_scaled_y(player, fov);
     sSkyBoxInfo[player].upperLeftTile = get_top_left_tile_idx(player);
