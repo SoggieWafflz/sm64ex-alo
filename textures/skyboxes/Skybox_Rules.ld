@@ -1,0 +1,1 @@
+   MIO0_SEG(custom_skybox_noise_skybox, 0x0A000000)

@@ -15,6 +15,7 @@
 
 #include "actors/common0.h"
 #include "actors/common1.h"
+#include "actors/group0.h"
 #include "actors/group1.h"
 #include "actors/group2.h"
 #include "actors/group3.h"
@@ -332,6 +333,44 @@
     BC_PTR(dropletParams)
 
 
+const BehaviorScript bhvTorusRot[] = {
+    BEGIN(OBJ_LIST_SURFACE),
+    OR_INT(oFlags, OBJ_FLAG_UPDATE_GFX_POS_AND_ANGLE),
+    LOAD_COLLISION_DATA(TorusRot_collision),
+    SET_INT(oAngleVelPitch,0x75),
+    SET_INT(oAngleVelYaw,0x80),
+    SET_INT(oAngleVelRoll,0x42),
+    BEGIN_LOOP(),
+		ADD_INT(oFaceAnglePitch,0x75),
+		ADD_INT(oFaceAngleYaw,0x80),
+		ADD_INT(oFaceAngleRoll,0x42),
+        CALL_NATIVE(load_object_collision_model),
+    END_LOOP(),
+};
+const BehaviorScript bhvDiamondRot[] = {
+    BEGIN(OBJ_LIST_SURFACE),
+    OR_INT(oFlags, OBJ_FLAG_UPDATE_GFX_POS_AND_ANGLE),
+    LOAD_COLLISION_DATA(DiamondRot_collision),
+    SET_INT(oAngleVelPitch,0x12),
+    SET_INT(oAngleVelYaw,0x10),
+    SET_INT(oAngleVelRoll,0x02),
+    BEGIN_LOOP(),
+		ADD_INT(oFaceAnglePitch,0x12),
+		ADD_INT(oFaceAngleYaw,0x10),
+		ADD_INT(oFaceAngleRoll,0x02),
+        CALL_NATIVE(load_object_collision_model),
+    END_LOOP(),
+};
+const BehaviorScript bhvGlowRot[] = {
+    BEGIN(OBJ_LIST_SURFACE),
+    OR_INT(oFlags, OBJ_FLAG_UPDATE_GFX_POS_AND_ANGLE),
+    LOAD_COLLISION_DATA(GlowRot_collision),
+	SET_INT(oAngleVelYaw,0x200),
+    BEGIN_LOOP(),
+		ADD_INT(oFaceAngleYaw,0x200),
+        CALL_NATIVE(load_object_collision_model),
+    END_LOOP(),
+};
 const BehaviorScript bhvSpawnTE[] = {
 	BEGIN(OBJ_LIST_GENACTOR),
 	CALL_NATIVE(spawn_te_init),

@@ -1,0 +1,10 @@
+extern const GeoLayout GlowRotGeo[];
+extern Lights1 GlowRot_center_plat_lights;
+extern u8 GlowRot_purple_grad_ci8[];
+extern u8 GlowRot_purple_grad_ci8_pal_rgba16[];
+extern Vtx GlowRot_Cylinder_mesh_layer_1_vtx_0[76];
+extern Gfx GlowRot_Cylinder_mesh_layer_1_tri_0[];
+extern Gfx mat_GlowRot_center_plat[];
+extern Gfx mat_revert_GlowRot_center_plat[];
+extern Gfx GlowRot_Cylinder_mesh_layer_1[];
+extern Gfx GlowRot_material_revert_render_settings[];

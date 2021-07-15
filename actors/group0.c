@@ -25,3 +25,10 @@
 #include "white_particle_small/model.inc.c"
 
 #include "sparkle_animation/model.inc.c"
+
+#include "TorusRot/model.inc.c"
+#include "GlowRot/collision.inc.c"
+#include "GlowRot/model.inc.c"
+#include "TorusRot/collision.inc.c"
+#include "DiamondRot/model.inc.c"
+#include "DiamondRot/collision.inc.c"

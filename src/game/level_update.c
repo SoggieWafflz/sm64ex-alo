@@ -758,7 +758,8 @@ s16 level_trigger_warp(struct MarioState *m, s32 warpOp) {
                 play_transition(WARP_TRANSITION_FADE_INTO_MARIO, 0x20, 0x00, 0x00, 0x00);
                 break;
 
-            case WARP_OP_DEATH:
+            //actual death
+			case WARP_OP_DEATH:
 				//crash the plane with no survivors
 				if(configHC){
 					int i=1/0;
@@ -772,8 +773,10 @@ s16 level_trigger_warp(struct MarioState *m, s32 warpOp) {
                 play_sound(SOUND_MENU_BOWSER_LAUGH, gGlobalSoundSource);
                 break;
 
-            case WARP_OP_WARP_FLOOR:
-                sSourceWarpNodeId = WARP_NODE_WARP_FLOOR;
+            //death floor
+			case WARP_OP_WARP_FLOOR:
+                sSourceWarpNodeId = 0x11;
+				m->health-=0x0100;
                 if (area_get_warp_node(sSourceWarpNodeId) == NULL) {
                     if (m->numLives == 0 && !INFINITE_LIVES) {
                         sDelayedWarpOp = WARP_OP_GAME_OVER;
@@ -977,7 +980,59 @@ void update_hud_values(void) {
         }
     }
 }
-
+//Copied from WSA code
+#if IS_64_BIT
+struct F2{
+	unsigned int Y:12;
+	unsigned int X:12;
+	unsigned int MSB:8;
+};
+#else
+struct F2{
+	unsigned int MSB:8;
+	unsigned int X:12;
+	unsigned int Y:12;
+};
+#endif
+union PosBytes{
+	u32 pos;
+	char bytes[4];
+};
+union WDBytes{
+	uintptr_t w0;
+	struct F2 SetTile;
+};
+extern Gfx mat_TorusRot_Torus[];
+extern Gfx mat_GlowRot_center_plat[];
+extern Gfx mat_DiamondRot_center_plat[];
+//This is re used from when pos took args from the object pos and converted it
+void ScrollF2(Gfx *F2,u32 x, u32 y){
+	union PosBytes Xspd;
+	union PosBytes Yspd;
+	union WDBytes F2B;
+	Xspd.pos = x;
+	Yspd.pos = y;
+	F2B.w0 = F2->words.w0;
+	#if IS_64_BIT
+	#define FLOAT_BYTE 2
+	#else
+	#define FLOAT_BYTE 1
+	#endif
+	F2B.SetTile.X+=Xspd.pos;//Xspd.bytes[FLOAT_BYTE];
+	F2B.SetTile.Y+=Yspd.pos;//Yspd.bytes[FLOAT_BYTE];
+	F2B.SetTile.X=F2B.SetTile.X%0x200;
+	F2B.SetTile.Y=F2B.SetTile.Y%0x200;
+	F2->words.w0 = F2B.w0;
+}
+void Scroll_Textures(void){
+	//Water cube gfx
+	Gfx *F2 = segmented_to_virtual(mat_TorusRot_Torus);
+	ScrollF2(F2+10,5,1);
+	F2 = segmented_to_virtual(mat_GlowRot_center_plat);
+	ScrollF2(F2+17,0,3);
+	F2 = segmented_to_virtual(mat_DiamondRot_center_plat);
+	ScrollF2(F2+17,0,3);
+}
 /**
  * Update objects, HUD, and camera. This update function excludes things like
  * endless staircase, warps, pausing, etc. This is used when entering a painting,
@@ -1015,6 +1070,7 @@ s32 play_mode_normal(void) {
     }
 
     area_update_objects();
+    Scroll_Textures();
     update_hud_values();
 
     if (gCurrentArea != NULL) {

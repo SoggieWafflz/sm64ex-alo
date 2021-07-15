@@ -1,0 +1,21 @@
+const Collision DiamondRot_collision[] = {
+	COL_INIT(),
+	COL_VERTEX_INIT(6),
+	COL_VERTEX(-250, 0, 250),
+	COL_VERTEX(0, 536, 0),
+	COL_VERTEX(-250, 0, -250),
+	COL_VERTEX(250, 0, -250),
+	COL_VERTEX(250, 0, 250),
+	COL_VERTEX(0, -536, 0),
+	COL_TRI_INIT(SURFACE_NO_CAM_COLLISION, 8),
+	COL_TRI(0, 1, 2),
+	COL_TRI(2, 1, 3),
+	COL_TRI(3, 1, 4),
+	COL_TRI(4, 1, 0),
+	COL_TRI(5, 4, 0),
+	COL_TRI(5, 3, 4),
+	COL_TRI(5, 2, 3),
+	COL_TRI(5, 0, 2),
+	COL_TRI_STOP(),
+	COL_END()
+};

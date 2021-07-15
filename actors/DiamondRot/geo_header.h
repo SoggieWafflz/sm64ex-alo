@@ -1,0 +1,10 @@
+extern const GeoLayout DiamondRotGeo[];
+extern Lights1 DiamondRot_center_plat_lights;
+extern u8 DiamondRot_purple_grad_ci8[];
+extern u8 DiamondRot_purple_grad_ci8_pal_rgba16[];
+extern Vtx DiamondRot_Diamond_Rot_mesh_layer_1_vtx_0[24];
+extern Gfx DiamondRot_Diamond_Rot_mesh_layer_1_tri_0[];
+extern Gfx mat_DiamondRot_center_plat[];
+extern Gfx mat_revert_DiamondRot_center_plat[];
+extern Gfx DiamondRot_Diamond_Rot_mesh_layer_1[];
+extern Gfx DiamondRot_material_revert_render_settings[];

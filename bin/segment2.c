@@ -2647,7 +2647,7 @@ const Gfx dl_transition_draw_filled_region[] = {
 const Gfx dl_skybox_begin[] = {
     gsDPPipeSync(),
     gsSPClearGeometryMode(G_LIGHTING),
-	gsDPSetRenderMode(G_RM_XLU_SURF, G_RM_XLU_SURF2),
+	gsDPSetRenderMode(G_RM_AA_XLU_SURF, G_RM_AA_XLU_SURF2),
     gsDPSetCombineMode(G_CC_MODULATEIFADE, G_CC_MODULATEIFADE),
     gsSPPerspNormalize(0xFFFF),
     gsSPMatrix(&matrix_identity, G_MTX_PROJECTION | G_MTX_LOAD | G_MTX_NOPUSH),

@@ -344,4 +344,16 @@ extern const Gfx white_particle_small_unused_dl[];
 
 #include "mario/geo_header.h"
 
+#include "TorusRot/geo_header.h"
+
+#include "GlowRot/collision_header.h"
+
+#include "GlowRot/geo_header.h"
+
+#include "TorusRot/collision_header.h"
+
+#include "DiamondRot/geo_header.h"
+
+#include "DiamondRot/collision_header.h"
+
 #endif
