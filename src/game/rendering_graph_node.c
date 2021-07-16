@@ -527,7 +527,7 @@ static void geo_process_background(struct GraphNodeBackground *node) {
                                  (struct AllocOnlyPool *) gMatStack[gMatStackIndex]);
     }
     if (list != NULL) {
-        geo_append_display_list((void *) VIRTUAL_TO_PHYSICAL(list), node->fnNode.node.flags >> 8);
+        geo_append_display_list((void *) VIRTUAL_TO_PHYSICAL(list), 5);
     } else if (gCurGraphNodeMasterList != NULL) {
 #ifndef F3DEX_GBI_2E
         Gfx *gfxStart = alloc_display_list(sizeof(Gfx) * 7);

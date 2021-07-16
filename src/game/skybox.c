@@ -241,13 +241,13 @@ Vtx *make_skybox_rect(s32 tileIndex, s8 colorIndex) {
     s16 y = SKYBOX_HEIGHT - tileIndex / SKYBOX_COLS * SKYBOX_TILE_HEIGHT;
 
     if (verts != NULL) {
-        make_vertex(verts, 0, x, y, -1-colorIndex, 0, 0, sSkyboxColors[colorIndex][0], sSkyboxColors[colorIndex][1],
+        make_vertex(verts, 0, x, y, -1, 0, 0, sSkyboxColors[colorIndex][0], sSkyboxColors[colorIndex][1],
                     sSkyboxColors[colorIndex][2], 255);
-        make_vertex(verts, 1, x, y - SKYBOX_TILE_HEIGHT, -1-colorIndex, 0, 31 << 5, sSkyboxColors[colorIndex][0], sSkyboxColors[colorIndex][1],
+        make_vertex(verts, 1, x, y - SKYBOX_TILE_HEIGHT, -1, 0, 31 << 5, sSkyboxColors[colorIndex][0], sSkyboxColors[colorIndex][1],
                     sSkyboxColors[colorIndex][2], 255);
-        make_vertex(verts, 2, x + SKYBOX_TILE_WIDTH, y - SKYBOX_TILE_HEIGHT, -1-colorIndex, 31 << 5, 31 << 5, sSkyboxColors[colorIndex][0],
+        make_vertex(verts, 2, x + SKYBOX_TILE_WIDTH, y - SKYBOX_TILE_HEIGHT, -1, 31 << 5, 31 << 5, sSkyboxColors[colorIndex][0],
                     sSkyboxColors[colorIndex][1], sSkyboxColors[colorIndex][2], 255);
-        make_vertex(verts, 3, x + SKYBOX_TILE_WIDTH, y, -1-colorIndex, 31 << 5, 0, sSkyboxColors[colorIndex][0], sSkyboxColors[colorIndex][1],
+        make_vertex(verts, 3, x + SKYBOX_TILE_WIDTH, y, -1, 31 << 5, 0, sSkyboxColors[colorIndex][0], sSkyboxColors[colorIndex][1],
                     sSkyboxColors[colorIndex][2], 255);
     } else {
     }
@@ -306,7 +306,7 @@ void *create_skybox_ortho_matrix(s8 player) {
  * Creates the skybox's display list, then draws the 3x3 grid of tiles.
  */
 Gfx *init_skybox_display_list(s8 player, s8 background, s8 colorIndex) {
-    s32 dlCommandCount = 5 + (3 * 3) * 7; // 5 for the start and end, plus 9 skybox tiles
+    s32 dlCommandCount = 6 + (3 * 3) * 7; // 5 for the start and end, plus 9 skybox tiles
     void *skybox = alloc_display_list(dlCommandCount * sizeof(Gfx));
     Gfx *dlist = skybox;
 
@@ -316,7 +316,7 @@ Gfx *init_skybox_display_list(s8 player, s8 background, s8 colorIndex) {
         Mtx *ortho = create_skybox_ortho_matrix(player);
 
         gSPDisplayList(dlist++, dl_skybox_begin);
-        gDPSetEnvColor(dlist++, 255,255,255,20);
+        gDPSetEnvColor(dlist++, 255,255,255,80-10*player);
         gSPMatrix(dlist++, VIRTUAL_TO_PHYSICAL(ortho), G_MTX_PROJECTION | G_MTX_MUL | G_MTX_NOPUSH);
         gSPDisplayList(dlist++, dl_skybox_tile_tex_settings);
         draw_skybox_tile_grid(&dlist, background, player, colorIndex);
@@ -347,15 +347,15 @@ Gfx *create_skybox_facing_camera(s8 player, s8 background, f32 fov,
 	background = 0;
 
     // If the first star is collected in JRB, make the sky darker and slightly green
-    if (background == 8 && !(save_file_get_star_flags(gCurrSaveFileNum - 1, COURSE_JRB - 1) & 1)) {
-        colorIndex = 0;
-    }
+    // if (background == 8 && !(save_file_get_star_flags(gCurrSaveFileNum - 1, COURSE_JRB - 1) & 1)) {
+        // colorIndex = 0;
+    // }
 
     //! fov is always set to 90.0f. If this line is removed, then the game crashes because fov is 0 on
     //! the first frame, which causes a floating point divide by 0
     fov = 90.0f;
     sSkyBoxInfo[player].timer ++;
-    sSkyBoxInfo[player].yaw = 0x7fff*sinf(0.002f*sSkyBoxInfo[player].timer*(-1+2*player));
+    sSkyBoxInfo[player].yaw = 0x7fff*sinf(0.002f*sSkyBoxInfo[player].timer+(-1+2*player));
     sSkyBoxInfo[player].pitch = 0x3fff*sinf(0.010f*sSkyBoxInfo[player].timer*(-1+2*player));
     sSkyBoxInfo[player].scaledX = calculate_skybox_scaled_x(player, fov);
     sSkyBoxInfo[player].scaledY = calculate_skybox_scaled_y(player, fov);

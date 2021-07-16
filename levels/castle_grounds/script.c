@@ -19,7 +19,7 @@
 const LevelScript level_castle_grounds_entry[] = {
 	INIT_LEVEL(),
 	LOAD_MIO0(0x07, _castle_grounds_segment_7SegmentRomStart, _castle_grounds_segment_7SegmentRomEnd), 
-	LOAD_MIO0(0x0A, _cloud_floor_skybox_mio0SegmentRomStart, _cloud_floor_skybox_mio0SegmentRomEnd), 
+	LOAD_MIO0(0x0A, _custom_skybox_noise_skybox_mio0SegmentRomStart, _custom_skybox_noise_skybox_mio0SegmentRomEnd), 
 	LOAD_MIO0_TEXTURE(0x09, _outside_mio0SegmentRomStart, _outside_mio0SegmentRomEnd), 
 	LOAD_MIO0(0x05, _group10_mio0SegmentRomStart, _group10_mio0SegmentRomEnd), 
 	LOAD_RAW(0x0C, _group10_geoSegmentRomStart, _group10_geoSegmentRomEnd), 
