@@ -190,11 +190,11 @@ HAHAHAHAHAHHAHAHAHAHAHAHHAHAHAHAHAHAHAHA[AbtnNextBox()]\
 NoDMsg = ["[JumpLink('Q1_Settings')][JumpLink('Q1_Box')]\
        ------Overlord Dev Log 121------[Pause(32)]\n\
        - - Date [H*][H*]&$[H*][H*] &&$[F*][F*][F*][F*] - -\
-[AbtnNextBox()][JumpLink('Q1_Box')]I probably got you real good didn't I?\n\
-I am not that mean. I am a gentle and kind overlord,\n\
-who nuzzle uwus his subject's as appropriately\nneeded.[AbtnNextBox()][JumpLink('Q1_Box')]\
+[AbtnNextBox()][JumpLink('Q1_Box')]I probably got you real good didn't I?[Pause(40)]\n\
+I am not that mean.[Pause(40)] I am a gentle and kind overlord,[Pause(10)]\n\
+who nuzzle uwus his subject's as appropriately\nneeded.[Pause(40)][AbtnNextBox()][JumpLink('Q1_Box')]\
 I also provide some single coins in harder to reach\n\
-for healing as needed. Even if you fail my tasks,\nthere\
-is still room for redemption. No need for\nthanks, I\
-do it for free.\n\
+for healing as needed.[Pause(30)] Even if you fail my tasks,[Pause(20)]\nthere\
+is still room for redemption.[Pause(40)] No need for\nthanks,[Pause(20)] I\
+do it for free.[Pause(40)]\n\
 - Your scuttling overlord[AbtnNextBox()][Jump('Q1_End')]"]

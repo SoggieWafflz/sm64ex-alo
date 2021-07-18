@@ -356,4 +356,8 @@ extern const Gfx white_particle_small_unused_dl[];
 
 #include "DiamondRot/collision_header.h"
 
+#include "PlusRot/geo_header.h"
+
+#include "PlusRot/collision_header.h"
+
 #endif

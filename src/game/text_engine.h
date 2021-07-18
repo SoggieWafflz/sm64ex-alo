@@ -111,6 +111,7 @@ union WordByte{
 u32 PrintAnswer(void);
 u32 DamageAnswer(u8 answer);
 u32 DetermineAnswer(u8 answer);
+extern u16 sCurrentMusic;
 extern const Gfx dl_draw_text_bg_box_TE[];
 extern char te_test[];
 extern char TE_KEYBOARD_lower[];

@@ -143,7 +143,7 @@ const char *credits18[] = { "3SPECIAL THANKS TO", "EAD STAFF", "ALL NINTENDO PER
 const char *credits19[] = { "1PRODUCER", "SHIGERU MIYAMOTO" };
 const char *credits20[] = { "1EXECUTIVE PRODUCER", "HIROSHI YAMAUCHI" };
 #endif
-
+extern u16 sCurrentMusic;
 // Screen top left - Bottom text
 #define CREDITS_POS_ONE 0*16
 // Screen top right - Bottom text
@@ -453,7 +453,8 @@ void init_mario_after_warp(void) {
     }
 
     if (gCurrDemoInput == NULL) {
-        set_background_music(gCurrentArea->musicParam, gCurrentArea->musicParam2, 0);
+		if(sCurrentMusic != gCurrentArea->musicParam)
+			set_background_music(gCurrentArea->musicParam, gCurrentArea->musicParam2, 0);
 
         if (gMarioState->flags & MARIO_METAL_CAP) {
             play_cap_music(SEQUENCE_ARGS(4, SEQ_EVENT_METAL_CAP));
@@ -777,13 +778,14 @@ s16 level_trigger_warp(struct MarioState *m, s32 warpOp) {
 			case WARP_OP_WARP_FLOOR:
                 sSourceWarpNodeId = 0x11;
 				m->health-=0x0100;
-                if (area_get_warp_node(sSourceWarpNodeId) == NULL) {
-                    if (m->numLives == 0 && !INFINITE_LIVES) {
-                        sDelayedWarpOp = WARP_OP_GAME_OVER;
-                    } else {
-                        sSourceWarpNodeId = WARP_NODE_DEATH;
-                    }
-                }
+				val04 = FALSE;
+                // if (area_get_warp_node(sSourceWarpNodeId) == NULL) {
+                    // if (m->numLives == 0 && !INFINITE_LIVES) {
+                        // sDelayedWarpOp = WARP_OP_GAME_OVER;
+                    // } else {
+                        // sSourceWarpNodeId = WARP_NODE_DEATH;
+                    // }
+                // }
                 sDelayedWarpTimer = 20;
                 play_transition(WARP_TRANSITION_FADE_INTO_CIRCLE, 0x14, 0x00, 0x00, 0x00);
                 break;

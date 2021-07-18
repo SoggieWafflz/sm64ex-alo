@@ -5,6 +5,7 @@
 
 extern const BehaviorScript bhvDiamondRot[];
 extern const BehaviorScript bhvTorusRot[];
+extern const BehaviorScript bhvPlusRot[];
 extern const BehaviorScript bhvGlowRot[];
 extern const BehaviorScript bhvSpawnTE[];
 extern const BehaviorScript editor_Scroll_Texture[];

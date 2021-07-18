@@ -20,3 +20,4 @@
 #include "TorusRot/geo.inc.c"
 #include "GlowRot/geo.inc.c"
 #include "DiamondRot/geo.inc.c"
+#include "PlusRot/geo.inc.c"

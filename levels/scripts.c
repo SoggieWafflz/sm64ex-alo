@@ -120,6 +120,7 @@ const LevelScript level_main_scripts_entry[] = {
     LOAD_MODEL_FROM_GEO(255,            GlowRotGeo),
     LOAD_MODEL_FROM_GEO(254,            TorusRotGeo),
     LOAD_MODEL_FROM_GEO(253,            DiamondRotGeo),
+    LOAD_MODEL_FROM_GEO(252,            PlusRotGeo),
 	#if INCLUDE_MOP
     LOAD_MODEL_FROM_GEO( /* NOTEBLOCK */0x7B,            Noteblock_MOP),
     LOAD_MODEL_FROM_DL(0x2E,DL_Checkpoint_Flag_MOP_0x606660,1),

@@ -32,3 +32,5 @@
 #include "TorusRot/collision.inc.c"
 #include "DiamondRot/model.inc.c"
 #include "DiamondRot/collision.inc.c"
+#include "PlusRot/model.inc.c"
+#include "PlusRot/collision.inc.c"
