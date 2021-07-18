@@ -370,11 +370,11 @@ const BehaviorScript bhvPlusRot[] = {
     BEGIN(OBJ_LIST_SURFACE),
     OR_INT(oFlags, OBJ_FLAG_UPDATE_GFX_POS_AND_ANGLE),
     LOAD_COLLISION_DATA(PlusRot_collision),
-	SET_INT(oAngleVelYaw,0x100),
+	SET_INT(oAngleVelYaw,0x50),
     SET_FLOAT(oCollisionDistance, 3800),
     SET_FLOAT(oDrawingDistance, 20000),
     BEGIN_LOOP(),
-		ADD_INT(oFaceAngleYaw,0x100),
+		ADD_INT(oFaceAngleYaw,0x50),
         CALL_NATIVE(load_object_collision_model),
     END_LOOP(),
 };
