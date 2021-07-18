@@ -190,11 +190,10 @@ HAHAHAHAHAHHAHAHAHAHAHAHHAHAHAHAHAHAHAHA[AbtnNextBox()]\
 NoDMsg = ["[JumpLink('Q1_Settings')][JumpLink('Q1_Box')]\
        ------Overlord Dev Log 121------[Pause(32)]\n\
        - - Date [H*][H*]&$[H*][H*] &&$[F*][F*][F*][F*] - -\
-[AbtnNextBox()][JumpLink('Q1_Box')]I probably got you real good didn't I?[Pause(40)]\n\
-I am not that mean.[Pause(40)] I am a gentle and kind overlord,[Pause(10)]\n\
+[AbtnNextBox()][JumpLink('Q1_Box')]Do you think I got them?[Pause(40)] I\n\
+can't be that mean.[Pause(40)] I am a gentle and kind overlord,[Pause(10)]\n\
 who nuzzle uwus his subject's as appropriately\nneeded.[Pause(40)][AbtnNextBox()][JumpLink('Q1_Box')]\
-I also provide some single coins in harder to reach\n\
-for healing as needed.[Pause(30)] Even if you fail my tasks,[Pause(20)]\nthere\
-is still room for redemption.[Pause(40)] No need for\nthanks,[Pause(20)] I\
-do it for free.[Pause(40)]\n\
-- Your scuttling overlord[AbtnNextBox()][Jump('Q1_End')]"]
+You know what,[Pause(20)] I'll even throw in some coins as bonus.\n\
+[Pause(30)]Even if they fail my tasks,[Pause(20)]\nthere\
+is still room for redemption.[Pause(40)] I won't even\ncharge,[Pause(20)] I'll\
+do it for free.[AbtnNextBox()][Jump('Q1_End')]"]

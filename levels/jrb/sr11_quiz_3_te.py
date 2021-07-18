@@ -39,10 +39,9 @@ They are so lost,[Pause(30)] it's laughable.\
 [AbtnNextBox()][JumpLink('Q3_Box')]\
 Why should I even bother with the opinions of\n\
 simpletons.[Pause(40)] They are like ants to my intellect.\n\
-[Pause(40)] I shall pay them no mind. Each second they occupy is\n\
+[Pause(40)] I shall pay them no mind.[Pause(30)] Each second they occupy is\n\
 worth a thousands worlds,[Pause(30)] and I have\n\
-so many more to make.[Pause(20)]\
-[AbtnNextBox()][Jump('Q3_End')]"]
+so many more to make.[AbtnNextBox()][Jump('Q3_End')]"]
 
 #Quiz one - one
 Quiz31_Handle = [

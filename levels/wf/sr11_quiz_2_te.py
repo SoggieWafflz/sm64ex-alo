@@ -192,7 +192,8 @@ and have earned the respect of your peers.\
 
 Q2_Last = ["Ahh.[Pause(40)] You know this sort of generic response\n\
 actually hurts me.[Pause(40)] I should put more effort in.[Pause(20)]\n\
-As your overlord,[Pause(20)] you deserve to know me.[Pause(40)] The real me.[Pause(40)]\n\
-Well you'll know soon.[Pause(30)] I've actually been working on\n\
-something.[Pause(40)] I'm proud of it a little bit. Well maybe,[Pause(14)]\n\
-the pride always fades once everyone else sees it.[AbtnNextBox()][Pop()]"]
+As your overlord,[Pause(20)] you deserve to know me.[Pause(40)] The real me.[AbtnNextBox()]\
+I worked very hard on these levels.[Pause(30)] Maybe a little\n\
+too hard.[Pause(30)] My underlings couldn't keep up.[Pause(30)]\n\
+Hopefully,[Pause(15)] you'll be up to my level.[Pause(40)] I have a special\n\
+task waiting for you if you're up to it.[AbtnNextBox()][Pop()]"]

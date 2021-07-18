@@ -1,6 +1,6 @@
 void scroll_wf_dl_DL_sl_1_0xe0a7ba0_Obj_004_mesh_layer_1_vtx_3() {
 	int i = 0;
-	int count = 180;
+	int count = 84;
 	int width = 32 * 0x20;
 	int height = 64 * 0x20;
 
