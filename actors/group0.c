@@ -26,6 +26,12 @@
 
 #include "sparkle_animation/model.inc.c"
 
+#include "dorrie/model.inc.c"
+#include "dorrie/anims/data.inc.c"
+#include "dorrie/anims/table.inc.c"
+#include "dorrie/collision.inc.c"
+UNUSED static const u64 binid_4 = 4;
+
 #include "TorusRot/model.inc.c"
 #include "GlowRot/collision.inc.c"
 #include "GlowRot/model.inc.c"

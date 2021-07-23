@@ -145,10 +145,12 @@ def Write(out,header,Test,name):
 					Place+=1
 					iter+=1
 			else:
-				Q=t.Ascii.get(cmd[iter],'0x9e')+','
-				cmt+=cmd[iter]
-				E+=Q
-				Place+=1
+				Q=t.Ascii.get(cmd[iter],'0x9e')
+				if Q:
+					Q+=','
+					cmt+=cmd[iter]
+					E+=Q
+					Place+=1
 				iter+=1
 	if E[-1] == ',':
 		E = E[:-1]+"\n};\n"

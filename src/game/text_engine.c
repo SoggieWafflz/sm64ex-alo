@@ -38,6 +38,8 @@ static struct TEState *AccessEngine; //for outside functions to access
 //my char and ptr arrays
 #include "src/game/Keyboard_te.py"
 #include "src/game/TE_strings.inc.h"
+#include "text_engine_cmds.inc.h"
+#include "text_engine_helpers.inc.h"
 
 //SR11 specific funcs
 u32 PrintAnswer(void){
@@ -199,7 +201,6 @@ void RunTextEngine(void){
 		// end:
 	}
 }
-#include "text_engine_cmds.inc.h"
 
 //inits the variables needed at the start of a frame
 void TE_frame_init(struct TEState *CurEng){

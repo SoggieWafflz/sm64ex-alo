@@ -163,6 +163,7 @@ s32 save_file_get_total_star_count(s32 fileIndex, s32 minCourse, s32 maxCourse);
 void save_file_set_flags(u32 flags);
 void save_file_clear_flags(u32 flags);
 u32 save_file_get_flags(void);
+u32 save_file_get_flag(u32 flag);
 u32 save_file_get_star_flags(s32 fileIndex, s32 courseIndex);
 u32 save_file_get_cannon_flags(s32 fileIndex, s32 courseIndex);
 void save_file_set_star_flags(s32 fileIndex, s32 courseIndex, u32 starFlags);

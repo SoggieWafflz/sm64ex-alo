@@ -8,11 +8,12 @@
 #include "game/moving_texture.h"
 #include "game/screen_transition.h"
 #include "game/paintings.h"
+#include "game/save_file.h"
 
 #include "make_const_nonconst.h"
 
 #include "levels/castle_inside/header.h"
-
+#include "levels/castle_inside/CG_te.py"
 #include "levels/castle_inside/star_door/geo.inc.c"
 #include "levels/castle_inside/trap_door/geo.inc.c"
 #include "levels/castle_inside/areas/1/geo.inc.c"

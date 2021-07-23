@@ -1,6 +1,7 @@
 #include <PR/ultratypes.h>
 
 #include "sm64.h"
+#include "actors/group0.h"
 #include "actors/common0.h"
 #include "actors/group11.h"
 #include "actors/group17.h"

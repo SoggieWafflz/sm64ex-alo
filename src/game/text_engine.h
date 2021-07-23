@@ -107,7 +107,7 @@ union WordByte{
 	u32 w0;
 	char col[4];
 };
-
+#include "text_engine_helpers.h"
 u32 PrintAnswer(void);
 u32 DamageAnswer(u8 answer);
 u32 DetermineAnswer(u8 answer);

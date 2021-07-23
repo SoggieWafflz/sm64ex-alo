@@ -16,6 +16,7 @@
 #include "water_splash/geo.inc.c"
 #include "sparkle_animation/geo.inc.c"
 #include "mario/geo.inc.c"
+#include "dorrie/geo.inc.c"
 
 #include "TorusRot/geo.inc.c"
 #include "GlowRot/geo.inc.c"

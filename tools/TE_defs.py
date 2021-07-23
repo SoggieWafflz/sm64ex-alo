@@ -41,6 +41,7 @@ Ascii.update({
 '[F*]':hex(0xfd),
 '[H*]':hex(0xfa),
 '\n':hex(0xfe),
+'\t':None,
 '.':hex(0x3f),
 "'":hex(0x3e),
 '[end]':hex(0xff)

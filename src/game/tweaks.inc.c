@@ -14,7 +14,7 @@
 #define INCLUDE_MOP 0
 //an array
 #define STAR_MILESTONES  1, 3, 8, 30, 50, 70
-#define SHOW_STAR_MILESTONES 1
+#define SHOW_STAR_MILESTONES 0
 
 #define KING_BOMB_FVEL 3.0f
 #define KING_BOMB_YAWVEL 0x100

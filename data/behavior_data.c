@@ -332,6 +332,22 @@
     BC_B(0x37), \
     BC_PTR(dropletParams)
 
+const BehaviorScript bhvDorriePanel[] = {
+    BEGIN(OBJ_LIST_SURFACE),
+    OR_INT(oFlags, OBJ_FLAG_UPDATE_GFX_POS_AND_ANGLE),
+    LOAD_COLLISION_DATA(dorrie_seg6_collision_0600F644),
+    LOAD_ANIMATIONS(oAnimations, dorrie_seg6_anims_0600F638),
+    SET_INTERACT_TYPE(INTERACT_TEXT),
+    SET_INT(oInteractionSubtype, INT_SUBTYPE_TE),
+    SET_HITBOX(/*Radius*/ 0x400, /*Height*/ 400),
+    SET_INT(oWoodenPostTotalMarioAngle, 0),
+    ANIMATE(1),
+    BEGIN_LOOP(),
+        SET_INT(oIntangibleTimer, 0),
+        CALL_NATIVE(load_object_collision_model),
+        SET_INT(oInteractStatus, 0),
+    END_LOOP(),
+};
 
 const BehaviorScript bhvTorusRot[] = {
     BEGIN(OBJ_LIST_SURFACE),
