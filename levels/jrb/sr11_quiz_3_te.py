@@ -201,12 +201,12 @@ I think this music fits well.\
 
 #Question right
 Q3_last = ["You're progressing.[Pause(32)] I'm proud of you.[Pause(32)]\n\
-They told me no one would make it this far.[Pause(32)] They\n\
-called me crazy.[Pause(32)] Well maybe I am crazy.\
+I never thought anyone would make it this far.[Pause(32)] You're\n\
+definitely the one.[Pause(32)] If it's you,[Pause(14)] you can save them.\
 [AbtnNextBox()]\
-I used to have a team of hard workers on this project.[Pause(32)]\n\
-They couldn't handle it.[Pause(32)] They didn't have the\n\
-mental aptitude for this.[Pause(32)] They couldn't see what I saw.[Pause(32)]\n\
-I've been misunderstood for so long,[Pause(18)] but now,[Pause(18)] no longer.[Pause(32)]\n\
-Soon you'll see my greatest creation.\
+I used to have a team of hard workers with me.[Pause(32)]\n\
+I thought they didn't understand my vision.[Pause(32)] I thought\n\
+I was better then them.[Pause(32)] I thought I didn't need them.[Pause(32)]\n\
+I've made so many mistakes,[Pause(18)] please,[Pause(18)]\n\
+save them.[Pause(32)].\
 [AbtnNextBox()][Pop()]"]

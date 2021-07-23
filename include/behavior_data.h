@@ -3,6 +3,7 @@
 
 #include "types.h"
 
+extern const BehaviorScript bhvSpikeRot[];
 extern const BehaviorScript bhvDiamondRot[];
 extern const BehaviorScript bhvTorusRot[];
 extern const BehaviorScript bhvPlusRot[];

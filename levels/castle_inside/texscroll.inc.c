@@ -35,7 +35,7 @@ void scroll_castle_inside_dl_Cube_mesh_layer_1_vtx_0() {
 }
 void scroll_castle_inside_dl_Cube_001_mesh_layer_1_vtx_0() {
 	int i = 0;
-	int count = 185;
+	int count = 196;
 	int width = 64 * 0x20;
 	int height = 64 * 0x20;
 

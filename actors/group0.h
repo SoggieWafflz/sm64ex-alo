@@ -360,4 +360,8 @@ extern const Gfx white_particle_small_unused_dl[];
 
 #include "PlusRot/collision_header.h"
 
+#include "SpikeRot/geo_header.h"
+
+#include "SpikeRot/collision_header.h"
+
 #endif

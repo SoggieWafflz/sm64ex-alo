@@ -21,3 +21,4 @@
 #include "GlowRot/geo.inc.c"
 #include "DiamondRot/geo.inc.c"
 #include "PlusRot/geo.inc.c"
+#include "SpikeRot/geo.inc.c"

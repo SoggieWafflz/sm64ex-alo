@@ -21,7 +21,7 @@
 .word  0x00000000               /* Unknown */
 .word  0x00000000               /* Unknown */
 .if VERSION_SH == 1
-.ascii "SUPERMARIO64        "   /* Internal ROM name */
+.ascii "SR11SA              "   /* Internal ROM name */
 .else
 .include "src/internal_name.s"
 # .byte INTERNAL_NAME   /* Internal ROM name */

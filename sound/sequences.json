@@ -20,8 +20,10 @@
     "0C_level_underground": null,
     "0C_Seq_NoD_custom": ["1A"],
     "0D_menu_star_select": ["16_course_start"],
-    "0E_event_powerup": ["17"],
-    "0F_event_metal_cap": ["18"],
+    "0E_event_powerup": null,
+    "0E_custom_serbian_kolo_120": ["0C"],
+    "0F_event_metal_cap": null,
+    "0F_custom_man_with_machinegun": ["0C"],
     "10_event_koopa_message": ["12"],
     "11_custom_press_garden": ["0C"],
     "11_level_koopa_road": null,
@@ -40,7 +42,8 @@
     "1B_event_solve_puzzle": ["14_piranha_music_box"],
     "1C_event_toad_message": ["20"],
     "1D_event_peach_message": ["1E"],
-    "1E_cutscene_intro": ["1B"],
+    "1E_cutscene_intro": null,
+    "1E_custom_kirby_beach_area": ["0C"],
     "1F_cutscene_victory": ["1A"],
     "20_cutscene_ending": ["23"],
     "21_menu_file_select": ["24"],
@@ -48,5 +51,7 @@
 	"23_custom_black_omen": ["0C"],
 	"24_custom_tidal_tempest_present": ["0C"],
 	"25_custom_white_forest": ["0C"],
-	"26_custom_pokemart": ["0C"]
+	"26_custom_pokemart": ["0C"],
+	"27_custom_so2_expel": ["0C"],
+	"28_custom_thorntail_night": ["0C"]
 }

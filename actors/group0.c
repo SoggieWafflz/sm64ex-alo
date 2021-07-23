@@ -34,3 +34,5 @@
 #include "DiamondRot/collision.inc.c"
 #include "PlusRot/model.inc.c"
 #include "PlusRot/collision.inc.c"
+#include "SpikeRot/model.inc.c"
+#include "SpikeRot/collision.inc.c"

@@ -1,0 +1,14 @@
+extern const GeoLayout SpikeRotGeo[];
+extern Lights1 SpikeRot_SpikeBall_Face_lights;
+extern Lights1 SpikeRot_Spike_lights;
+extern u8 SpikeRot_sun9_i8[];
+extern u8 SpikeRot_tk_lightning01_i4[];
+extern Vtx SpikeRot_Cube_011_mesh_layer_1_vtx_0[24];
+extern Gfx SpikeRot_Cube_011_mesh_layer_1_tri_0[];
+extern Vtx SpikeRot_Cube_011_mesh_layer_1_vtx_1[59];
+extern Gfx SpikeRot_Cube_011_mesh_layer_1_tri_1[];
+extern Gfx mat_SpikeRot_SpikeBall_Face[];
+extern Gfx mat_SpikeRot_Spike[];
+extern Gfx mat_revert_SpikeRot_Spike[];
+extern Gfx SpikeRot_Cube_011_mesh_layer_1[];
+extern Gfx SpikeRot_material_revert_render_settings[];
