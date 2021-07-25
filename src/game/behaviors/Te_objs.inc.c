@@ -4,14 +4,14 @@ void spawn_te_init(void){
 }
 u32 gStarSpawn=0;
 void te_spawn_star(void){
-	struct Object *sp30;
 	if(o->oAction){
 		o->oPosY+=10.0f;
 	}
 	if(gStarSpawn){
 		gStarSpawn=0;
-		spawn_star(sp30,o->oPosX, o->oPosY, o->oPosZ);
-		sp30->oBehParams = 0x05000000;
+		f32 facingZ = coss(o->oFaceAngleYaw)*700.0f;
+		f32 facingX = sins(o->oFaceAngleYaw)*700.0f;
+		cur_obj_spawn_star_at_y_offset(o->oPosX+facingX, o->oPosY+300.0f, o->oPosZ+facingZ, 0.0f);
 		o->oAction = 1;
 	}
 }

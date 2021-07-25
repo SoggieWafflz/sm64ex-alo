@@ -758,7 +758,7 @@ u32 interact_coin(struct MarioState *m, UNUSED u32 interactType, struct Object *
 
     if (COURSE_IS_MAIN_COURSE(gCurrCourseNum) && m->numCoins - o->oDamageOrCoinValue < COINS_REQ_COINSTAR
         && m->numCoins >= COINS_REQ_COINSTAR) {
-        bhv_spawn_star_no_level_exit(6);
+        // bhv_spawn_star_no_level_exit(6);
     }
 #ifdef RUMBLE_FEEDBACK
     if (o->oDamageOrCoinValue >= 2) {

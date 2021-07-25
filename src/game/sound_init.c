@@ -280,7 +280,7 @@ void play_cutscene_music(u16 seqArgs) {
  */
 void play_shell_music(void) {
     play_music(SEQ_PLAYER_LEVEL, SEQUENCE_ARGS(4, 0x1E), 0);
-    sCurrentShellMusic = SEQUENCE_ARGS(4, SEQ_EVENT_POWERUP);
+    sCurrentShellMusic = SEQUENCE_ARGS(4, 0x1E);
 }
 
 /**

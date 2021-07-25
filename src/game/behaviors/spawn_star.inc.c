@@ -42,10 +42,10 @@ void bhv_star_spawn_init(void) {
     o->oVelY = (o->oHomeY - o->oPosY) / 30.0f;
     o->oForwardVel = o->oStarSpawnDisFromHome / 30.0f;
     o->oStarSpawnUnkFC = o->oPosY;
-    if (o->oBehParams2ndByte == 0 || gCurrCourseNum == COURSE_BBH)
+    // if (o->oBehParams2ndByte == 0 || gCurrCourseNum == COURSE_BBH)
         cutscene_object(CUTSCENE_STAR_SPAWN, o);
-    else
-        cutscene_object(CUTSCENE_RED_COIN_STAR_SPAWN, o);
+    // else
+        // cutscene_object(CUTSCENE_RED_COIN_STAR_SPAWN, o);
 
     set_time_stop_flags(TIME_STOP_ENABLED | TIME_STOP_MARIO_AND_DOORS);
     o->activeFlags |= ACTIVE_FLAG_INITIATED_TIME_STOP;

@@ -27,7 +27,7 @@ If they don't want to work,[Pause(15)] I'll just do it myself.[Pause(40)]\n\
 I always knew Jerry was a lazy piece of garbage.[Pause(40)]\n\
 Don't they realize I am making history here.[AbtnNextBox()][JumpLink('c6_Box')]\
 They'll be sorry.[Pause(40)] Now, I alone will stand atop\n\
-of all worlds. Soon I will activate the largest\n\
+of all worlds.[Pause(40)] Soon I will activate the largest\n\
 power crystal and make it all mine.\
 [AbtnNextBox()][Jump('c6_End')]"]
 
@@ -49,7 +49,7 @@ Dorrie_c6_2 = [
 you figured it out?[DialogOptions(1)]\
 Yes[end]\
 No[end]\
-[DialogResponse(0)][JumpLink('c6_Box')]Nice,[Pause(15)] let's tear this\n\
+[DialogResponse(0)][JumpLink('c6_Box')]Nice,[Pause(15)] let's tear this\
 place down.[AbtnNextBox()][ResetKeyboard()][StartKeyboard(0)][AutoNextBox()]\
 [Jump('Check_password_c6')]\
 [GenericText()]Come back once you have figured it out.[AbtnNextBox()][Jump('c6_End')]"]
@@ -57,8 +57,8 @@ place down.[AbtnNextBox()][ResetKeyboard()][StartKeyboard(0)][AutoNextBox()]\
 Dorrie_c6_1 = [
 	"[JumpLink('c6_Settings')][JumpLink('c6_once')][JumpLink('c6_Box')]\
 	That scuttle guy was a huge pain.[Pause(40)] He went through\n\
-	all this trouble and didn't even make anything himself.[Pause(40)]\n\
-	If you ask me,[Pause(15)] this is classic him.[Pause(40)]\n\
+	all this trouble and didn't even make anything\n\
+	himself.[Pause(40)] If you ask me,[Pause(15)] this is classic him.[Pause(40)]\n\
 	I really hope you destroy him completely.[AbtnNextBox()][JumpLink('c6_Box')]\
 	To really stick it to him,[Pause(15)] you have to destroy\n\
 	it all.[Pause(40)] Destroy everything he's worked\n\
