@@ -4,6 +4,8 @@
 #include "types.h"
 #include "game/moving_texture.h"
 
+#include "levels/bbh//sr11_c5_te.h"
+
 // geo
 extern const GeoLayout geo_bbh_0005B0[];
 extern const GeoLayout geo_bbh_0005C8[];

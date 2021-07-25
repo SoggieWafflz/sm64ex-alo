@@ -2,7 +2,7 @@
 #define TEXT_ENGINE_H
 
 #include <PR/ultratypes.h>
-#define TE_DEBUG 1
+#define TE_DEBUG 0
 #define NumEngines 3
 struct Transition{
 	/* 0xD0 */ s32 TransVI; //the start of the transition, for the end of a box
@@ -65,6 +65,7 @@ struct TEState{
 	/* 0x46 */ s8 IntendedLetter;
 	/* 0x47 */ u8 SelLetter; //the letter thats currently hovered over
 	/* 0x48 */ u32 KeyboardTimer;
+	/* 0x48 */ u32 KeyboardTimerScroll;
 	/* 0x4C */ u8 *PreKeyboardStr;
 	/* 0x50 */ u8 *InputStr;
 	/* 0x54 */ u32 TotalXOff; //X offset from current line origin
@@ -108,12 +109,12 @@ union WordByte{
 	char col[4];
 };
 #include "text_engine_helpers.h"
+extern u32 gDorrieState;
 u32 PrintAnswer(void);
 u32 DamageAnswer(u8 answer);
 u32 DetermineAnswer(u8 answer);
 extern u16 sCurrentMusic;
 extern const Gfx dl_draw_text_bg_box_TE[];
-extern char te_test[];
 extern char TE_KEYBOARD_lower[];
 extern char TE_KEYBOARD_upper[];
 extern char *TE_Strings[];

@@ -136,8 +136,8 @@ def Write(out,header,Test,name):
 							cmt+= cmd[iter+1:c]
 							Q+=','
 							E+=Q
+							Place+=1
 						iter+=len(q)
-						Place+=1
 				else:
 					Q=t.Ascii.get(cmd[iter],'0x9e')+','
 					cmt+=cmd[iter]

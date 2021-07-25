@@ -345,6 +345,7 @@ const BehaviorScript bhvDorriePanel[] = {
     BEGIN_LOOP(),
         SET_INT(oIntangibleTimer, 0),
         CALL_NATIVE(load_object_collision_model),
+        CALL_NATIVE(te_spawn_star),
         SET_INT(oInteractStatus, 0),
     END_LOOP(),
 };
@@ -920,6 +921,21 @@ const BehaviorScript bhvWarp[] = {
     SET_INT(oIntangibleTimer, 0),
     BEGIN_LOOP(),
         CALL_NATIVE(bhv_warp_loop),
+    END_LOOP(),
+};
+
+const BehaviorScript bhvWarpPipeDestroy[] = {
+    BEGIN(OBJ_LIST_SURFACE),
+    OR_INT(oFlags, (OBJ_FLAG_SET_FACE_YAW_TO_MOVE_YAW | OBJ_FLAG_UPDATE_GFX_POS_AND_ANGLE)),
+    SET_INT(oInteractType, INTERACT_WARP),
+    LOAD_COLLISION_DATA(warp_pipe_seg3_collision_03009AC8),
+    SET_FLOAT(oDrawingDistance, 16000),
+    SET_INT(oIntangibleTimer, 0),
+    SET_HITBOX(/*Radius*/ 70, /*Height*/ 50),
+	CALL_NATIVE(te_destroy_level),
+    BEGIN_LOOP(),
+        CALL_NATIVE(bhv_warp_loop),
+        CALL_NATIVE(load_object_collision_model),
     END_LOOP(),
 };
 

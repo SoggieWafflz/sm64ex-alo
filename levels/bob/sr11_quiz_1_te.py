@@ -17,7 +17,7 @@ have to start all over![AbtnNextBox()]\
 [Pop()]"]
 
 TeamDev = ["[JumpLink('Q1_Settings')][JumpLink('Q1_Box')]\
-       ------Overlord Dev Log 18------[Pause(32)]\n\
+       ------Overlord Dev Log 32------[Pause(32)]\n\
        - - Date [H*][H*]&$[H*][H*] &&$[F*][F*][F*][F*] - -\
 [AbtnNextBox()][JumpLink('Q1_Box')]\
 Congratulations team. [Pause(40)]We've commandeered our first\n\
@@ -188,7 +188,7 @@ HAHAHAHAHAHHAHAHAHAHAHAHHAHAHAHAHAHAHAHA[AbtnNextBox()]\
 [Pop()]"]
 
 NoDMsg = ["[JumpLink('Q1_Settings')][JumpLink('Q1_Box')]\
-       ------Overlord Dev Log 121------[Pause(32)]\n\
+       ------Overlord Dev Log 47 ------[Pause(32)]\n\
        - - Date [H*][H*]&$[H*][H*] &&$[F*][F*][F*][F*] - -\
 [AbtnNextBox()][JumpLink('Q1_Box')]Do you think I got them?[Pause(40)] I\n\
 can't be that mean.[Pause(40)] I am a gentle and kind overlord,[Pause(10)]\n\

@@ -12,6 +12,7 @@
 #include "make_const_nonconst.h"
 
 #include "levels/bbh/header.h"
+#include "levels/bbh/sr11_c5_te.py"
 
 #include "levels/bbh/staircase_step/geo.inc.c"
 #include "levels/bbh/tilting_trap_platform/geo.inc.c"

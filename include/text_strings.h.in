@@ -18,6 +18,12 @@
 #define TEXT_VARIABLE_X _("×")
 #define TEXT_UNFILLED_STAR _("☆")
 
+/* passwords */
+#define Pass1 _("DISCOLOREDPRIDE")
+#define Pass2 _("LonelyTree")
+#define Pass3 _("SNAKE EYES")
+#define Pass4 _("blood moon")
+
 /**
  * Global Text
  */
@@ -30,6 +36,7 @@
 #define TEXT_HUD_CONGRATULATIONS _("CONGRATULATIONS") // Course Complete Text, Bowser Courses
 
 #if defined(VERSION_JP) || defined(VERSION_SH)
+
 
 /**
  * File Select Text

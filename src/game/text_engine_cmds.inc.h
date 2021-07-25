@@ -354,6 +354,7 @@ s8 TE_make_keyboard(struct TEState *CurEng,u8 *str){
 	CurEng->UserInput = 0;
 	CurEng->IntendedLetter = 0;
 	CurEng->ShiftPressed = 0;
+	CurEng->PlainText = 0;
 	CurEng->PreKeyboardStr = str;
 	u8 ind = str[1];
 	u8 i;
@@ -367,10 +368,10 @@ s8 TE_make_keyboard(struct TEState *CurEng,u8 *str){
 }
 s8 TE_add_usr_str(struct TEState *CurEng,u8 *str){
 	CurEng->KeyboardState = 3;
-	str[2] = 0x43;
-	str[3] = CurEng->CurUsrStr;
-	return TE_advBlen(CurEng,2);
+	str[1] = CurEng->CurUsrStr;
+	return TE_display_usr_str(CurEng,str);
 }
+//cringer
 s8 TE_draw_keyboard(struct TEState *CurEng,u8 *str){
 	//draw user input
 	//draw keyboard
@@ -380,9 +381,9 @@ s8 TE_draw_keyboard(struct TEState *CurEng,u8 *str){
 	}else{
 		CurEng->TempStr = &TE_KEYBOARD_lower;
 	}
-	if(gNumVblanks != CurEng->KeyboardTimer){
+	if(gNumVblanks > CurEng->KeyboardTimer){
 		if(gPlayer1Controller->buttonPressed&A_BUTTON){
-			CurEng->KeyboardTimer = gNumVblanks;
+			CurEng->KeyboardTimer = gNumVblanks+2;
 			//handle shift, end and backspace
 			switch(CurEng->SelLetter){
 				//shift
@@ -414,13 +415,12 @@ s8 TE_draw_keyboard(struct TEState *CurEng,u8 *str){
 					break;
 			}
 		}else if(gPlayer1Controller->buttonPressed&B_BUTTON && CurEng->UserInput>0){
-			CurEng->KeyboardTimer = gNumVblanks;
+			CurEng->KeyboardTimer = gNumVblanks+2;
 			UserInputs[CurEng->state][CurEng->CurUsrStr][CurEng->UserInput-1] = 0x9F;
 			CurEng->UserInput-=1;
 		}
-	}
-	if(gNumVblanks - CurEng->KeyboardTimer>0x2){
-		CurEng->KeyboardTimer = gNumVblanks;
+	}if(gNumVblanks%4==2 && CurEng->KeyboardTimerScroll<gNumVblanks){
+		CurEng->KeyboardTimerScroll = gNumVblanks;
 		//for overflow
 		s8 vert = 0;
 		handle_menu_scrolling(MENU_SCROLL_VERTICAL,&vert,-1,1);

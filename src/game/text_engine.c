@@ -154,6 +154,8 @@ void RunTextEngine(void){
 					loop = TE_keyboard_sel(CurEng,str,0);
 					goto loopswitch;
 				}
+				TE_add_char2buf(CurEng);
+				goto loop;
 			}
 			//normal character is detected
 			if(CurEng->TempStrEnd!=CurEng->CurPos){
@@ -185,7 +187,7 @@ void RunTextEngine(void){
 		nonewchar:
 		TE_print(CurEng);
 		printnone:
-		CurEng->PlainText = 0;
+		// CurEng->PlainText = 0;
 		if(CurEng->ScissorSet){
 			gDPSetScissor(gDisplayListHead++, G_SC_NON_INTERLACE, 0, 0, SCREEN_WIDTH, SCREEN_HEIGHT);
 			CurEng->ScissorSet = 0;
@@ -472,15 +474,16 @@ u32 TE_get_ptr(u8 *strArgs,u8 *str){
 }
 
 #if TE_DEBUG
+extern uintptr_t sSegmentTable[32];
 void TE_debug_print(struct TEState *CurEng){
 	u8 buf[32];
 	if (gPlayer1Controller->buttonDown&L_TRIG){
-		sprintf(buf,"str %x",CurEng->OgStr);
+		sprintf(buf,"timer %x",CurEng->KeyboardTimer);
 		print_text(32,64,buf);
-		sprintf(buf,"stack %x",&CurEng->StrStack);
-		print_text(32,32,buf);
-		sprintf(buf,"dialog %x",&CurEng->ReturnedDialog);
+		sprintf(buf,"og %x",CurEng->OgStr);
 		print_text(32,128,buf);
+		sprintf(buf,"seg %x",sSegmentTable[0x1a]);
+		print_text(32,32,buf);
 	}
 	
 	

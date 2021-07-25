@@ -10,7 +10,7 @@
 #include "game/paintings.h"
 
 #include "make_const_nonconst.h"
-
+#include "levels/ccm/SR11_c4_te.py"
 #include "levels/ccm/header.h"
 #include "levels/ccm/ropeway_lift/geo.inc.c"
 #include "levels/ccm/snowman_base/geo.inc.c"

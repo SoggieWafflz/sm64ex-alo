@@ -12,6 +12,7 @@
 #include "make_const_nonconst.h"
 
 #include "levels/hmc/header.h"
+#include "levels/hmc/sr11_c6_te.py"
 
 #include "levels/hmc/areas/1/grill_door/geo.inc.c"
 #include "levels/hmc/rolling_rock/geo.inc.c"

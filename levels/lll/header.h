@@ -3,7 +3,7 @@
 
 #include "types.h"
 #include "game/moving_texture.h"
-
+#include "levels/lll/sr11_c7_te.h"
 // geo
 extern const GeoLayout lll_geo_0009E0[];
 extern const GeoLayout lll_geo_0009F8[];

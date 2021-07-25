@@ -12,6 +12,7 @@
 #include "make_const_nonconst.h"
 
 #include "levels/lll/header.h"
+#include "levels/lll/sr11_c7_te.py"
 
 #include "levels/lll/areas/1/4/geo.inc.c"
 #include "levels/lll/areas/1/5/geo.inc.c"

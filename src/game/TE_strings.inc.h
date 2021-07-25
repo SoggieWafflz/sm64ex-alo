@@ -27,4 +27,13 @@ char *TE_Strings[] = {
 	/* 0x14 */
 	&Sacrifice,
 	&OW_scut_intro,
+	&Dorrie_c4_1,
+	/* 0x17 */
+	&c4_Hint1,
+	&c4_Hint2,
+	&c4_Hint3,
+	&c4_Hint4,
+	&FoundCrystals,
+	&Power,
+	/* 0x1D */
 };

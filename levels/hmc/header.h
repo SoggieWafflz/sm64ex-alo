@@ -3,7 +3,7 @@
 
 #include "types.h"
 #include "game/moving_texture.h"
-
+#include "levels/hmc/sr11_c6_te.h"
 // geo
 extern const GeoLayout hmc_geo_000530[];
 extern const GeoLayout hmc_geo_000548[];
