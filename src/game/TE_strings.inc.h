@@ -36,4 +36,11 @@ char *TE_Strings[] = {
 	&FoundCrystals,
 	&Power,
 	/* 0x1D */
+	&Dorrie_c5_1,
+	&c5_Hint1,
+	&c5_Hint2,
+	/* 0x20 */
+	&c5_Hint3,
+	&CrystalExplain,
+	&DorrieDeath,
 };

@@ -4,7 +4,7 @@ struct ObjectHitbox sMrBlizzardHitbox = {
     /* downOffset:        */ 24,
     /* damageOrCoinValue: */ 2,
     /* health:            */ 99,
-    /* numLootCoins:      */ 3,
+    /* numLootCoins:      */ 0,
     /* radius:            */ 65,
     /* height:            */ 170,
     /* hurtboxRadius:     */ 65,

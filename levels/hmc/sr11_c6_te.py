@@ -12,8 +12,9 @@ CrystalExplain = ["[JumpLink('c6_Settings')][JumpLink('c6_Box')]\
        ------Overlord Dev Log 132------[Pause(32)]\n\
        - - Date [F*][F*]&$[F*][H*] &&$[H*][H*][F*][F*] - -\
 [AbtnNextBox()][JumpLink('c6_Box')]\
-These spike crystals seem to be more powerful. [Pause(40)]\n\
-They hold together worlds better,[Pause(20)] and can\n\
+These spike crystals seem to be more powerful\n\
+than I have ever imagined.[Pause(40)]\n\
+They can hold worlds together better,[Pause(20)] and can\n\
 even stitch together different dimensions.[Pause(40)]\n\
 These will be the key to conquering all worlds.\
 [AbtnNextBox()][Jump('c6_End')]"]
