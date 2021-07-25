@@ -23,8 +23,8 @@ AllGone = ["[JumpLink('c7_Settings')][JumpLink('c7_Box')]\
        - - Date [F*][F*]&$[H*][H*] &&$[H*][H*][F*][F*] - -\
 [AbtnNextBox()][JumpLink('c7_Box')]\
 They're all gone.[Pause(40)] I didn't think this would\n\
-happen.[Pause(40)] I never realized what powering\n\
-the crystals.[Pause(40)]\n\
+happen.[Pause(40)] I never realized what was really\n\
+powering the crystals.[Pause(40)]\n\
 I shouldn't have abandoned them.\
 [AbtnNextBox()][Jump('c7_End')]"]
 
@@ -47,20 +47,20 @@ Dorrie_c7_2 = [
 you figured it out?[DialogOptions(1)]\
 Yes[end]\
 No[end]\
-[DialogResponse(0)][JumpLink('c7_Box')]Amazing,[Pause(15)] now we can save\n\
+[DialogResponse(0)][JumpLink('c7_Box')]Amazing,[Pause(15)] now we can save\
 romhacking.[AbtnNextBox()][ResetKeyboard()][StartKeyboard(0)][AutoNextBox()]\
 [Jump('Check_password_c7')]\
 [GenericText()]Come back once you have figured it out.[AbtnNextBox()][Jump('c7_End')]"]
 
 Dorrie_c7_1 = [
 	"[JumpLink('c7_Settings')][JumpLink('c7_once')][JumpLink('c7_Box')]\
-	This isn't even Star Revenge.[Pause(40)] What am\n\
-	I even here for.[Pause(40)]\n\
-	I really don't get it,[Pause(15)] if he really\n\
-	was looking for the ultimate hack,[Pause(15)] why\n\
-	would he even open a kaizo hack.[AbtnNextBox()][JumpLink('c7_Box')]\
-	No matter how based,[Pause(15)] kaizo's will have a flock of haters.[Pause(40)]\n\
-	This naive bug is fighting a losing battle.[Pause(40)]\n\
+	This isn't even Star Revenge.[Pause(40)] What am I even\n\
+	here for.[Pause(40)]\n\
+	I really don't get it,[Pause(15)] if he really was looking\n\
+	for the ultimate hack,[Pause(15)] why would he even\n\
+	open a kaizo hack.[AbtnNextBox()][JumpLink('c7_Box')]\
+	No matter how based,[Pause(15)] kaizo's will have a flock of\n\
+	haters.[Pause(40)] This naive bug is fighting a losing battle.[Pause(40)]\n\
 	Please,[Pause(15)] do me and romhacks a favor,[Pause(15)]\n\
 	and destroy this world.[AbtnNextBox()][JumpLink('c7_Box')]\
 	Once you are ready to save hacking,[Pause(15)] come speak\n\
@@ -79,7 +79,7 @@ c7_Hint2 = [
 
 c7_Hint3 = [
 	"[JumpLink('c7_HINT_Settings')][JumpLink('c7_Box')]\
-	the darker, somber of our pair.\
+	the darker and more somber of our pair.\
 	[AbtnNextBox()][Jump('c7_End')]"]
 
 c7_Hint4 = [

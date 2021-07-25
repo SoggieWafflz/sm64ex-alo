@@ -478,12 +478,14 @@ extern uintptr_t sSegmentTable[32];
 void TE_debug_print(struct TEState *CurEng){
 	u8 buf[32];
 	if (gPlayer1Controller->buttonDown&L_TRIG){
-		sprintf(buf,"timer %x",CurEng->KeyboardTimer);
+		sprintf(buf,"new %d",CurEng->NewSeqID);
 		print_text(32,64,buf);
-		sprintf(buf,"og %x",CurEng->OgStr);
+		sprintf(buf,"og %d",CurEng->OgSeqID);
 		print_text(32,128,buf);
-		sprintf(buf,"seg %x",sSegmentTable[0x1a]);
+		sprintf(buf,"mus %d",sCurrentMusic);
 		print_text(32,32,buf);
+		sprintf(buf,"param %d",gCurrentArea->musicParam);
+		print_text(32,96,buf);
 	}
 	
 	

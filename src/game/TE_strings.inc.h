@@ -43,4 +43,15 @@ char *TE_Strings[] = {
 	&c6_Hint3,
 	&CrystalExplain,
 	&DorrieDeath,
+	&Dorrie_c7_1,
+	/* 0x24 */
+	&c7_Hint1,
+	&c7_Hint2,
+	&c7_Hint3,
+	&c7_Hint4,
+	&Fuck,
+	&AllGone,
+	/* 0x2A */
+	&BroDuteMsg,
+	&Mission,
 };

@@ -1,5 +1,5 @@
 #OW dorrie
-OW_settings = ["[SetSpd(1)][FFSpd(-1)][EnBlip()][Pop()]"]
+OW_settings = ["[SetSpd(1)][FFSpd(-1)][EnBlip()][EnShadow()][Pop()]"]
 OW_Box2 = ["[ShadedBGBox(0x16,0x120,0x14,164,0x20,0x20,0x20,0x80)][Pop()]"]
 OW_Box1 = ["[ShadedBGBox(0x16,0x120,0x14,0x74,0x20,0x20,0x20,0x80)][Pop()]"]
 OW_Box = ["[ShadedBGBox(0x18,0x120,0x08,0x50,0x20,0x20,0x20,0x80)][Pop()]"]
@@ -14,6 +14,46 @@ imagined before,[Pause(24)] just step inside and begin.[AbtnNextBox()]\
 [MarioAction('ACT_IDLE')][TimeEndStr(0)]"]
 
 OW_once = ["[CallOnce(0,'save_file_get_flag',1,[(1 << 9)])][CallOnce(1,'save_file_set_flags',1,[(1 << 9)])][MatchRtrn(0,0)][Pop()][GenericText()][AutoNextBox()][Jump('OW_dorrie2')]"]
+
+BroDuteMsg = [
+"[JumpLink('OW_settings')][SetOrigin(30,96)][JumpLink('OW_Box1')]\
+The following is a message from BroDute.[AbtnNextBox()][JumpLink('OW_Box1')]\
+STOP POSTING ABOUT EXTREME HACKS![Pause(50)]\n\
+I'M TIRED OF SEEING IT![Pause(50)]\n\
+My friends on Twitch streaming extreme hacks,[Pause(15)] on\n\
+Discord its fucking extreme red coin stars.[Pause(30)]\n\
+I was in a server,[Pause(15)] right,[Pause(15)] and ALL the channels are\n\
+just #Kaizo stuff.[AbtnNextBox()][JumpLink('OW_Box1')]\
+I showed my hack to my girlfriend,[Pause(15)] and the level I\n\
+added sand and I said, [Pause(40)][PlayMusic(0xC)][LQ]Hey babe,[Pause(30)] when the\n\
+level quicksand spam![Pause(30)] HAHA![RQ][Pause(30)]\
+[AbtnNextBox()][JumpLink('OW_Box1')]\
+I fucking looked at a star and I said,[Pause(30)]\n\
+[LQ]That's a bit spammy![RQ][Pause(30)]\n\
+I looked at one of my other hacks,[Pause(15)] I thought\n\
+of Night of Doom and I go,\n\
+[Pause(30)][LQ]STAR REVENGE?[Pause(30)] MORE LIKE NIGHT OF REVENGE![RQ][Pause(30)]\n\
+AAAAAAAAAAAAAA[AbtnNextBox()][MarioAction('ACT_IDLE')][TimeEndStr(0)]"
+]
+
+Mission = [
+"[JumpLink('OW_settings')][SetOrigin(30,96)][JumpLink('OW_Box1')]\
+You're the first one to make it this far.[Pause(30)]\n\
+What was once just a fun hack turned\n\
+into this huge disaster.[Pause(30)] I was just trying\n\
+to make romhacks.[Pause(30)] I don't know how it got this\n\
+complicated.[AbtnNextBox()][JumpLink('OW_Box1')]\
+What you saw before was the scraps of my\n\
+my work.[Pause(30)] Now what lies ahead is a\n\
+a mess of mangled together hacks.[Pause(30)]\n\
+I believe you can be the one to fix all of this.[Pause(30)]\n\
+Please save the dorrie's, and then enter the\n\
+pipe behind me.[AbtnNextBox()][JumpLink('OW_Box1')]\
+Ahead lies the origin of this disaster.[Pause(30)] You have\n\
+to destroy the grand cyrstal to make everything\n\
+right again.[Pause(30)]\n\
+After that I'll handle the rest.[AbtnNextBox()][MarioAction('ACT_IDLE')][TimeEndStr(0)]"
+]
 
 OW_dorrie2 = [
 	"[JumpLink('OW_settings')][SetRtrn(0)][SetOrigin(30,148)][JumpLink('OW_Box2')]\

@@ -591,7 +591,7 @@ s8 TE_persist_music(struct TEState *CurEng,u8 *str){
 }
 //79 cmd works
 s8 TE_change_music(struct TEState *CurEng,u8 *str){
-	u16 CurSeq = gCurrentArea->musicParam;
+	u16 CurSeq = sCurrentMusic;
 	if(CurEng->OgSeqID == -1){
 		CurEng->OgSeqID = CurSeq;
 	}
@@ -600,9 +600,8 @@ s8 TE_change_music(struct TEState *CurEng,u8 *str){
 	}
 	CurEng->NewSeqID = str[1];
 	gCurrentArea->musicParam = str[1];
-	play_music(SEQ_PLAYER_LEVEL,str[1],0);
+	seq_player_play_sequence(SEQ_PLAYER_LEVEL,str[1],15);
 	sCurrentMusic = CurEng->NewSeqID;
-	gCurrentArea->musicParam = CurEng->NewSeqID;
 	return TE_advBlen(CurEng,2);
 }
 //7a cmd works
@@ -628,7 +627,7 @@ s8 TE_end_str(struct TEState *CurEng){
 //reset everything back to 0
 s8 TE_reset_str(struct TEState *CurEng){
 	if(CurEng->NewSeqID != CurEng->OgSeqID){
-		play_music(SEQ_PLAYER_LEVEL,CurEng->OgSeqID,0);
+		seq_player_play_sequence(SEQ_PLAYER_LEVEL,CurEng->OgSeqID,15);
 		gCurrentArea->musicParam = CurEng->OgSeqID;
 		sCurrentMusic = CurEng->OgSeqID;
 	}
