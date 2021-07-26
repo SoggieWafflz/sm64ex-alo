@@ -40,8 +40,8 @@ though.[Pause(25)] I believe in you.[AbtnNextBox()][Jump('c5_End')]"]
 
 Spawn_Star_c5 = [
 "[JumpLink('c5_Settings')][JumpLink('c5_Box')]Finally.[Pause(25)] I can return to my wife.[Pause(25)]\n\
-I cannot thank you enough.[Pause(25)] If you can,[Pause(10)] go easy\n\
-on the bug.[Pause(25)] I don't think he meant for this.\
+I cannot thank you enough.[Pause(25)] If you can,[Pause(10)] go easy on\n\
+the bug.[Pause(25)] I don't think he meant for this.\
 [AbtnNextBox()][CallOnce(1,'TE_set_flag',2,['&gStarSpawn',1])][Jump('c5_End')]"]
 
 Dorrie_c5_2 = [
@@ -59,12 +59,12 @@ Dorrie_c5_1 = [
 	I almost gave up hope.[Pause(40)] I've been here so long\n\
 	I've forgotten almost everything.[Pause(40)]\n\
 	The only thing left is the memory of my wife.[Pause(40)]\n\
-	She sucks at cooking but I love her anyway.[AbtnNextBox()][JumpLink('c5_Box')]\
-	If you can,[Pause(15)] would you please undo this\n\
-	world completely.[Pause(40)] It's the only way to\n\
-	save this world.[AbtnNextBox()][JumpLink('c5_Box')]\
-	If you have the power to do it,[Pause(15)] come speak\n\
-	to me again.\
+	She sucks at cooking,[Pause(20)] but I love her anyway.[AbtnNextBox()][JumpLink('c5_Box')]\
+	If you can,[Pause(15)] would you please undo this world\n\
+	completely.[Pause(40)] It's the only way to make things\n\
+	right.[AbtnNextBox()][JumpLink('c5_Box')]\
+	If you have the power to do it,[Pause(15)] come speak to\n\
+	me again.\
 	[AbtnNextBox()][Jump('c5_End')]"]
 
 c5_Hint1 = [

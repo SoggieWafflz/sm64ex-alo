@@ -54,4 +54,13 @@ char *TE_Strings[] = {
 	/* 0x2A */
 	&BroDuteMsg,
 	&Mission,
+	/* 0x2C */
+	&Dorrie_c5_1,
+	&c5_Hint1,
+	&c5_Hint2,
+	&c5_Hint3,
+	&c5_Hint4,
+	/* 0x31 */
+	&EnlistHelp,
+	&JourneyBegin,
 };
