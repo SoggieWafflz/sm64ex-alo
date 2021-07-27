@@ -19,7 +19,7 @@
 const LevelScript level_bbh_entry[] = {
 	INIT_LEVEL(),
 	LOAD_MIO0(0x07, _bbh_segment_7SegmentRomStart, _bbh_segment_7SegmentRomEnd), 
-	LOAD_MIO0(0x0A, _water_skybox_mio0SegmentRomStart, _water_skybox_mio0SegmentRomEnd), 
+	LOAD_MIO0(0x0A, _custom_skybox_noise_skybox_mio0SegmentRomStart, _custom_skybox_noise_skybox_mio0SegmentRomEnd), 
 	LOAD_MIO0_TEXTURE(0x09, _spooky_mio0SegmentRomStart, _spooky_mio0SegmentRomEnd), 
 	LOAD_MIO0(0x05, _group5_mio0SegmentRomStart, _group5_mio0SegmentRomEnd), 
 	LOAD_RAW(0x0C, _group5_geoSegmentRomStart, _group5_geoSegmentRomEnd), 

@@ -196,4 +196,4 @@ who nuzzle uwus his subject's as appropriately\nneeded.[Pause(40)][AbtnNextBox()
 You know what,[Pause(20)] I'll even throw in some coins as bonus.\n\
 [Pause(30)]Even if they fail my tasks,[Pause(20)]\nthere\
 is still room for redemption.[Pause(40)] I won't even\ncharge,[Pause(20)] I'll\
-d o it for free.[AbtnNextBox()][Jump('Q1_End')]"]
+do it for free.[AbtnNextBox()][Jump('Q1_End')]"]

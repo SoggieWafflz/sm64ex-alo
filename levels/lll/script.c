@@ -20,7 +20,7 @@ const LevelScript level_lll_entry[] = {
 	INIT_LEVEL(),
 	LOAD_MIO0(0x07, _lll_segment_7SegmentRomStart, _lll_segment_7SegmentRomEnd), 
 	LOAD_MIO0_TEXTURE(0x09, _fire_mio0SegmentRomStart, _fire_mio0SegmentRomEnd), 
-	LOAD_MIO0(0x0A, _water_skybox_mio0SegmentRomStart, _water_skybox_mio0SegmentRomEnd), 
+	LOAD_MIO0(0x0A, _custom_skybox_noise_skybox_mio0SegmentRomStart, _custom_skybox_noise_skybox_mio0SegmentRomEnd), 
 	LOAD_MIO0(0x0B, _effect_mio0SegmentRomStart, _effect_mio0SegmentRomEnd), 
 	LOAD_MIO0(0x05, _group1_mio0SegmentRomStart, _group1_mio0SegmentRomEnd), 
 	LOAD_RAW(0x0C, _group1_geoSegmentRomStart, _group1_geoSegmentRomEnd), 

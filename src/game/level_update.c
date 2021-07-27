@@ -1412,11 +1412,15 @@ s32 lvl_init_from_save_file(UNUSED s16 arg0, s32 levelNum) {
 #endif
     ;
 
-    gCurrLevelNum = levelNum;
+    if(save_file_get_total_star_count(gCurrSaveFileNum - 1, COURSE_MIN - 1, COURSE_MAX - 1)==0)
+		gCurrLevelNum = levelNum;
+	else
+		gCurrLevelNum = 6;
     gCurrCourseNum = COURSE_NONE;
     gSavedCourseNum = COURSE_NONE;
     gCurrCreditsEntry = NULL;
     gSpecialTripleJump = FALSE;
+	levelNum = gCurrLevelNum;
 
     init_mario_from_save_file();
     save_file_init_challenges();

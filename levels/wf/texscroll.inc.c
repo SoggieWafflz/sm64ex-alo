@@ -1,4 +1,4 @@
-void scroll_wf_dl_DL_sl_1_0xe0a7ba0_Obj_004_mesh_layer_1_vtx_3() {
+void scroll_wf_dl_DL_sl_1_0xe0a7ba0_Obj_004_mesh_layer_1_vtx_2() {
 	int i = 0;
 	int count = 84;
 	int width = 32 * 0x20;
@@ -6,7 +6,7 @@ void scroll_wf_dl_DL_sl_1_0xe0a7ba0_Obj_004_mesh_layer_1_vtx_3() {
 
 	static int currentY = 0;
 	int deltaY;
-	Vtx *vertices = segmented_to_virtual(wf_dl_DL_sl_1_0xe0a7ba0_Obj_004_mesh_layer_1_vtx_3);
+	Vtx *vertices = segmented_to_virtual(wf_dl_DL_sl_1_0xe0a7ba0_Obj_004_mesh_layer_1_vtx_2);
 
 	deltaY = (int)(0.20000000298023224 * 0x20) % height;
 
@@ -65,7 +65,7 @@ void scroll_wf_dl_DL_bbh_1_0xe106610_Obj_001_mesh_layer_4_vtx_0() {
 
 }
 void scroll_wf() {
-	scroll_wf_dl_DL_sl_1_0xe0a7ba0_Obj_004_mesh_layer_1_vtx_3();
+	scroll_wf_dl_DL_sl_1_0xe0a7ba0_Obj_004_mesh_layer_1_vtx_2();
 	scroll_wf_dl_DL_bbh_1_0xe0ce020_Obj_001_mesh_layer_4_vtx_2();
 	scroll_wf_dl_DL_bbh_1_0xe106610_Obj_001_mesh_layer_4_vtx_0();
 }

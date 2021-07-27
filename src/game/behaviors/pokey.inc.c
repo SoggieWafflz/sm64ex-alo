@@ -100,7 +100,7 @@ void bhv_pokey_body_part_update(void) {
 
             // Only the head has loot coins
             if (o->oBehParams2ndByte == 0) {
-                o->oNumLootCoins = 1;
+                // o->oNumLootCoins = 1;
             } else {
                 o->oNumLootCoins = 0;
             }
@@ -114,7 +114,7 @@ void bhv_pokey_body_part_update(void) {
                     o->parentObj->oPokeyHeadWasKilled = TRUE;
                     // Last minute change to blue coins - not sure why they didn't
                     // just set it to -1 above
-                    o->oNumLootCoins = -1;
+                    // o->oNumLootCoins = -1;
                 }
 
                 o->parentObj->oPokeyAliveBodyPartFlags =
