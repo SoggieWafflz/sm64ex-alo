@@ -240,7 +240,7 @@ void set_background_music(u16 a, u16 seqArgs, s16 fadeTimer) {
             sound_reset(a);
         }
 
-        if (!gNeverEnteredCastle || seqArgs != SEQ_LEVEL_INSIDE_CASTLE) {
+        if (1) {
             play_music(SEQ_PLAYER_LEVEL, seqArgs, fadeTimer);
             sCurrentMusic = seqArgs;
         }

@@ -355,8 +355,8 @@ Gfx *create_skybox_facing_camera(s8 player, s8 background, f32 fov,
     //! the first frame, which causes a floating point divide by 0
     fov = 90.0f;
     sSkyBoxInfo[player].timer ++;
-    sSkyBoxInfo[player].yaw = 0x7fff*sinf(0.0004f*sSkyBoxInfo[player].timer+(-1+2*player));
-    sSkyBoxInfo[player].pitch = 0x3fff*sinf(0.0020f*sSkyBoxInfo[player].timer*(-1+2*player));
+    sSkyBoxInfo[player].yaw = 0x7fff*sinf(0.0002f*sSkyBoxInfo[player].timer+(-1+2*player));
+    sSkyBoxInfo[player].pitch = 0x3fff*sinf(0.0010f*sSkyBoxInfo[player].timer*(-1+2*player));
     sSkyBoxInfo[player].scaledX = calculate_skybox_scaled_x(player, fov);
     sSkyBoxInfo[player].scaledY = calculate_skybox_scaled_y(player, fov);
     sSkyBoxInfo[player].upperLeftTile = get_top_left_tile_idx(player);

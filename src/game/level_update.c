@@ -452,7 +452,7 @@ void init_mario_after_warp(void) {
             break;
     }
 
-    if (gCurrDemoInput == NULL) {
+    if (1) {
 		if(sCurrentMusic != gCurrentArea->musicParam)
 			set_background_music(gCurrentArea->musicParam, gCurrentArea->musicParam2, 0);
 
@@ -1343,7 +1343,7 @@ s32 init_level(void) {
             play_transition(WARP_TRANSITION_FADE_FROM_STAR, 0x10, 0xFF, 0xFF, 0xFF);
         }
 
-        if (gCurrDemoInput == NULL) {
+        if (1) {
             set_background_music(gCurrentArea->musicParam, gCurrentArea->musicParam2, 0);
         }
     }
@@ -1412,15 +1412,13 @@ s32 lvl_init_from_save_file(UNUSED s16 arg0, s32 levelNum) {
 #endif
     ;
 
-    if(save_file_get_total_star_count(gCurrSaveFileNum - 1, COURSE_MIN - 1, COURSE_MAX - 1)==0)
-		gCurrLevelNum = levelNum;
-	else
-		gCurrLevelNum = 6;
+    if(save_file_get_total_star_count(gCurrSaveFileNum - 1, COURSE_MIN - 1, COURSE_MAX - 1)>0)
+		levelNum = 6;
     gCurrCourseNum = COURSE_NONE;
     gSavedCourseNum = COURSE_NONE;
     gCurrCreditsEntry = NULL;
     gSpecialTripleJump = FALSE;
-	levelNum = gCurrLevelNum;
+	gCurrLevelNum = levelNum;
 
     init_mario_from_save_file();
     save_file_init_challenges();

@@ -208,5 +208,5 @@ I used to have a team of hard workers with me.[Pause(32)]\n\
 I thought they didn't understand my vision.[Pause(32)] I thought\n\
 I was better then them.[Pause(32)] I thought I didn't need them.[Pause(32)]\n\
 I've made so many mistakes,[Pause(18)] please,[Pause(18)]\n\
-save them.[Pause(32)].\
+save them.[Pause(32)]\
 [AbtnNextBox()][Pop()]"]

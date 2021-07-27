@@ -6,7 +6,7 @@
     "02_custom_global_terminal": ["0C"],
     "03_level_grass": ["22"],
     "04_level_inside_castle": null,
-    "04_custom_cloudrunner_fortress": ["0C"],
+    "04_Seq_SR1_custom": ["11"],
     "05_level_water": null,
     "05_custom_another_world": ["0C"],
     "06_level_hot": null,
@@ -61,5 +61,6 @@
 	"2A_custom_courage": ["0C"],
 	"2B_custom_breath_of_destiny": ["0C"],
 	"2C_custom_reflected_moon": ["0C"],
-	"2D_custom_white_heart": ["0C"]
+	"2D_custom_white_heart": ["0C"],
+	"2E_custom_final_battle": ["0C"]
 }
