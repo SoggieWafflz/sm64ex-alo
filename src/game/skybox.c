@@ -109,7 +109,7 @@ SkyboxTexture *sSkyboxTextures[10
  */
 u8 sSkyboxColors[][3] = {
     { 0, 0xFF, 0 },
-    { 0xFF, 0, 0xFF },
+    { 0x90, 0, 0x90 },
 };
 
 /**
@@ -316,7 +316,7 @@ Gfx *init_skybox_display_list(s8 player, s8 background, s8 colorIndex) {
         Mtx *ortho = create_skybox_ortho_matrix(player);
 
         gSPDisplayList(dlist++, dl_skybox_begin);
-        gDPSetEnvColor(dlist++, 255,255,255,255-80*player);
+        gDPSetEnvColor(dlist++, 255,255,255,255-90*player);
         gSPMatrix(dlist++, VIRTUAL_TO_PHYSICAL(ortho), G_MTX_PROJECTION | G_MTX_MUL | G_MTX_NOPUSH);
         gSPDisplayList(dlist++, dl_skybox_tile_tex_settings);
         draw_skybox_tile_grid(&dlist, background, player, colorIndex);
@@ -355,8 +355,8 @@ Gfx *create_skybox_facing_camera(s8 player, s8 background, f32 fov,
     //! the first frame, which causes a floating point divide by 0
     fov = 90.0f;
     sSkyBoxInfo[player].timer ++;
-    sSkyBoxInfo[player].yaw = 0x7fff*sinf(0.0002f*sSkyBoxInfo[player].timer+(-1+2*player));
-    sSkyBoxInfo[player].pitch = 0x3fff*sinf(0.0010f*sSkyBoxInfo[player].timer*(-1+2*player));
+    sSkyBoxInfo[player].yaw = 0x7fff*sinf(0.0003f*sSkyBoxInfo[player].timer+(-1+2*player));
+    sSkyBoxInfo[player].pitch = 0x3fff*sinf(0.0015f*sSkyBoxInfo[player].timer*(-1+2*player));
     sSkyBoxInfo[player].scaledX = calculate_skybox_scaled_x(player, fov);
     sSkyBoxInfo[player].scaledY = calculate_skybox_scaled_y(player, fov);
     sSkyBoxInfo[player].upperLeftTile = get_top_left_tile_idx(player);
