@@ -3,10 +3,10 @@
 const GeoLayout castle_inside_area_1_geo[] = {
 	GEO_NODE_START(),
 	GEO_OPEN_NODE(),
-		GEO_TRANSLATE_NODE_WITH_DL(1, -2727, -1142, 0, castle_inside_dl_Cube_mesh_layer_1),
-		GEO_TRANSLATE_NODE_WITH_DL(1, -4818, -865, 0, castle_inside_dl_Cylinder_mesh_layer_1),
-		GEO_TRANSLATE_NODE_WITH_DL(1, -6284, -865, 1336, castle_inside_dl_Cylinder_001_mesh_layer_1),
-		GEO_TRANSLATE_NODE_WITH_DL(1, -6256, -865, -1293, castle_inside_dl_Cylinder_002_mesh_layer_1),
+		GEO_TRANSLATE_NODE_WITH_DL(1, 0, -1142, 2727, castle_inside_dl_Cube_mesh_layer_1),
+		GEO_TRANSLATE_NODE_WITH_DL(1, 0, -865, 4818, castle_inside_dl_Cylinder_mesh_layer_1),
+		GEO_TRANSLATE_NODE_WITH_DL(1, 1336, -865, 6284, castle_inside_dl_Cylinder_001_mesh_layer_1),
+		GEO_TRANSLATE_NODE_WITH_DL(1, -1293, -865, 6256, castle_inside_dl_Cylinder_002_mesh_layer_1),
 	GEO_CLOSE_NODE(),
 	GEO_RETURN(),
 };
@@ -24,7 +24,7 @@ const GeoLayout castle_inside_area_1[] = {
 		GEO_OPEN_NODE(),
 			GEO_CAMERA_FRUSTUM_WITH_FUNC(45.0000, 100, 30000, geo_camera_fov),
 			GEO_OPEN_NODE(),
-				GEO_CAMERA(CAMERA_MODE_8_DIRECTIONS, 0, -133, 0, 0, -233, 0, geo_camera_main),
+				GEO_CAMERA(CAMERA_MODE_8_DIRECTIONS, 38, -4, 27, 38, -104, 27, geo_camera_main),
 				GEO_OPEN_NODE(),
 					GEO_BRANCH(1, castle_inside_area_1_geo),
 					GEO_RENDER_OBJ(),
