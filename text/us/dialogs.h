@@ -214,9 +214,9 @@ Would you like to Save?\n\
 //Yes////No"))
 
 DEFINE_DIALOG(DIALOG_013, 1, 5, 30, 200, _("\
-You've collected 100\n\
-coins! Mario gains more\n\
-power from the castle.\n\
+You've collected a\n\
+star! Mario gains more\n\
+power from the +++++.\n\
 Do you want to Save?\n\
 //Yes////No"))
 
@@ -224,7 +224,7 @@ DEFINE_DIALOG(DIALOG_014, 1, 4, 30, 200, _("\
 Wow! Another Power Star!\n\
 Mario gains more courage\n\
 from the power of the\n\
-castle.\n\
++++++.\n\
 Do you want to Save?\n\
 \n\
 //You Bet//Not Now"))
@@ -1182,19 +1182,15 @@ My troops in the walls\n\
 need them! Bwa ha ha!"))
 
 DEFINE_DIALOG(DIALOG_093, 1, 5, 30, 200, _("\
-Mario! You again! Well\n\
-that's just fine--I've\n\
-been looking for something\n\
-to fry with my fire\n\
-breath!\n\
-Your Star Power is\n\
-useless against me!\n\
-Your friends are all\n\
-trapped within the\n\
-walls...\n\
-And you'll never see the\n\
-Princess again!\n\
-Bwa ha ha ha!"))
+Mario! Today is the day\n\
+I will finally defeat you.\n\
+I've grown more powerful\n\
+than ever thanks to these\n\
+glowing crystals!\n\
+That dumb bug let me right\n\
+into this chamber of power!\n\
+Bwa ha ha ha!\n\
+Now I'll never be defeated."))
 
 DEFINE_DIALOG(DIALOG_094, 1, 4, 30, 200, _("\
 Get a good run up the\n\
@@ -1464,20 +1460,14 @@ tower.\n\
 I'll be waiting!\n\
 Gwa ha ha ha!"))
 
-DEFINE_DIALOG(DIALOG_121, 1, 5, 30, 200, _("\
-Nooo! It can't be!\n\
-You've really beaten me,\n\
-Mario?!! I gave those\n\
-troops power, but now\n\
-it's fading away!\n\
-Arrgghh! I can see peace\n\
-returning to the world! I\n\
-can't stand it! Hmmm...\n\
-It's not over yet...\n\
-\n\
-C'mon troops! Let's watch\n\
-the ending together!\n\
-Bwa ha ha!"))
+DEFINE_DIALOG(DIALOG_121, 1, 6, 30, 200, _("\
+Nooooooooooooo!\n\
+It was a trap. How could\n\
+I have known this area\n\
+was full of conveniently\n\
+palced bombs!\n\
+My worst nemesis\n\
+AAAAAAAAAAAHHHHHHHHHHHHHHH!"))
 
 DEFINE_DIALOG(DIALOG_122, 1, 4, 30, 200, _("\
 The Black Hole\n\

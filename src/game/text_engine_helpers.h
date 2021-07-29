@@ -12,3 +12,6 @@ extern char c5_password[];
 extern char c6_password[];
 extern char c7_password[];
 extern u32 gStarSpawn;
+extern u32 gStarSpawn1;
+extern u32 gStarSpawn2;
+extern u32 ScutState;

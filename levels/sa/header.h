@@ -2,7 +2,8 @@
 #define SA_HEADER_H
 
 #include "types.h"
-
+//te strings
+#include "levels/sa//SR11_end_te.h"
 // geo
 extern const GeoLayout sa_geo_000170[];
 
@@ -14,5 +15,7 @@ extern const MacroObject sa_seg7_macro_objs[];
 
 // script
 extern const LevelScript level_sa_entry[];
+
+#include "levels/sa/header.inc.h"
 
 #endif

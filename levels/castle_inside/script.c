@@ -75,7 +75,7 @@ const LevelScript level_castle_inside_entry[] = {
 		OBJECT(MODEL_NONE, 1808, -123, 2728, 0, 90, 0, 0x001B0000, bhvAirborneStarCollectWarp),
 		OBJECT(MODEL_NONE, 1342, -435, 5560, 0, 90, 0, 0x002B0000, bhvAirborneStarCollectWarp),
 		OBJECT(MODEL_NONE, -1319, -435, 5558, 0, 90, 0, 0x003B0000, bhvAirborneStarCollectWarp),
-		OBJECT(MODEL_NONE, 0, -821, 7820, 0, -90, 0, 0x00610000, bhvWarp),
+		OBJECT(MODEL_NONE, 0, -821, 7826, 0, -90, 0, 0x00610000, bhvWarp),
 		TERRAIN(castle_inside_area_1_collision),
 		MACRO_OBJECTS(castle_inside_area_1_macro_objs),
 		SET_BACKGROUND_MUSIC(0x00, 5),

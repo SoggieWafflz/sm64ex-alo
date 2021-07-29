@@ -14,3 +14,6 @@
 #include "levels/sa/header.h"
 
 #include "levels/sa/areas/1/geo.inc.c"
+#include "levels/sa/geo.inc.c"
+//te strings
+#include "levels/sa//SR11_end_te.py"

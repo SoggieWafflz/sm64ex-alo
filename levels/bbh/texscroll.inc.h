@@ -1,4 +1,5 @@
 extern void scroll_bbh_dl_DL_wdw_1_0xe05cce0_Obj_001_mesh_layer_1_vtx_8();
 extern void scroll_bbh_dl_DL_wdw_1_0xe05cce0_Obj_001_mesh_layer_1_vtx_17();
 extern void scroll_bbh_dl_DL_wdw_1_0xe05cce0_Obj_001_mesh_layer_1_vtx_23();
+extern void scroll_bbh_dl_water_plane_mesh_layer_5_vtx_0();
 extern void scroll_bbh();

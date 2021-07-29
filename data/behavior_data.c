@@ -332,6 +332,21 @@
     BC_B(0x37), \
     BC_PTR(dropletParams)
 
+const BehaviorScript bhvScuttlePanel[] = {
+    BEGIN(OBJ_LIST_SURFACE),
+    OR_INT(oFlags, OBJ_FLAG_UPDATE_GFX_POS_AND_ANGLE),
+    LOAD_ANIMATIONS(oAnimations, scuttlebug_seg6_anims_06015064),
+    ANIMATE(0),
+    SET_INTERACT_TYPE(INTERACT_TEXT),
+    SET_INT(oInteractionSubtype, INT_SUBTYPE_TE),
+    SET_HITBOX(/*Radius*/ 0x200, /*Height*/ 400),
+    SET_INT(oWoodenPostTotalMarioAngle, 0),
+    BEGIN_LOOP(),
+        SET_INT(oIntangibleTimer, 0),
+        CALL_NATIVE(te_spawn_star2),
+        SET_INT(oInteractStatus, 0),
+    END_LOOP(),
+};
 const BehaviorScript bhvDorriePanel[] = {
     BEGIN(OBJ_LIST_SURFACE),
     OR_INT(oFlags, OBJ_FLAG_UPDATE_GFX_POS_AND_ANGLE),
@@ -2045,8 +2060,8 @@ const BehaviorScript bhvBowserKey[] = {
 const BehaviorScript bhvGrandStar[] = {
     BEGIN(OBJ_LIST_LEVEL),
     OR_INT(oFlags, OBJ_FLAG_UPDATE_GFX_POS_AND_ANGLE),
-    SET_INTERACT_TYPE(INTERACT_STAR_OR_KEY),
-    SET_INT(oInteractionSubtype, INT_SUBTYPE_GRAND_STAR),
+    SET_INTERACT_TYPE(INTERACT_WARP),
+    // SET_INT(oInteractionSubtype, INT_SUBTYPE_GRAND_STAR),
     SET_HITBOX(/*Radius*/ 160, /*Height*/ 100),
     SET_HOME(),
     BEGIN_LOOP(),

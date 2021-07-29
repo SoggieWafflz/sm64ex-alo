@@ -5707,7 +5707,7 @@ Gfx mat_bowser_3_dl_crystal[] = {
 	gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, ENVIRONMENT, TEXEL0, 0, SHADE, 0, 0, 0, 0, ENVIRONMENT),
 	gsSPSetGeometryMode(G_TEXTURE_GEN_LINEAR),
 	gsSPClearGeometryMode(G_LIGHTING),
-	gsSPTexture(1983, 8127, 0, 0, 1),
+	gsSPTexture(1966, 63568, 0, 0, 1),
 	gsDPTileSync(),
 	gsDPSetTextureImage(G_IM_FMT_I, G_IM_SIZ_8b_LOAD_BLOCK, 1, bowser_3_dl__2803kd_kasanlight05_i8),
 	gsDPSetTile(G_IM_FMT_I, G_IM_SIZ_8b_LOAD_BLOCK, 0, 0, 7, 0, G_TX_WRAP | G_TX_NOMIRROR, 7, 0, G_TX_WRAP | G_TX_NOMIRROR, 5, 0),

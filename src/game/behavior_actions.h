@@ -12,6 +12,7 @@ struct Struct802C0DF0 {
 
 void spawn_te_init(void);
 void te_spawn_star(void);
+void te_spawn_star2(void);
 void te_destroy_level(void);
 
 

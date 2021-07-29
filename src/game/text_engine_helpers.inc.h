@@ -1,20 +1,24 @@
 u32 gDorrieState=0;
 s32 TE_inc_state(s32 *state){
-	*state++;
-	return *state;
+	s32 a = *state;
+	++*state;
+	return a+1;
 }
 s32 TE_dec_state(s32 *state){
-	*state--;
-	return *state;
+	s32 a = *state;
+	--*state;
+	return a-1;
 }
 s32 TE_mod_state(s32 *state,s32 mod){
-	return (*state++)%mod;
+	s32 a = *state;
+	return a%mod;
 }
 s32 TE_get_state(s32 *state){
 	return *state;
 }
 s32 TE_get_flag(s32 *flag,u32 bit){
-	return ((*flag&bit)>0);
+	s32 a = *flag;
+	return ((a&bit)>0);
 }
 s32 TE_set_flag(s32 *flag,u32 bit){
 	*flag |= bit;
@@ -46,3 +50,4 @@ char c4_password[] = {Pass1};
 char c5_password[] = {Pass2};
 char c6_password[] = {Pass3};
 char c7_password[] = {Pass4};
+u32 ScutState = 0;

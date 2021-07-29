@@ -117,7 +117,6 @@ const LevelScript level_ccm_entry[] = {
 		OBJECT(124, 6092, -2961, 5827, 0, 0, 0, 0x001B0000, bhvMessagePanel),
 		OBJECT(124, 1140, -5041, 7289, 0, 90, 0, 0x00190000, bhvMessagePanel),
 		OBJECT(124, -4053, 39, -3114, 0, -90, 0, 0x00180000, bhvMessagePanel),
-		OBJECT(124, -6519, -213, -3097, 0, -90, 0, 0, bhvMessagePanel),
 		OBJECT(124, -3, -861, 889, 0, 180, 0, 0x00170000, bhvMessagePanel),
 		OBJECT(124, -2482, -3857, 8220, 0, -157, 0, 0x001A0000, bhvMessagePanel),
 		OBJECT(124, 7208, -561, 2817, 0, -90, 0, 0x001C0000, bhvMessagePanel),

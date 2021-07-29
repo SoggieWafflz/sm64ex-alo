@@ -1011,6 +1011,7 @@ extern Gfx mat_TorusRot_Torus[];
 extern Gfx mat_GlowRot_center_plat[];
 extern Gfx mat_DiamondRot_center_plat[];
 extern Gfx mat_SpikeRot_Spike[];
+extern Gfx mat_bowser_3_dl_crystal[];
 //This is re used from when pos took args from the object pos and converted it
 void ScrollF2(Gfx *F2,u32 x, u32 y){
 	union PosBytes Xspd;
@@ -1040,6 +1041,10 @@ void Scroll_Textures(void){
 	ScrollF2(F2+17,0,3);
 	F2 = segmented_to_virtual(mat_SpikeRot_Spike);
 	ScrollF2(F2+11,0,6);
+	if(gCurrLevelNum==LEVEL_BOWSER_3){
+		F2 = segmented_to_virtual(mat_bowser_3_dl_crystal);
+		ScrollF2(F2+12,2,1);
+	}
 }
 /**
  * Update objects, HUD, and camera. This update function excludes things like

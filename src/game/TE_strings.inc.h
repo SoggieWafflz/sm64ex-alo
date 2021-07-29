@@ -63,4 +63,5 @@ char *TE_Strings[] = {
 	/* 0x31 */
 	&EnlistHelp,
 	&JourneyBegin,
+	&Scut_Talk,
 };

@@ -177,7 +177,7 @@ OW_dorrie1 = [
 	Luckily as your friendly neighborhood dorrie,[Pause(14)]\n\
 	I can navigate the clusters to help guide you\n\
 	back to your rightful place,[Pause(20)] SR 5.5 the best SR.[Pause(30)]\n\
-	There's 11 stars to collect,[Pause(14)] and in order to get\n\
+	There's 29 stars to collect,[Pause(14)] and in order to get\n\
 	them you have to appease the scuttling overlord.[AbtnNextBox()][JumpLink('OW_Box1')]\
 	His guidance is as follows,[Pause(20)]\n\
 	[LQ]Answer my questions,[Pause(20)]\n\
