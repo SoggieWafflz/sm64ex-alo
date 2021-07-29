@@ -84,5 +84,5 @@ c5_Hint3 = [
 
 c5_Hint4 = [
 	"[JumpLink('c5_HINT_Settings')][JumpLink('c5_Box')]\
-	Blue is the lonliest color.\
+	Blue is the loneliest color.\
 	[AbtnNextBox()][Jump('c5_End')]"]

@@ -761,6 +761,7 @@ s16 level_trigger_warp(struct MarioState *m, s32 warpOp) {
 
             //actual death
 			case WARP_OP_DEATH:
+				death:
 				//crash the plane with no survivors
 				if(configHC){
 					int i=1/0;
@@ -776,7 +777,9 @@ s16 level_trigger_warp(struct MarioState *m, s32 warpOp) {
 
             //death floor
 			case WARP_OP_WARP_FLOOR:
-                sSourceWarpNodeId = 0x11;
+                if(gCurrLevelNum==LEVEL_BOWSER_3)
+					goto death;
+				sSourceWarpNodeId = 0x11;
 				m->health-=0x0100;
 				val04 = FALSE;
                 // if (area_get_warp_node(sSourceWarpNodeId) == NULL) {
@@ -1007,6 +1010,7 @@ union WDBytes{
 extern Gfx mat_TorusRot_Torus[];
 extern Gfx mat_GlowRot_center_plat[];
 extern Gfx mat_DiamondRot_center_plat[];
+extern Gfx mat_SpikeRot_Spike[];
 //This is re used from when pos took args from the object pos and converted it
 void ScrollF2(Gfx *F2,u32 x, u32 y){
 	union PosBytes Xspd;
@@ -1034,6 +1038,8 @@ void Scroll_Textures(void){
 	ScrollF2(F2+17,0,3);
 	F2 = segmented_to_virtual(mat_DiamondRot_center_plat);
 	ScrollF2(F2+17,0,3);
+	F2 = segmented_to_virtual(mat_SpikeRot_Spike);
+	ScrollF2(F2+11,0,6);
 }
 /**
  * Update objects, HUD, and camera. This update function excludes things like

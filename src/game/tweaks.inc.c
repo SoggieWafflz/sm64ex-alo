@@ -62,13 +62,13 @@
 #define HUD_LIVES_NUM_X GFX_DIMENSIONS_RECT_FROM_LEFT_EDGE(54)
 #define HUD_LIVES_NUM_Y 209
 
-#define HUD_COINS_X 168
+#define HUD_COINS_X 154
 #define HUD_COINS_Y 209
 
-#define HUD_COINS_CROSS_X 184
+#define HUD_COINS_CROSS_X 170
 #define HUD_COINS_CROSS_Y 209
 
-#define HUD_COINS_NUM_X 198
+#define HUD_COINS_NUM_X 184
 #define HUD_COINS_NUM_Y 209
 
 // X dimension - num, or 320-78 = 242

@@ -1,4 +1,4 @@
-void scroll_hmc_dl_DL_lll_1_0xe0ae900_Obj_001_mesh_layer_4_vtx_34() {
+void scroll_hmc_dl_DL_lll_1_0xe0ae900_Obj_001_mesh_layer_4_vtx_33() {
 	int i = 0;
 	int count = 8;
 	int width = 32 * 0x20;
@@ -6,7 +6,7 @@ void scroll_hmc_dl_DL_lll_1_0xe0ae900_Obj_001_mesh_layer_4_vtx_34() {
 
 	static int currentY = 0;
 	int deltaY;
-	Vtx *vertices = segmented_to_virtual(hmc_dl_DL_lll_1_0xe0ae900_Obj_001_mesh_layer_4_vtx_34);
+	Vtx *vertices = segmented_to_virtual(hmc_dl_DL_lll_1_0xe0ae900_Obj_001_mesh_layer_4_vtx_33);
 
 	deltaY = (int)(1.0 * 0x20) % height;
 
@@ -43,6 +43,6 @@ void scroll_hmc_dl_DL_bob_1_0xe01b220_Obj_mesh_layer_4_vtx_1() {
 
 }
 void scroll_hmc() {
-	scroll_hmc_dl_DL_lll_1_0xe0ae900_Obj_001_mesh_layer_4_vtx_34();
+	scroll_hmc_dl_DL_lll_1_0xe0ae900_Obj_001_mesh_layer_4_vtx_33();
 	scroll_hmc_dl_DL_bob_1_0xe01b220_Obj_mesh_layer_4_vtx_1();
 }

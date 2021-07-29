@@ -5,6 +5,7 @@ const GeoLayout hmc_area_1_geo[] = {
 	GEO_OPEN_NODE(),
 		GEO_DISPLAY_LIST(4, hmc_dl_DL_lll_1_0xe0ae900_Obj_001_mesh_layer_4),
 		GEO_DISPLAY_LIST(4, hmc_dl_DL_lll_1_0xe0ae900_Obj_002_mesh_layer_4),
+		GEO_DISPLAY_LIST(4, hmc_dl_DL_lll_1_0xe0ae900_Obj_003_mesh_layer_4),
 	GEO_CLOSE_NODE(),
 	GEO_RETURN(),
 };

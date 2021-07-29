@@ -1,3 +1,4 @@
+extern void scroll_ccm_dl_DL_hmc_1_0xe096310_Obj_001_mesh_layer_4_vtx_0();
 extern void scroll_ccm_dl_DL_jrb_1_0xe0986e0_Obj_mesh_layer_4_vtx_12();
 extern void scroll_ccm_dl_DL_jrb_1_0xe0986e0_Obj_mesh_layer_4_vtx_21();
 extern void scroll_ccm_dl_DL_jrb_1_0xe0986e0_Obj_mesh_layer_4_vtx_37();

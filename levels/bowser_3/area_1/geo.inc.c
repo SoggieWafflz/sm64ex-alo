@@ -3,6 +3,12 @@
 const GeoLayout bowser_3_area_1_geo[] = {
 	GEO_NODE_START(),
 	GEO_OPEN_NODE(),
+		GEO_TRANSLATE_NODE_WITH_DL(1, -1347, -2957, -8347, bowser_3_dl_Cube_mesh_layer_1),
+		GEO_TRANSLATE_NODE_WITH_DL(1, -7453, -2699, -4335, bowser_3_dl_Cube_001_mesh_layer_1),
+		GEO_TRANSLATE_NODE_WITH_DL(1, 2696, -2695, -7666, bowser_3_dl_Cube_002_mesh_layer_1),
+		GEO_TRANSLATE_NODE_WITH_DL(1, -5102, -464, 2823, bowser_3_dl_Cube_003_mesh_layer_1),
+		GEO_TRANSLATE_NODE_WITH_DL(1, -2985, 318, 9320, bowser_3_dl_Cube_004_mesh_layer_1),
+		GEO_TRANSLATE_NODE_WITH_DL(1, 4462, -1585, -1292, bowser_3_dl_Cube_005_mesh_layer_1),
 		GEO_TRANSLATE_NODE_WITH_DL(5, 0, -308, 0, bowser_3_dl_Cylinder_001_mesh_layer_5),
 		GEO_TRANSLATE_NODE_WITH_DL(5, 0, -1386, 0, bowser_3_dl_Cylinder_002_mesh_layer_5),
 		GEO_TRANSLATE_NODE_WITH_DL(1, 0, -1191, 0, bowser_3_dl_Cylinder_003_mesh_layer_1),

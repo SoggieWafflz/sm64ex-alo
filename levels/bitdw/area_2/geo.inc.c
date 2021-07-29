@@ -39,8 +39,8 @@ const GeoLayout bitdw_area_2[] = {
 				GEO_CLOSE_NODE(),
 			GEO_CLOSE_NODE(),
 		GEO_CLOSE_NODE(),
-		GEO_DISPLAY_LIST(4, bitdw_dl_material_revert_render_settings),
 		GEO_DISPLAY_LIST(5, bitdw_dl_material_revert_render_settings),
+		GEO_DISPLAY_LIST(4, bitdw_dl_material_revert_render_settings),
 	GEO_CLOSE_NODE(),
 	GEO_END(),
 };
