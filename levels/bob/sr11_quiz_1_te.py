@@ -2,7 +2,7 @@
 
 Q1_Settings = ["[a comment, you can put anything here and it won't compile]\
 [SetSpd(1)][SetOrigin(28,168)][FFSpd(-1)][EnBlip()]\
-[EnShadow()][Pop()]"]
+[Pop()]"]
 
 Q1_End = ["[MarioAction('ACT_IDLE')][TimeEndStr(1)]"]
 

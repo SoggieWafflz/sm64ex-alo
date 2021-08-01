@@ -943,8 +943,14 @@ s32 update_8_directions_camera(struct Camera *c, Vec3f focus, Vec3f pos) {
     UNUSED f32 unused1;
     UNUSED f32 unused2;
     UNUSED f32 unused3;
-    f32 yOff = 125.f;
     f32 baseDist = 1000.f;
+    f32 yOff;
+ 
+    if (gMarioState->action & ACT_FLAG_SWIMMING) {
+        yOff = -125.f;
+    } else {
+        yOff = 125.f;
+    }
 
     sAreaYaw = camYaw;
     calc_y_to_curr_floor(&posY, 1.f, 200.f, &focusY, 0.9f, 200.f);
@@ -1242,10 +1248,10 @@ void mode_8_directions_camera(struct Camera *c) {
     }
 	// extra functionality
     else if (gPlayer1Controller->buttonDown & L_JPAD) {
-        s8DirModeYawOffset -= DEGREES(2);
+        s8DirModeYawOffset -= DEGREES(1);
     }
     else if (gPlayer1Controller->buttonDown & R_JPAD) {
-        s8DirModeYawOffset += DEGREES(2);
+        s8DirModeYawOffset += DEGREES(1);
     }
     else if (gPlayer1Controller->buttonPressed & U_JPAD) {
         s8DirModeYawOffset = (gMarioState->faceAngle[1]+0x9000)&0xE000;
@@ -3106,6 +3112,7 @@ void update_camera(struct Camera *c) {
                     set_cam_angle(CAM_ANGLE_MARIO);
                 } else {
                     set_cam_angle(CAM_ANGLE_LAKITU);
+					s8DirModeYawOffset = (gMarioState->faceAngle[1]+0x9000)&0xE000;
                 }
             }
         }
@@ -4937,19 +4944,19 @@ void play_camera_buzz_if_c_sideways(void) {
 }
 
 void play_sound_cbutton_up(void) {
-    play_sound(SOUND_MENU_CAMERA_ZOOM_IN, gGlobalSoundSource);
+    // play_sound(SOUND_MENU_CAMERA_ZOOM_IN, gGlobalSoundSource);
 }
 
 void play_sound_cbutton_down(void) {
-    play_sound(SOUND_MENU_CAMERA_ZOOM_OUT, gGlobalSoundSource);
+    // play_sound(SOUND_MENU_CAMERA_ZOOM_OUT, gGlobalSoundSource);
 }
 
 void play_sound_cbutton_side(void) {
-    play_sound(SOUND_MENU_CAMERA_TURN, gGlobalSoundSource);
+    // play_sound(SOUND_MENU_CAMERA_TURN, gGlobalSoundSource);
 }
 
 void play_sound_button_change_blocked(void) {
-    play_sound(SOUND_MENU_CAMERA_BUZZ, gGlobalSoundSource);
+    // play_sound(SOUND_MENU_CAMERA_BUZZ, gGlobalSoundSource);
 }
 
 void play_sound_rbutton_changed(void) {
@@ -5639,7 +5646,7 @@ void set_camera_mode_8_directions(struct Camera *c) {
     if (c->mode != CAMERA_MODE_8_DIRECTIONS) {
         c->mode = CAMERA_MODE_8_DIRECTIONS;
         sStatusFlags &= ~CAM_FLAG_SMOOTH_MOVEMENT;
-        s8DirModeBaseYaw = 0;
+        s8DirModeYawOffset = (gMarioState->faceAngle[1]+0x9000)&0xE000;
         s8DirModeYawOffset = 0;
     }
 #ifdef BETTERCAMERA

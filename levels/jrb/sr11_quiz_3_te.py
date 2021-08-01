@@ -1,7 +1,7 @@
 #quiz one
 
 Q3_Settings = ["[SetSpd(1)][SetOrigin(28,168)][FFSpd(-1)][EnBlip()]\
-[EnShadow()][Pop()]"]
+[Pop()]"]
 
 Q3_End = ["[MarioAction('ACT_IDLE')][TimeEndStr(1)]"]
 Q3_Box = ["[ShadedBGBox(24,296,100,186,0x20,0x20,0x20,0x80)][Pop()]"]
