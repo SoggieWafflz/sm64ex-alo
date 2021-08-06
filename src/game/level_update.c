@@ -1012,6 +1012,7 @@ extern Gfx mat_GlowRot_center_plat[];
 extern Gfx mat_DiamondRot_center_plat[];
 extern Gfx mat_SpikeRot_Spike[];
 extern Gfx mat_bowser_3_dl_crystal[];
+extern Gfx star_seg3_dl_0302B870[];
 //This is re used from when pos took args from the object pos and converted it
 void ScrollF2(Gfx *F2,u32 x, u32 y){
 	union PosBytes Xspd;
@@ -1041,6 +1042,8 @@ void Scroll_Textures(void){
 	ScrollF2(F2+17,0,3);
 	F2 = segmented_to_virtual(mat_SpikeRot_Spike);
 	ScrollF2(F2+11,0,6);
+	F2 = segmented_to_virtual(star_seg3_dl_0302B870);
+	ScrollF2(F2+10,0,1);
 	if(gCurrLevelNum==LEVEL_BOWSER_3){
 		F2 = segmented_to_virtual(mat_bowser_3_dl_crystal);
 		ScrollF2(F2+12,2,1);

@@ -176,7 +176,6 @@ const LevelScript level_ccm_entry[] = {
 		OBJECT(MODEL_STAR, 580, 8551, -2796, 0, 0, 0, 0x02000001, bhvStar),
 		OBJECT(MODEL_STAR, -2819, 7756, -12512, 0, 0, 0, 0x03000001, bhvStar),
 		OBJECT(251, 2406, 3890, 10181, 0, 0, 0, 0x04000001, bhvSpikeRot),
-		OBJECT(MODEL_STAR, -4568, 7220, 9983, 0, 0, 0, 0x04000001, bhvStar),
 		OBJECT(MODEL_NONE, -2572, -3481, 7969, 0, 0, 180, 0x00120000, bhvAirborneWarp),
 		OBJECT(250, -5280, -569, -1502, 0, 0, 0, 0x05160000, bhvDorriePanel),
 		OBJECT(MODEL_BITDW_WARP_PIPE, -4721, 234, 9924, 0, 0, 0, 0x00210000, bhvWarpPipe),
