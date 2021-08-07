@@ -33,8 +33,8 @@ const GeoLayout lll_area_1[] = {
 				GEO_CLOSE_NODE(),
 			GEO_CLOSE_NODE(),
 		GEO_CLOSE_NODE(),
-		GEO_DISPLAY_LIST(4, lll_dl_material_revert_render_settings),
 		GEO_DISPLAY_LIST(1, lll_dl_material_revert_render_settings),
+		GEO_DISPLAY_LIST(4, lll_dl_material_revert_render_settings),
 	GEO_CLOSE_NODE(),
 	GEO_END(),
 };

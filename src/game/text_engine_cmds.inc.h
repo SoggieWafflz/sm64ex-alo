@@ -382,6 +382,10 @@ s8 TE_draw_keyboard(struct TEState *CurEng,u8 *str){
 		CurEng->TempStr = &TE_KEYBOARD_lower;
 	}
 	if(gNumVblanks > CurEng->KeyboardTimer){
+		if(gPlayer1Controller->buttonPressed&START_BUTTON){
+			CurEng->IntendedLetter = 42;
+			return 1;
+		}
 		if(gPlayer1Controller->buttonPressed&A_BUTTON){
 			CurEng->KeyboardTimer = gNumVblanks+2;
 			//handle shift, end and backspace
@@ -419,7 +423,7 @@ s8 TE_draw_keyboard(struct TEState *CurEng,u8 *str){
 			UserInputs[CurEng->state][CurEng->CurUsrStr][CurEng->UserInput-1] = 0x9F;
 			CurEng->UserInput-=1;
 		}
-	}if(gNumVblanks%4==2 && CurEng->KeyboardTimerScroll<gNumVblanks){
+	}if(gNumVblanks%4>=2 && CurEng->KeyboardTimerScroll<gNumVblanks){
 		CurEng->KeyboardTimerScroll = gNumVblanks;
 		//for overflow
 		s8 vert = 0;

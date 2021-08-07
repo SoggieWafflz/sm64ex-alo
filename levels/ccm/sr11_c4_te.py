@@ -51,7 +51,7 @@ No[end]\
 [DialogResponse(0)][JumpLink('c4_Box')]Ok,[Pause(15)] give me the password and I can destroy\n\
 this world.[AbtnNextBox()][ResetKeyboard()][StartKeyboard(0)][AutoNextBox()]\
 [Jump('Check_password_c4')]\
-[GenericText()]Come back once you have figured it out.[AbtnNextBox()][Jump('c4_End')]"]
+[GenericText()][JumpLink('c4_Box')]Come back once you have figured it out.[AbtnNextBox()][Jump('c4_End')]"]
 
 Dorrie_c4_1 = [
 	"[JumpLink('c4_Settings')][JumpLink('c4_once')][JumpLink('c4_Box')]\

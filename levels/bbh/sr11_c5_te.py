@@ -52,7 +52,7 @@ No[end]\
 [DialogResponse(0)][JumpLink('c5_Box')]Ok,[Pause(15)] just say it and I'll\n\
 end it all.[AbtnNextBox()][ResetKeyboard()][StartKeyboard(0)][AutoNextBox()]\
 [Jump('Check_password_c5')]\
-[GenericText()]Come back once you have figured it out.[AbtnNextBox()][Jump('c5_End')]"]
+[GenericText()][JumpLink('c5_Box')]Come back once you have figured it out.[AbtnNextBox()][Jump('c5_End')]"]
 
 Dorrie_c5_1 = [
 	"[JumpLink('c5_Settings')][JumpLink('c5_once')][JumpLink('c5_Box')]\

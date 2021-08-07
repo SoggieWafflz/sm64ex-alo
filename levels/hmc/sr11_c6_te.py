@@ -52,7 +52,7 @@ No[end]\
 [DialogResponse(0)][JumpLink('c6_Box')]Nice,[Pause(15)] let's tear this \
 place down.[AbtnNextBox()][ResetKeyboard()][StartKeyboard(0)][AutoNextBox()]\
 [Jump('Check_password_c6')]\
-[GenericText()]Come back once you have figured it out.[AbtnNextBox()][Jump('c6_End')]"]
+[GenericText()][JumpLink('c6_Box')]Come back once you have figured it out.[AbtnNextBox()][Jump('c6_End')]"]
 
 Dorrie_c6_1 = [
 	"[JumpLink('c6_Settings')][JumpLink('c6_once')][JumpLink('c6_Box')]\

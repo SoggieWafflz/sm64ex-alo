@@ -50,7 +50,7 @@ No[end]\
 [DialogResponse(0)][JumpLink('c7_Box')]Amazing,[Pause(15)] now we can save\
 romhacking.[AbtnNextBox()][ResetKeyboard()][StartKeyboard(0)][AutoNextBox()]\
 [Jump('Check_password_c7')]\
-[GenericText()]Come back once you have figured it out.[AbtnNextBox()][Jump('c7_End')]"]
+[GenericText()][JumpLink('c7_Box')]Come back once you have figured it out.[AbtnNextBox()][Jump('c7_End')]"]
 
 Dorrie_c7_1 = [
 	"[JumpLink('c7_Settings')][JumpLink('c7_once')][JumpLink('c7_Box')]\
